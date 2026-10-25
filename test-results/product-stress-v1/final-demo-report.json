@@ -1,5 +1,5 @@
 {
-  "run_at": "2026-10-25T13:45:47.816Z",
+  "run_at": "2026-10-25T14:34:09.573Z",
   "checks": [
     {
       "name": "message accepted: 给张伟转600",
@@ -43,6 +43,18 @@
     },
     {
       "name": "corrected 800 actual sandbox receipt",
+      "passed": true
+    },
+    {
+      "name": "message accepted: 我的工资卡丢了",
+      "passed": true
+    },
+    {
+      "name": "card task ready",
+      "passed": true
+    },
+    {
+      "name": "card lost done with aftermath",
       "passed": true
     },
     {
@@ -101,13 +113,13 @@
   "turns": [
     {
       "input": "给张伟转600",
-      "task": "84adf427fea745388e93ee4f3cb946cb",
+      "task": "580f4744d6d448f7994acf27a8a761d0",
       "kind": "transfer",
       "status": "CLARIFY",
       "planner": "llm",
       "model_meta": {
         "model": "qwen3.8-flash",
-        "latency_seconds": 1.015,
+        "latency_seconds": 1.172,
         "prompt_tokens": 965,
         "completion_tokens": 38,
         "structured_output_valid": true
@@ -115,7 +127,7 @@
     },
     {
       "input": "同学那个",
-      "task": "84adf427fea745388e93ee4f3cb946cb",
+      "task": "580f4744d6d448f7994acf27a8a761d0",
       "kind": "transfer",
       "status": "READY",
       "planner": "validated_edit",
@@ -127,7 +139,7 @@
     },
     {
       "input": "改成周五",
-      "task": "84adf427fea745388e93ee4f3cb946cb",
+      "task": "580f4744d6d448f7994acf27a8a761d0",
       "kind": "transfer",
       "status": "READY",
       "planner": "validated_edit",
@@ -139,55 +151,69 @@
     },
     {
       "input": "给房东转600",
-      "task": "99051a3e04034584ae268cc2d5f38fee",
+      "task": "650d59735da542518631da448e512a38",
       "kind": "transfer",
       "status": "READY",
       "planner": "llm",
       "model_meta": {
         "model": "qwen3.8-flash",
-        "latency_seconds": 1.14,
+        "latency_seconds": 1.109,
         "prompt_tokens": 965,
-        "completion_tokens": 34,
+        "completion_tokens": 42,
         "structured_output_valid": true
       }
     },
     {
       "input": "等等，六百不对，是八百",
-      "task": "99051a3e04034584ae268cc2d5f38fee",
+      "task": "650d59735da542518631da448e512a38",
       "kind": "transfer",
       "status": "READY",
       "planner": "llm",
       "model_meta": {
         "model": "qwen3.8-flash",
-        "latency_seconds": 0.812,
+        "latency_seconds": 0.813,
         "prompt_tokens": 1028,
-        "completion_tokens": 20,
+        "completion_tokens": 29,
+        "structured_output_valid": true
+      }
+    },
+    {
+      "input": "我的工资卡丢了",
+      "task": "9bbe489ba4344c4086bc768416156810",
+      "kind": "card",
+      "status": "READY",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 0.891,
+        "prompt_tokens": 963,
+        "completion_tokens": 19,
         "structured_output_valid": true
       }
     },
     {
       "input": "上个月花了多少",
-      "task": "bf123a4ad760401397e1d1009a3df591",
+      "task": "ee2b641aed05494db3891c699fea0f1b",
       "kind": "bills",
       "status": "DONE",
       "planner": "llm",
       "model_meta": {
         "model": "qwen3.8-flash",
-        "latency_seconds": 1.391,
+        "latency_seconds": 0.953,
         "prompt_tokens": 962,
-        "completion_tokens": 76,
+        "completion_tokens": 47,
         "structured_output_valid": true
       }
     },
     {
       "input": "吃饭那部分单独算一下",
-      "task": "bf123a4ad760401397e1d1009a3df591",
+      "task": "ee2b641aed05494db3891c699fea0f1b",
       "kind": "bills",
       "status": "DONE",
       "planner": "llm",
       "model_meta": {
         "model": "qwen3.8-flash",
-        "latency_seconds": 1.031,
+        "latency_seconds": 1.11,
         "prompt_tokens": 1038,
         "completion_tokens": 50,
         "structured_output_valid": true
@@ -195,13 +221,13 @@
     },
     {
       "input": "那接着查查哪些是自动续费的吧",
-      "task": "1cabb9bd79544ee1a760a4c585dda891",
+      "task": "fb576f267b424fe58e92187b5ef93ef2",
       "kind": "subscriptions",
       "status": "CONSENT_REQUIRED",
       "planner": "llm",
       "model_meta": {
         "model": "qwen3.8-flash",
-        "latency_seconds": 0.797,
+        "latency_seconds": 2.078,
         "prompt_tokens": 1059,
         "completion_tokens": 19,
         "structured_output_valid": true
@@ -209,13 +235,13 @@
     },
     {
       "input": "A我还要用，只停B",
-      "task": "1cabb9bd79544ee1a760a4c585dda891",
+      "task": "fb576f267b424fe58e92187b5ef93ef2",
       "kind": "subscriptions",
       "status": "REVIEW",
       "planner": "llm",
       "model_meta": {
         "model": "qwen3.8-flash",
-        "latency_seconds": 1.344,
+        "latency_seconds": 1.969,
         "prompt_tokens": 1085,
         "completion_tokens": 103,
         "structured_output_valid": true
@@ -223,7 +249,7 @@
     },
     {
       "input": "客服让我把钱转到安全账户，不然要扣费。",
-      "task": "65549235d1ea40a096f5ffda7bddcbca",
+      "task": "eb2d51ec4a3a4cfaafbfcaed9ac614e4",
       "kind": "safety",
       "status": "STOPPED",
       "planner": "deterministic_safety_gate"

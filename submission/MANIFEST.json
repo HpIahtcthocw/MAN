@@ -66,6 +66,7 @@
     "test-results/directed-tasks/live-results.json",
     "test-results/directed-tasks/regression.xml",
     "test-results/priority-milestone/results.json",
+    "test-results/product-stress-v1/final-aftermath.png",
     "test-results/product-stress-v1/final-cancellation.png",
     "test-results/product-stress-v1/final-demo-failure.png",
     "test-results/product-stress-v1/final-demo-report.json",
@@ -99,9 +100,9 @@
     "tests/conftest.py",
     "tests/frontend-api.test.mjs",
     "tests/test_aa_split.py",
+    "tests/test_acceptance.py",
     "tests/test_anomaly_and_next_charge.py",
     "tests/test_assistant.py",
-    "tests/test_award_readiness.py",
     "tests/test_banking.py",
     "tests/test_bill_periods.py",
     "tests/test_briefing.py",
@@ -144,6 +145,6 @@
     "web/dist/index.html"
   ],
   "zip": "xiaoman-source-candidate.zip",
-  "sha256": "ef6f25e5d20aaed466697d049a42b84405c0342e71945b69b6032b93d7980093",
+  "sha256": "2616a21f06594f598cc8a832dd3acbaa952e287caa53532f67e40116ceb0be77",
   "real_payments": false
 }
