@@ -1,0 +1,102 @@
+{
+  "run_at": "2026-10-20T03:51:25.150Z",
+  "checks": [
+    {
+      "name": "accepted 查余额",
+      "passed": true
+    },
+    {
+      "name": "balance bypasses model",
+      "passed": true
+    },
+    {
+      "name": "accepted 9月1日到9月3日花了多少",
+      "passed": true
+    },
+    {
+      "name": "day range has no fifth-day rows",
+      "passed": true
+    },
+    {
+      "name": "accepted 上个月只看餐饮",
+      "passed": true
+    },
+    {
+      "name": "food selected",
+      "passed": true
+    },
+    {
+      "name": "accepted 和八月比呢",
+      "passed": true
+    },
+    {
+      "name": "comparison retains food and both months",
+      "passed": true
+    },
+    {
+      "name": "accepted 全部类别，只看云盘",
+      "passed": true
+    },
+    {
+      "name": "explicit reset switches to cloud",
+      "passed": true
+    },
+    {
+      "name": "accepted 接着整理这些代扣",
+      "passed": true
+    },
+    {
+      "name": "linked query requires consent",
+      "passed": true
+    },
+    {
+      "name": "only two cloud protocols exposed",
+      "passed": true
+    },
+    {
+      "name": "candidates have source evidence and no auto-selection",
+      "passed": true
+    },
+    {
+      "name": "matching explanation visible",
+      "passed": true
+    },
+    {
+      "name": "accepted 上个月餐饮花了多少",
+      "passed": true
+    },
+    {
+      "name": "accepted 接着整理这些代扣",
+      "passed": true
+    },
+    {
+      "name": "food has no protocol match and no expansion",
+      "passed": true
+    },
+    {
+      "name": "accepted 查询全部代扣",
+      "passed": true
+    },
+    {
+      "name": "expansion asks fresh consent",
+      "passed": true
+    },
+    {
+      "name": "explicitly authorized all query returns three",
+      "passed": true
+    },
+    {
+      "name": "no financial writes",
+      "passed": true
+    },
+    {
+      "name": "no page errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "passed": true,
+  "real_bank": false,
+  "environment": "Final UI and configured model; balance deterministic; new isolated cookie account; no response mocking"
+}

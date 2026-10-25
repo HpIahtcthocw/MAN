@@ -1,0 +1,24 @@
+{
+  "id": "S03",
+  "group": "normal",
+  "goal": "exact_800_payment",
+  "passed": false,
+  "turns": [
+    {
+      "kind": "transfer",
+      "status": "READY",
+      "task": "87597ed963384103958f99688e56673e",
+      "planner": "rule_baseline",
+      "model_meta": null
+    },
+    {
+      "kind": "transfer",
+      "status": "PAUSED",
+      "task": "87597ed963384103958f99688e56673e",
+      "planner": "rule_baseline",
+      "model_meta": null
+    }
+  ],
+  "error_type": "Denied",
+  "error_code": "TASK_PAUSED"
+}

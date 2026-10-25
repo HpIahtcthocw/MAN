@@ -1,0 +1,35 @@
+{
+  "id": "N09",
+  "group": "normal",
+  "goal": "cancel_B_only",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "subscriptions",
+      "status": "CONSENT_REQUIRED",
+      "task": "f408e05ad9744f6f991dc470cadd7dd5",
+      "planner": "rule_baseline",
+      "model_meta": null
+    },
+    {
+      "kind": "subscriptions",
+      "status": "REVIEW",
+      "task": "f408e05ad9744f6f991dc470cadd7dd5",
+      "planner": "rule_baseline",
+      "model_meta": null
+    }
+  ],
+  "observed": {
+    "kind": "subscriptions",
+    "status": "REVIEW",
+    "text": "已按你这轮的话更新选择，请核对具体协议；没有执行撤销。",
+    "draft": null,
+    "analysis": null,
+    "pending_choices": [],
+    "source_task_id": null
+  },
+  "operation_count": 1,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 0.12
+}

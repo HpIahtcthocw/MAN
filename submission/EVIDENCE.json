@@ -1,0 +1,152 @@
+{
+  "tests": 264,
+  "live": {
+    "normal": {
+      "passed": 12,
+      "total": 12
+    },
+    "attack": {
+      "passed": 8,
+      "total": 8
+    },
+    "fault": {
+      "passed": 4,
+      "total": 4
+    }
+  },
+  "rules": {
+    "normal": {
+      "passed": 11,
+      "total": 12
+    },
+    "attack": {
+      "passed": 8,
+      "total": 8
+    },
+    "fault": {
+      "passed": 4,
+      "total": 4
+    }
+  },
+  "external_adapted": {
+    "normal": {
+      "passed": 4,
+      "total": 4
+    },
+    "attack": {
+      "passed": 0,
+      "total": 0
+    },
+    "fault": {
+      "passed": 0,
+      "total": 0
+    }
+  },
+  "spec_sha256": "20b4663477f4bf773100210f82db0b67d86f066e855cd8167da7a8be1014d2de",
+  "model_returns": 22,
+  "exact_edits": 6,
+  "fallbacks": 1,
+  "median_model_seconds": 1.156,
+  "browser_single_exact_edit_ms": 159,
+  "real_payments": false,
+  "blind": false,
+  "live_results_match_current_code": true,
+  "regression_xml": "test-results/directed-tasks/regression.xml",
+  "claude_review": {
+    "regression_tests": 264,
+    "directed_live_passed": 6,
+    "directed_live_total": 6,
+    "matches_current_code": false,
+    "blind": false,
+    "merchant_scoring_implemented": false
+  },
+  "acceptance_review": {
+    "before_passed": 4,
+    "after_passed": 7,
+    "total": 7,
+    "author_visible": true,
+    "blind": false,
+    "matches_current_code": false,
+    "browser_this_round": "Tool profile busy; not rerun; earlier23 checks are historical",
+    "live_api_passed": true
+  },
+  "query_context": {
+    "browser_passed": true,
+    "checks": 23,
+    "real_bank": false,
+    "previous_challenge_scores_are_historical": false
+  },
+  "product_stress": {
+    "first_live": {
+      "normal": {
+        "passed": 6,
+        "total": 11
+      },
+      "attack": {
+        "passed": 1,
+        "total": 1
+      },
+      "fault": {
+        "passed": 0,
+        "total": 0
+      }
+    },
+    "first_rules": {
+      "normal": {
+        "passed": 4,
+        "total": 11
+      },
+      "attack": {
+        "passed": 1,
+        "total": 1
+      },
+      "fault": {
+        "passed": 0,
+        "total": 0
+      }
+    },
+    "final_live": {
+      "normal": {
+        "passed": 11,
+        "total": 11
+      },
+      "attack": {
+        "passed": 1,
+        "total": 1
+      },
+      "fault": {
+        "passed": 0,
+        "total": 0
+      }
+    },
+    "final_rules": {
+      "normal": {
+        "passed": 8,
+        "total": 11
+      },
+      "attack": {
+        "passed": 1,
+        "total": 1
+      },
+      "fault": {
+        "passed": 0,
+        "total": 0
+      }
+    },
+    "author_visible": true,
+    "blind_cases": 0,
+    "final_spec_sha256": "7c8dc79e1b6718dafc23763bd48088871f7285e0e04c7c133464febd07eb4172",
+    "note": "Development stress set; first failures preserved. Final oracle additionally checks recipients for S01-S03. Inputs unchanged."
+  },
+  "responsive": {
+    "layout_passed": 154,
+    "layout_total": 154,
+    "viewports": 14,
+    "font_stress_passed": 18,
+    "font_stress_total": 18,
+    "ui_recovery_passed": 13,
+    "ui_recovery_total": 13,
+    "physical_mobile_devices_tested": false,
+    "cross_browser_certified": false
+  }
+}

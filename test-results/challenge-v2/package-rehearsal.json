@@ -1,0 +1,15 @@
+{
+  "source_zip_sha256": "8b200f13e274ba09d6560df4c0082c4b7e504c6ba7ae52713f8a29d0455bd6fe",
+  "extraction_dir": "E:\\gitproject\\hackathon\\cashflow-guardian\\submission\\build\\rehearsal-jz_i9f6u",
+  "independent_checkout": true,
+  "fresh_dependency_install": false,
+  "shared_python_environment": "E:\\gitproject\\hackathon\\agent-hack\\personal-investment-os\\.venv\\Scripts\\python.exe",
+  "tests_exit_code": 0,
+  "tests_summary": "213 passed in 16.74s",
+  "app_exit_code": 0,
+  "passed": true,
+  "limitations": [
+    "Existing verified Python dependencies reused",
+    "No clean-machine dependency installation or production deploy"
+  ]
+}

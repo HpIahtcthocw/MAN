@@ -1,0 +1,78 @@
+{
+  "id": "N02",
+  "group": "normal",
+  "goal": "same_task_scheduled_880_school",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "transfer",
+      "status": "CLARIFY",
+      "task": "6cb169af48ec4196a4cfec6ebad46d57",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 8.86,
+        "prompt_tokens": 1392,
+        "completion_tokens": 280,
+        "structured_output_valid": true
+      }
+    },
+    {
+      "kind": "transfer",
+      "status": "READY",
+      "task": "6cb169af48ec4196a4cfec6ebad46d57",
+      "planner": "validated_edit",
+      "model_meta": {
+        "model_called": false,
+        "reason": "exact_scoped_edit",
+        "structured_output_valid": true
+      }
+    },
+    {
+      "kind": "transfer",
+      "status": "READY",
+      "task": "6cb169af48ec4196a4cfec6ebad46d57",
+      "planner": "validated_edit",
+      "model_meta": {
+        "model_called": false,
+        "reason": "exact_scoped_edit",
+        "structured_output_valid": true
+      }
+    },
+    {
+      "kind": "transfer",
+      "status": "READY",
+      "task": "6cb169af48ec4196a4cfec6ebad46d57",
+      "planner": "validated_edit",
+      "model_meta": {
+        "model_called": false,
+        "reason": "exact_scoped_edit",
+        "structured_output_valid": true
+      }
+    }
+  ],
+  "observed": {
+    "operation": {
+      "id": "7e8d86f8b4884f7bab4285462d0bb683",
+      "owner": "83bfae6fd40f42a7895c1fb216a0170b",
+      "kind": "transfer",
+      "payload": {
+        "amount_cents": 88000,
+        "currency": "CNY",
+        "due_day": "2026-10-27",
+        "note": "给张伟转600",
+        "recipient": "zhang-school"
+      },
+      "binding": "0ed115e02d516924700578ad44452dc1cb30fda56d28d173af36c259ced23168",
+      "status": "SCHEDULED",
+      "created": 1792423111.5684848,
+      "idem": "task_6cb169af48ec4196a4cfec6ebad46d57_7d69f3e1b71ed86e",
+      "level": "YELLOW",
+      "approved": 1792423111.660214
+    }
+  },
+  "operation_count": 1,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 9.34
+}

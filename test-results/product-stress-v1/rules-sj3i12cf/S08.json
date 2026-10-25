@@ -1,0 +1,28 @@
+{
+  "id": "S08",
+  "group": "normal",
+  "goal": "cloud_expense_58",
+  "passed": false,
+  "turns": [
+    {
+      "kind": "subscriptions",
+      "status": "CONSENT_REQUIRED",
+      "task": "0fb210ec38eb4aaa8ea8b5236fa93239",
+      "planner": "rule_baseline",
+      "model_meta": null
+    }
+  ],
+  "observed": {
+    "kind": "subscriptions",
+    "status": "REVIEW",
+    "text": "这些是银行协议与对应扣费记录。用途可能相近，是否还需要由你决定。",
+    "draft": null,
+    "analysis": null,
+    "pending_choices": [],
+    "source_task_id": null
+  },
+  "operation_count": 0,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 0.05
+}

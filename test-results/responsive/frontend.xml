@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+	<testcase name="transport sends same-origin CSRF and exact payload without retry" time="0.000969" classname="test"/>
+	<testcase name="connection loss never automatically repeats a financial POST" time="0.001140" classname="test"/>
+	<testcase name="non-JSON gateway error is recoverable and does not leak its body" time="0.000267" classname="test"/>
+	<testcase name="stale authorization version preserves typed error for refresh only" time="0.000232" classname="test"/>
+	<testcase name="aborted request reports uncertain outcome rather than failed payment" time="0.000184" classname="test"/>
+	<!-- tests 5 -->
+	<!-- suites 0 -->
+	<!-- pass 5 -->
+	<!-- fail 0 -->
+	<!-- cancelled 0 -->
+	<!-- skipped 0 -->
+	<!-- todo 0 -->
+	<!-- duration_ms 170.303 -->
+</testsuites>

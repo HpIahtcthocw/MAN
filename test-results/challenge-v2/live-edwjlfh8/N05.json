@@ -1,0 +1,464 @@
+{
+  "id": "N05",
+  "group": "normal",
+  "goal": "two_month_delta_zero",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "bills",
+      "status": "DONE",
+      "task": "ac16d1edf6594c96b412afec37cf83c4",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 1.266,
+        "prompt_tokens": 966,
+        "completion_tokens": 49,
+        "structured_output_valid": true
+      }
+    }
+  ],
+  "observed": {
+    "kind": "bills",
+    "status": "DONE",
+    "text": "账单范围和金额已按银行流水计算，下面保留原始依据。",
+    "draft": null,
+    "analysis": {
+      "balance_cents": 975900,
+      "reserved_cents": 0,
+      "available_cents": 975900,
+      "filters": {
+        "category": null,
+        "merchant_contains": null,
+        "exclude": []
+      },
+      "coverage": {
+        "first_day": "2026-07-02",
+        "last_day": "2026-10-25",
+        "note": "我只能看到这个银行账户里已有的记录；现金、微信、支付宝里的花销我看不到。"
+      },
+      "period": "2026年09月",
+      "scope": {
+        "start": "2026-09-01",
+        "end": "2026-09-30"
+      },
+      "query": {
+        "scope": {
+          "start": "2026-09-01",
+          "end": "2026-09-30"
+        },
+        "filters": {
+          "category": null,
+          "merchant_contains": null,
+          "exclude": []
+        },
+        "comparison_scopes": [
+          {
+            "start": "2026-09-01",
+            "end": "2026-09-30"
+          },
+          {
+            "start": "2026-08-01",
+            "end": "2026-08-31"
+          }
+        ]
+      },
+      "expense_cents": 384400,
+      "income_cents": 435000,
+      "categories": {
+        "医药": 4500,
+        "居住": 290500,
+        "通讯": 3900,
+        "交通": 700,
+        "订阅": 11200,
+        "购物": 8600,
+        "餐饮": 65000
+      },
+      "rows": [
+        {
+          "id": "5146ab0693a0482e869470bf6e8e0abb",
+          "owner": "2632d547c0db40ff802ef82a37cb572f",
+          "amount": -4500,
+          "merchant": "老百姓大药房",
+          "category": "医药",
+          "day": "2026-09-25",
+          "source": "pharmacy12026-09-25"
+        },
+        {
+          "id": "512e3721b9cb4c639d4b28c08fb2cccc",
+          "owner": "2632d547c0db40ff802ef82a37cb572f",
+          "amount": -30500,
+          "merchant": "国网电费",
+          "category": "居住",
+          "day": "2026-09-18",
+          "source": "power12026-09-18"
+        },
+        {
+          "id": "7efa296e48d649cb9caa4bfa3acaf51d",
+          "owner": "2632d547c0db40ff802ef82a37cb572f",
+          "amount": -3900,
+          "merchant": "中国移动",
+          "category": "通讯",
+          "day": "2026-09-15",
+          "source": "mobile12026-09-15"
+        },
+        {
+          "id": "1b2415d78d53451bb8a65125be621ecf",
+          "owner": "2632d547c0db40ff802ef82a37cb572f",
+          "amount": -700,
+          "merchant": "地铁乘车码",
+          "category": "交通",
+          "day": "2026-09-13",
+          "source": "metro12026-09-13"
+        },
+        {
+          "id": "24f4c37ffdc34bcd9698ac685278965d",
+          "owner": "2632d547c0db40ff802ef82a37cb572f",
+          "amount": -1500,
+          "merchant": "音乐会员",
+          "category": "订阅",
+          "day": "2026-09-12",
+          "source": "music12026-09-12"
+        },
+        {
+          "id": "f7d2f6e1c2e64992bdf1cfc733b73ac4",
+          "owner": "2632d547c0db40ff802ef82a37cb572f",
+          "amount": 435000,
+          "merchant": "养老金代发",
+          "category": "收入",
+          "day": "2026-09-10",
+          "source": "pension12026-09-10"
+        },
+        {
+          "id": "4c64d0846a9348d18c34da8ca5e1b39b",
+          "owner": "2632d547c0db40ff802ef82a37cb572f",
+          "amount": -8600,
+          "merchant": "永辉超市",
+          "category": "购物",
+          "day": "2026-09-09",
+          "source": "mart12026-09-09"
+        },
+        {
+          "id": "0accf352902146438e63a8dd18e37af4",
+          "owner": "2632d547c0db40ff802ef82a37cb572f",
+          "amount": -2900,
+          "merchant": "云盘会员 A",
+          "category": "订阅",
+          "day": "2026-09-05",
+          "source": "cloud-a2026-09-05"
+        },
+        {
+          "id": "39f16d9719c344e0b35002b4a650bb72",
+          "owner": "2632d547c0db40ff802ef82a37cb572f",
+          "amount": -2900,
+          "merchant": "云盘会员 B",
+          "category": "订阅",
+          "day": "2026-09-05",
+          "source": "cloud-b2026-09-05"
+        },
+        {
+          "id": "7b7280527e054144ad7c9ac1010a3851",
+          "owner": "2632d547c0db40ff802ef82a37cb572f",
+          "amount": -3900,
+          "merchant": "视频会员",
+          "category": "订阅",
+          "day": "2026-09-05",
+          "source": "video2026-09-05"
+        },
+        {
+          "id": "e6302b5ec0ce4cd78136901a597ddad5",
+          "owner": "2632d547c0db40ff802ef82a37cb572f",
+          "amount": -65000,
+          "merchant": "日常餐饮",
+          "category": "餐饮",
+          "day": "2026-09-05",
+          "source": "food2026-09-05"
+        },
+        {
+          "id": "066522d02b7e44ea8df9f42723dbb9a5",
+          "owner": "2632d547c0db40ff802ef82a37cb572f",
+          "amount": -260000,
+          "merchant": "房租-林女士",
+          "category": "居住",
+          "day": "2026-09-02",
+          "source": "rent12026-09-02"
+        }
+      ],
+      "anomalies": [],
+      "plain_summary": "钱主要花在：居住 2905元、餐饮 650元、订阅 112元。",
+      "comparison_periods": [
+        {
+          "period": "2026-09",
+          "label": "2026年09月",
+          "start": "2026-09-01",
+          "end": "2026-09-30",
+          "expense_cents": 384400,
+          "income_cents": 435000,
+          "categories": {
+            "医药": 4500,
+            "居住": 290500,
+            "通讯": 3900,
+            "交通": 700,
+            "订阅": 11200,
+            "购物": 8600,
+            "餐饮": 65000
+          },
+          "rows": [
+            {
+              "id": "5146ab0693a0482e869470bf6e8e0abb",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -4500,
+              "merchant": "老百姓大药房",
+              "category": "医药",
+              "day": "2026-09-25",
+              "source": "pharmacy12026-09-25"
+            },
+            {
+              "id": "512e3721b9cb4c639d4b28c08fb2cccc",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -30500,
+              "merchant": "国网电费",
+              "category": "居住",
+              "day": "2026-09-18",
+              "source": "power12026-09-18"
+            },
+            {
+              "id": "7efa296e48d649cb9caa4bfa3acaf51d",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -3900,
+              "merchant": "中国移动",
+              "category": "通讯",
+              "day": "2026-09-15",
+              "source": "mobile12026-09-15"
+            },
+            {
+              "id": "1b2415d78d53451bb8a65125be621ecf",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -700,
+              "merchant": "地铁乘车码",
+              "category": "交通",
+              "day": "2026-09-13",
+              "source": "metro12026-09-13"
+            },
+            {
+              "id": "24f4c37ffdc34bcd9698ac685278965d",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -1500,
+              "merchant": "音乐会员",
+              "category": "订阅",
+              "day": "2026-09-12",
+              "source": "music12026-09-12"
+            },
+            {
+              "id": "f7d2f6e1c2e64992bdf1cfc733b73ac4",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": 435000,
+              "merchant": "养老金代发",
+              "category": "收入",
+              "day": "2026-09-10",
+              "source": "pension12026-09-10"
+            },
+            {
+              "id": "4c64d0846a9348d18c34da8ca5e1b39b",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -8600,
+              "merchant": "永辉超市",
+              "category": "购物",
+              "day": "2026-09-09",
+              "source": "mart12026-09-09"
+            },
+            {
+              "id": "0accf352902146438e63a8dd18e37af4",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -2900,
+              "merchant": "云盘会员 A",
+              "category": "订阅",
+              "day": "2026-09-05",
+              "source": "cloud-a2026-09-05"
+            },
+            {
+              "id": "39f16d9719c344e0b35002b4a650bb72",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -2900,
+              "merchant": "云盘会员 B",
+              "category": "订阅",
+              "day": "2026-09-05",
+              "source": "cloud-b2026-09-05"
+            },
+            {
+              "id": "7b7280527e054144ad7c9ac1010a3851",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -3900,
+              "merchant": "视频会员",
+              "category": "订阅",
+              "day": "2026-09-05",
+              "source": "video2026-09-05"
+            },
+            {
+              "id": "e6302b5ec0ce4cd78136901a597ddad5",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -65000,
+              "merchant": "日常餐饮",
+              "category": "餐饮",
+              "day": "2026-09-05",
+              "source": "food2026-09-05"
+            },
+            {
+              "id": "066522d02b7e44ea8df9f42723dbb9a5",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -260000,
+              "merchant": "房租-林女士",
+              "category": "居住",
+              "day": "2026-09-02",
+              "source": "rent12026-09-02"
+            }
+          ]
+        },
+        {
+          "period": "2026-08",
+          "label": "2026年08月",
+          "start": "2026-08-01",
+          "end": "2026-08-31",
+          "expense_cents": 388550,
+          "income_cents": 435000,
+          "categories": {
+            "医药": 8600,
+            "购物": 12350,
+            "居住": 286800,
+            "通讯": 3900,
+            "订阅": 11200,
+            "交通": 700,
+            "餐饮": 65000
+          },
+          "rows": [
+            {
+              "id": "6447958e1f464f5ba5e2b2d098920cc9",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -8600,
+              "merchant": "老百姓大药房",
+              "category": "医药",
+              "day": "2026-08-21",
+              "source": "pharmacy22026-08-21"
+            },
+            {
+              "id": "9ac0b745fa6a443e883bbb155fb0d908",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -12350,
+              "merchant": "永辉超市",
+              "category": "购物",
+              "day": "2026-08-19",
+              "source": "mart22026-08-19"
+            },
+            {
+              "id": "b56b03296ca34c9cb4085c9239fdfea7",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -26800,
+              "merchant": "国网电费",
+              "category": "居住",
+              "day": "2026-08-18",
+              "source": "power22026-08-18"
+            },
+            {
+              "id": "cb00925af02c4918b4f79259db334625",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -3900,
+              "merchant": "中国移动",
+              "category": "通讯",
+              "day": "2026-08-15",
+              "source": "mobile22026-08-15"
+            },
+            {
+              "id": "f801485cc924481a81bd98308269f5c4",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -1500,
+              "merchant": "音乐会员",
+              "category": "订阅",
+              "day": "2026-08-12",
+              "source": "music22026-08-12"
+            },
+            {
+              "id": "007f6e0730c44223955d4ef340484c67",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": 435000,
+              "merchant": "养老金代发",
+              "category": "收入",
+              "day": "2026-08-10",
+              "source": "pension22026-08-10"
+            },
+            {
+              "id": "ab1ac118fe5a45719f4a8f806ba47371",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -700,
+              "merchant": "地铁乘车码",
+              "category": "交通",
+              "day": "2026-08-06",
+              "source": "metro2a2026-08-06"
+            },
+            {
+              "id": "1fd35c69f2c542df8a89a44021fd7dad",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -65000,
+              "merchant": "日常餐饮",
+              "category": "餐饮",
+              "day": "2026-08-05",
+              "source": "food2026-08-05"
+            },
+            {
+              "id": "4834eb17275c4ae195f47773fdebbda4",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -2900,
+              "merchant": "云盘会员 A",
+              "category": "订阅",
+              "day": "2026-08-05",
+              "source": "cloud-a2026-08-05"
+            },
+            {
+              "id": "d4166468b4be4c2f8791260220da0491",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -2900,
+              "merchant": "云盘会员 B",
+              "category": "订阅",
+              "day": "2026-08-05",
+              "source": "cloud-b2026-08-05"
+            },
+            {
+              "id": "f65ba7527623459f8060d6e62d1fe386",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -3900,
+              "merchant": "视频会员",
+              "category": "订阅",
+              "day": "2026-08-05",
+              "source": "video2026-08-05"
+            },
+            {
+              "id": "4272f4eea0a7493aabb7f5f21b612c4b",
+              "owner": "2632d547c0db40ff802ef82a37cb572f",
+              "amount": -260000,
+              "merchant": "房租-林女士",
+              "category": "居住",
+              "day": "2026-08-02",
+              "source": "rent22026-08-02"
+            }
+          ]
+        }
+      ],
+      "delta_cents": -4150,
+      "category_deltas": {
+        "医药": -4100,
+        "购物": -3750,
+        "交通": 0,
+        "订阅": 0,
+        "餐饮": 0,
+        "通讯": 0,
+        "居住": 3700
+      },
+      "query_verification": "model_host_agreement"
+    },
+    "pending_choices": null,
+    "source_task_id": null
+  },
+  "operation_count": 0,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 1.34
+}

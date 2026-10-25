@@ -1,0 +1,84 @@
+{
+  "id": "N02",
+  "group": "normal",
+  "goal": "same_task_scheduled_880_school",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "transfer",
+      "status": "CLARIFY",
+      "task": "91edbfd50308438e9821f25e7a8b2f89",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 8.719,
+        "prompt_tokens": 1392,
+        "completion_tokens": 283,
+        "structured_output_valid": true
+      }
+    },
+    {
+      "kind": "transfer",
+      "status": "READY",
+      "task": "91edbfd50308438e9821f25e7a8b2f89",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 9.156,
+        "prompt_tokens": 1446,
+        "completion_tokens": 313,
+        "structured_output_valid": true
+      }
+    },
+    {
+      "kind": "transfer",
+      "status": "READY",
+      "task": "91edbfd50308438e9821f25e7a8b2f89",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 9.0,
+        "prompt_tokens": 1467,
+        "completion_tokens": 272,
+        "structured_output_valid": true
+      }
+    },
+    {
+      "kind": "transfer",
+      "status": "READY",
+      "task": "91edbfd50308438e9821f25e7a8b2f89",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 8.75,
+        "prompt_tokens": 1481,
+        "completion_tokens": 286,
+        "structured_output_valid": true
+      }
+    }
+  ],
+  "observed": {
+    "operation": {
+      "id": "be19f76e184c488bac5809e84c94d9d9",
+      "owner": "bf74a0c63fff4ae0a66cf0ec67cb35e7",
+      "kind": "transfer",
+      "payload": {
+        "amount_cents": 88000,
+        "currency": "CNY",
+        "due_day": "2026-10-27",
+        "note": "给张伟转600",
+        "recipient": "zhang-school"
+      },
+      "binding": "b2d0985e33a0d0ea505a3fab46c9335d2f7f386ba5e6522f8dc5ac02dd87d5e0",
+      "status": "SCHEDULED",
+      "created": 1792422429.952643,
+      "idem": "task_91edbfd50308438e9821f25e7a8b2f89_7d69f3e1b71ed86e",
+      "level": "YELLOW",
+      "approved": 1792422430.0008073
+    }
+  },
+  "operation_count": 1,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 35.95
+}

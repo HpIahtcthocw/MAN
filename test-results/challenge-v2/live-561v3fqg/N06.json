@@ -1,0 +1,47 @@
+{
+  "id": "N06",
+  "group": "normal",
+  "goal": "clarify_then_90_days",
+  "passed": false,
+  "turns": [
+    {
+      "kind": "bills",
+      "status": "CLARIFY",
+      "task": "8f99041c8c6e4b228b427cbdc38a5216",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 1.078,
+        "prompt_tokens": 964,
+        "completion_tokens": 48,
+        "structured_output_valid": true
+      }
+    },
+    {
+      "kind": "bills",
+      "status": "CLARIFY",
+      "task": "8f99041c8c6e4b228b427cbdc38a5216",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 1.5,
+        "prompt_tokens": 981,
+        "completion_tokens": 79,
+        "structured_output_valid": true
+      }
+    }
+  ],
+  "observed": {
+    "kind": "bills",
+    "status": "CLARIFY",
+    "text": "日期、筛选或排除条件尚未核对一致，请说明具体范围；当前不会返回其他范围的金额。",
+    "draft": null,
+    "analysis": null,
+    "pending_choices": null,
+    "source_task_id": null
+  },
+  "operation_count": 0,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 2.75
+}

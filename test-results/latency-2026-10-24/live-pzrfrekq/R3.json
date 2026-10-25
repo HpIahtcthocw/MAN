@@ -1,0 +1,35 @@
+{
+  "id": "R3",
+  "passed": true,
+  "turns": [
+    {
+      "input": "9月外卖花了多少",
+      "planner": "llm",
+      "status": "CLARIFY",
+      "text": "这次提到的分类或商户尚未匹配，请核对具体名称；当前不会返回整个期间的金额。",
+      "query_proposal": {
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-30",
+        "period_evidence": "9月",
+        "category": "外卖",
+        "category_evidence": "外卖",
+        "merchant": null,
+        "merchant_evidence": null,
+        "exclude": [],
+        "compare_start": null,
+        "compare_end": null,
+        "compare_evidence": null
+      },
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 6.735,
+        "prompt_tokens": 881,
+        "completion_tokens": 95,
+        "structured_output_valid": true
+      },
+      "draft": null,
+      "analysis": null
+    }
+  ],
+  "payment_rows": 0
+}

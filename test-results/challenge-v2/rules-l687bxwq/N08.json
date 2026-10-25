@@ -1,0 +1,87 @@
+{
+  "id": "N08",
+  "group": "normal",
+  "goal": "cloud_expense_58",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "bills",
+      "status": "DONE",
+      "task": "b92bfd3fe8a648169e08d9cdb3c9c0b5",
+      "planner": "rule_baseline",
+      "model_meta": null
+    }
+  ],
+  "observed": {
+    "kind": "bills",
+    "status": "DONE",
+    "text": "账单范围和金额已按银行流水计算，下面保留原始依据。",
+    "draft": null,
+    "analysis": {
+      "balance_cents": 975900,
+      "reserved_cents": 0,
+      "available_cents": 975900,
+      "filters": {
+        "category": null,
+        "merchant_contains": "云盘",
+        "exclude": []
+      },
+      "coverage": {
+        "first_day": "2026-07-02",
+        "last_day": "2026-10-25",
+        "note": "我只能看到这个银行账户里已有的记录；现金、微信、支付宝里的花销我看不到。"
+      },
+      "period": "2026年09月",
+      "scope": {
+        "start": "2026-09-01",
+        "end": "2026-09-30"
+      },
+      "query": {
+        "scope": {
+          "start": "2026-09-01",
+          "end": "2026-09-30"
+        },
+        "filters": {
+          "category": null,
+          "merchant_contains": "云盘",
+          "exclude": []
+        },
+        "comparison_scopes": []
+      },
+      "expense_cents": 5800,
+      "income_cents": 0,
+      "categories": {
+        "订阅": 5800
+      },
+      "rows": [
+        {
+          "id": "14c9612cc0d4409eb198644ad025149f",
+          "owner": "e48f004a0b5b41efa59871603b1c69db",
+          "amount": -2900,
+          "merchant": "云盘会员 B",
+          "category": "订阅",
+          "day": "2026-09-05",
+          "source": "cloud-b2026-09-05"
+        },
+        {
+          "id": "6426a591be93478e909dbe3282e3c057",
+          "owner": "e48f004a0b5b41efa59871603b1c69db",
+          "amount": -2900,
+          "merchant": "云盘会员 A",
+          "category": "订阅",
+          "day": "2026-09-05",
+          "source": "cloud-a2026-09-05"
+        }
+      ],
+      "anomalies": [],
+      "plain_summary": "钱主要花在：订阅 58元。",
+      "query_verification": "host_only"
+    },
+    "pending_choices": null,
+    "source_task_id": null
+  },
+  "operation_count": 0,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 0.06
+}

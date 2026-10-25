@@ -1,0 +1,36 @@
+{
+  "id": "N10",
+  "group": "normal",
+  "goal": "revoke_prepared_cancellation",
+  "passed": false,
+  "turns": [
+    {
+      "kind": "subscriptions",
+      "status": "CONSENT_REQUIRED",
+      "task": "e8201920c40141b8ad944bea66475433",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 1.312,
+        "prompt_tokens": 962,
+        "completion_tokens": 19,
+        "structured_output_valid": true
+      }
+    },
+    {
+      "kind": "subscriptions",
+      "status": "PAUSED",
+      "task": "e8201920c40141b8ad944bea66475433",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 1.672,
+        "prompt_tokens": 1061,
+        "completion_tokens": 65,
+        "structured_output_valid": true
+      }
+    }
+  ],
+  "error_type": "Denied",
+  "error_code": "TASK_PAUSED"
+}

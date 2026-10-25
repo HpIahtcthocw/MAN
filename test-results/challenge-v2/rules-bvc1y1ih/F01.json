@@ -1,0 +1,16 @@
+{
+  "id": "F01",
+  "group": "fault",
+  "goal": "timeout_after_accept_restart_one_debit",
+  "passed": true,
+  "turns": [],
+  "observed": {
+    "payment_rows": 1,
+    "balance_cents": 915900,
+    "recovered": "SUCCEEDED"
+  },
+  "operation_count": 1,
+  "payment_rows": 1,
+  "audit_valid": true,
+  "duration_seconds": 0.11
+}

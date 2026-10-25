@@ -1,0 +1,64 @@
+{
+  "skill": "vibe-preflight",
+  "scope": "Public source archive plus in-process FastAPI tests, no external deploy",
+  "checks": [
+    {
+      "name": "Private files excluded from archive",
+      "passed": true,
+      "paths": []
+    },
+    {
+      "name": "Exact local credential not present in archive",
+      "passed": true
+    },
+    {
+      "name": "Build inputs present",
+      "passed": true
+    },
+    {
+      "name": "Skill credential-pattern scan, public archive",
+      "passed": true,
+      "findings": []
+    },
+    {
+      "name": "Private HTTP paths unavailable",
+      "passed": true
+    },
+    {
+      "name": "No-session state access rejected",
+      "passed": true
+    },
+    {
+      "name": "Mutation without CSRF rejected",
+      "passed": true
+    },
+    {
+      "name": "Cross-origin mutation rejected",
+      "passed": true
+    },
+    {
+      "name": "Local preview security headers",
+      "passed": true
+    },
+    {
+      "name": "Health does not return credential",
+      "passed": true
+    },
+    {
+      "name": "Protocol query consent still separate",
+      "passed": true
+    }
+  ],
+  "actual_credential_values_logged": false,
+  "passed": true,
+  "not_applicable": [
+    "Supabase RLS: not used",
+    "Production HSTS: loopback HTTP only"
+  ],
+  "limitations": [
+    "Regex scan is heuristic; not third-party penetration testing",
+    "Dependency names already installed and build verified; no fresh registry/provenance audit",
+    "Only synthetic loopback authentication tested",
+    "Prompt injection is covered by frozen boundary cases, not all prompt attacks"
+  ]
+}

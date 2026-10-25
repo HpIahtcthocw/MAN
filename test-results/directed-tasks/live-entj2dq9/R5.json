@@ -1,0 +1,105 @@
+{
+  "id": "R5",
+  "passed": true,
+  "turns": [
+    {
+      "input": "给房东转600",
+      "planner": "llm",
+      "status": "READY",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 9.672,
+        "prompt_tokens": 1950,
+        "completion_tokens": 291,
+        "structured_output_valid": true
+      },
+      "draft": {
+        "amount": "600",
+        "recipient": "landlord",
+        "recipient_hint": "landlord",
+        "due_day": "2026-10-20",
+        "reference_last": false
+      },
+      "analysis": null
+    },
+    {
+      "input": "不转600了，转500，周五",
+      "planner": "llm",
+      "status": "READY",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 8.063,
+        "prompt_tokens": 2019,
+        "completion_tokens": 297,
+        "structured_output_valid": true
+      },
+      "draft": {
+        "amount": "500",
+        "due_day": "2026-10-23",
+        "recipient": "landlord",
+        "recipient_hint": "landlord",
+        "reference_last": false
+      },
+      "analysis": null
+    },
+    {
+      "input": "先别转了",
+      "planner": "llm",
+      "status": "PAUSED",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 9.031,
+        "prompt_tokens": 2034,
+        "completion_tokens": 284,
+        "structured_output_valid": true
+      },
+      "draft": {
+        "amount": "500",
+        "due_day": "2026-10-23",
+        "recipient": "landlord",
+        "recipient_hint": "landlord",
+        "reference_last": false
+      },
+      "analysis": null
+    },
+    {
+      "input": "改成周五",
+      "planner": "validated_edit",
+      "status": "PAUSED",
+      "model_meta": {
+        "model_called": false,
+        "reason": "exact_scoped_edit",
+        "structured_output_valid": true
+      },
+      "draft": {
+        "amount": "500",
+        "due_day": "2026-10-23",
+        "recipient": "landlord",
+        "recipient_hint": "landlord",
+        "reference_last": false
+      },
+      "analysis": null
+    },
+    {
+      "input": "继续办理",
+      "planner": "llm",
+      "status": "READY",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 10.141,
+        "prompt_tokens": 2060,
+        "completion_tokens": 279,
+        "structured_output_valid": true
+      },
+      "draft": {
+        "amount": "500",
+        "due_day": "2026-10-23",
+        "recipient": "landlord",
+        "recipient_hint": "landlord",
+        "reference_last": false
+      },
+      "analysis": null
+    }
+  ],
+  "payment_rows": 0
+}

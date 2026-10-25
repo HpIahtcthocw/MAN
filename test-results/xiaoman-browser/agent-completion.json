@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-19",
+  "environment": "real Chromium, 430x950, synthetic bank, live qwen3.8-flash",
+  "method": "Tool-orchestrated Playwright assertions; browser traces also recorded in Codex tool calls",
+  "journeys": [
+    {
+      "name": "多轮预约",
+      "passed": true,
+      "same_task": true,
+      "refresh_restored": true,
+      "recipient": "zhang-school",
+      "amount_cents": 60000,
+      "minimum_balance_cents": 300000,
+      "status": "SCHEDULED",
+      "screenshot": "live-multiturn.png"
+    },
+    {
+      "name": "代扣改口再办理",
+      "passed": true,
+      "A": "using",
+      "old_draft": "CANCELLED",
+      "bank_cancelled_count": 1,
+      "screenshot": "live-subscription.png"
+    },
+    {
+      "name": "反诈解释与接管",
+      "passed": true,
+      "quote_kind": "safety_info",
+      "held_status": "HANDOFF",
+      "ticket_persisted": true,
+      "operations": 0,
+      "screenshot": "live-handoff.png"
+    },
+    {
+      "name": "响应丢失后回查",
+      "passed": true,
+      "execute_requests": 1,
+      "payment_rows": 1,
+      "payment_amount_cents": -60000,
+      "balance_cents": 915900,
+      "refresh_restored": true,
+      "screenshot": "live-recovery.png"
+    }
+  ],
+  "limitations": [
+    "Synthetic bank receipts only",
+    "No real MFA, bank seat or microphone trial",
+    "Not a blind usability study"
+  ]
+}

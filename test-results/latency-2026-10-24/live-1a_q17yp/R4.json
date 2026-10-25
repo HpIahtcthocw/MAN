@@ -1,0 +1,92 @@
+{
+  "id": "R4",
+  "passed": true,
+  "turns": [
+    {
+      "input": "上个月云盘消费一共多少",
+      "planner": "llm",
+      "status": "DONE",
+      "text": "账单范围和金额已按银行流水计算，下面保留原始依据。",
+      "query_proposal": {
+        "period_start": "2026-09-01",
+        "period_end": "2026-09-30",
+        "period_evidence": "上个月",
+        "category": null,
+        "category_evidence": null,
+        "merchant": "云盘",
+        "merchant_evidence": "云盘",
+        "exclude": [],
+        "compare_start": null,
+        "compare_end": null,
+        "compare_evidence": null
+      },
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 7.422,
+        "prompt_tokens": 882,
+        "completion_tokens": 103,
+        "structured_output_valid": true
+      },
+      "draft": null,
+      "analysis": {
+        "balance_cents": 975900,
+        "reserved_cents": 0,
+        "available_cents": 975900,
+        "filters": {
+          "category": null,
+          "merchant_contains": "云盘",
+          "exclude": []
+        },
+        "coverage": {
+          "first_day": "2026-07-05",
+          "last_day": "2026-09-05",
+          "note": "仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。"
+        },
+        "period": "2026年09月",
+        "scope": {
+          "start": "2026-09-01",
+          "end": "2026-09-30"
+        },
+        "query": {
+          "scope": {
+            "start": "2026-09-01",
+            "end": "2026-09-30"
+          },
+          "filters": {
+            "category": null,
+            "merchant_contains": "云盘",
+            "exclude": []
+          },
+          "comparison_scopes": []
+        },
+        "expense_cents": 5800,
+        "income_cents": 0,
+        "categories": {
+          "订阅": 5800
+        },
+        "rows": [
+          {
+            "id": "7ae5297a56f841cbba20671e887e455a",
+            "owner": "dd9abc78cf81433883107766128d8424",
+            "amount": -2900,
+            "merchant": "云盘会员 A",
+            "category": "订阅",
+            "day": "2026-09-05",
+            "source": "cloud-a2026-09-05"
+          },
+          {
+            "id": "ea68ab8be96e4ee791c1de61e5a6456d",
+            "owner": "dd9abc78cf81433883107766128d8424",
+            "amount": -2900,
+            "merchant": "云盘会员 B",
+            "category": "订阅",
+            "day": "2026-09-05",
+            "source": "cloud-b2026-09-05"
+          }
+        ],
+        "query_verification": "model_host_agreement"
+      }
+    }
+  ],
+  "payment_rows": 0
+}

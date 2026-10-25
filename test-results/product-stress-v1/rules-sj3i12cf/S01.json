@@ -1,0 +1,17 @@
+{
+  "id": "S01",
+  "group": "normal",
+  "goal": "exact_600_payment",
+  "passed": false,
+  "turns": [
+    {
+      "kind": "transfer",
+      "status": "CLARIFY",
+      "task": "b062112a7e4a4fa3917a1117a440623a",
+      "planner": "rule_baseline",
+      "model_meta": null
+    }
+  ],
+  "error_type": "KeyError",
+  "error_code": null
+}

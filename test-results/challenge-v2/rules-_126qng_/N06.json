@@ -1,0 +1,133 @@
+{
+  "id": "N06",
+  "group": "normal",
+  "goal": "clarify_then_90_days",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "bills",
+      "status": "CLARIFY",
+      "task": "a5a997aa47df4e79b5f14089a0e91bb9",
+      "planner": "rule_baseline",
+      "model_meta": null
+    },
+    {
+      "kind": "bills",
+      "status": "DONE",
+      "task": "a5a997aa47df4e79b5f14089a0e91bb9",
+      "planner": "rule_baseline",
+      "model_meta": null
+    }
+  ],
+  "observed": {
+    "kind": "bills",
+    "status": "DONE",
+    "text": "账单范围和金额已按银行流水计算，下面保留原始依据。",
+    "draft": null,
+    "analysis": {
+      "balance_cents": 975900,
+      "reserved_cents": 0,
+      "available_cents": 975900,
+      "filters": {
+        "category": null,
+        "merchant_contains": null
+      },
+      "coverage": {
+        "first_day": "2026-07-05",
+        "last_day": "2026-09-05",
+        "note": "仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。"
+      },
+      "period": "2026-07-23 至 2026-10-20",
+      "scope": {
+        "start": "2026-07-23",
+        "end": "2026-10-20"
+      },
+      "expense_cents": 149400,
+      "income_cents": 0,
+      "categories": {
+        "订阅": 19400,
+        "餐饮": 130000
+      },
+      "rows": [
+        {
+          "id": "488179a6caa547a08bc042665d677e8f",
+          "owner": "f7321f0d1e2e4ad3a19cc07904c459ef",
+          "amount": -2900,
+          "merchant": "云盘会员 B",
+          "category": "订阅",
+          "day": "2026-09-05",
+          "source": "cloud-b2026-09-05"
+        },
+        {
+          "id": "56b28e5306b443338382d032034b0436",
+          "owner": "f7321f0d1e2e4ad3a19cc07904c459ef",
+          "amount": -65000,
+          "merchant": "日常餐饮",
+          "category": "餐饮",
+          "day": "2026-09-05",
+          "source": "food2026-09-05"
+        },
+        {
+          "id": "d2d124711ee1430e8b0f72b63be362e7",
+          "owner": "f7321f0d1e2e4ad3a19cc07904c459ef",
+          "amount": -3900,
+          "merchant": "视频会员",
+          "category": "订阅",
+          "day": "2026-09-05",
+          "source": "video2026-09-05"
+        },
+        {
+          "id": "e3656177bda74f28a9ff92e26e2b5417",
+          "owner": "f7321f0d1e2e4ad3a19cc07904c459ef",
+          "amount": -2900,
+          "merchant": "云盘会员 A",
+          "category": "订阅",
+          "day": "2026-09-05",
+          "source": "cloud-a2026-09-05"
+        },
+        {
+          "id": "0e12354d2cea4e768f82e71dce266814",
+          "owner": "f7321f0d1e2e4ad3a19cc07904c459ef",
+          "amount": -3900,
+          "merchant": "视频会员",
+          "category": "订阅",
+          "day": "2026-08-05",
+          "source": "video2026-08-05"
+        },
+        {
+          "id": "24dff569e01b41bb8ebea81ae0eaf3b6",
+          "owner": "f7321f0d1e2e4ad3a19cc07904c459ef",
+          "amount": -2900,
+          "merchant": "云盘会员 A",
+          "category": "订阅",
+          "day": "2026-08-05",
+          "source": "cloud-a2026-08-05"
+        },
+        {
+          "id": "9274257849344385b9353b11b3b85864",
+          "owner": "f7321f0d1e2e4ad3a19cc07904c459ef",
+          "amount": -2900,
+          "merchant": "云盘会员 B",
+          "category": "订阅",
+          "day": "2026-08-05",
+          "source": "cloud-b2026-08-05"
+        },
+        {
+          "id": "a06d6fb6d81a4cacb8ae4b8188ca8353",
+          "owner": "f7321f0d1e2e4ad3a19cc07904c459ef",
+          "amount": -65000,
+          "merchant": "日常餐饮",
+          "category": "餐饮",
+          "day": "2026-08-05",
+          "source": "food2026-08-05"
+        }
+      ]
+    },
+    "pending_choices": null,
+    "source_task_id": null
+  },
+  "operation_count": 0,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 0.06
+}

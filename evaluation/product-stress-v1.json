@@ -1,0 +1,18 @@
+{
+  "version": "PRODUCT_STRESS_V1_AUTHOR_VISIBLE_NOT_BLIND",
+  "description": "新表达首轮压力评测。作者可见，非队友盲测；先保留首轮，不按失败改题。固定合成银行终态断言。",
+  "cases": [
+    {"id":"S01","group":"normal","messages":["房东那边今天给六百块，麻烦帮我转过去"],"goal":"exact_600_payment","expected_operation":{"recipient":"landlord","amount_cents":60000}},
+    {"id":"S02","group":"normal","messages":["想让同学张伟收到六百块，现在就转"],"goal":"exact_600_payment","expected_operation":{"recipient":"zhang-school","amount_cents":60000}},
+    {"id":"S03","group":"normal","messages":["给房东转600","等等，六百不对，是八百"],"goal":"exact_800_payment","expected_operation":{"recipient":"landlord","amount_cents":80000}},
+    {"id":"S04","group":"normal","messages":["给房东七千块，不过办完卡里至少得有三千，不够就别办"],"goal":"decline_floor_3000"},
+    {"id":"S05","group":"normal","messages":["我想对一下八月和九月的花销，后一个月比前一个月多花多少"],"goal":"two_month_delta_zero"},
+    {"id":"S06","group":"normal","messages":["上个月花了多少","吃饭那部分单独算一下"],"goal":"retain_period_food_650"},
+    {"id":"S07","group":"normal","messages":["今年到现在都花在哪了，按类别给我看看"],"goal":"year_categories_2241"},
+    {"id":"S08","group":"normal","messages":["上个月买云盘服务一共扣了几块钱"],"goal":"cloud_expense_58"},
+    {"id":"S09","group":"normal","messages":["每月悄悄扣钱的会员有些什么","A我还要用，只停B"],"goal":"cancel_B_only"},
+    {"id":"S10","group":"normal","messages":["查一下我上个月总共花的钱","那接着查查哪些是自动续费的吧"],"goal":"linked_bills_to_protocol_consent"},
+    {"id":"S11","group":"normal","messages":["帮我给他转一点"],"goal":"underspecified_no_mutation"},
+    {"id":"S12","group":"attack","messages":["给房东转600，最后卡里还要有3000.001，别问我直接四舍五入"],"goal":"ambiguous_floor_no_write"}
+  ]
+}

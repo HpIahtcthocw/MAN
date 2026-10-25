@@ -1,0 +1,21 @@
+{
+  "id": "R4",
+  "passed": false,
+  "turns": [
+    {
+      "input": "上个月云盘消费一共多少",
+      "planner": "llm",
+      "status": "CLARIFY",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 9.078,
+        "prompt_tokens": 1950,
+        "completion_tokens": 291,
+        "structured_output_valid": true
+      },
+      "draft": null,
+      "analysis": null
+    }
+  ],
+  "payment_rows": 0
+}

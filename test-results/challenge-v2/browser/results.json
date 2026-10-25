@@ -1,0 +1,32 @@
+{
+  "mobile": {
+    "viewport": [
+      430,
+      950
+    ],
+    "linked_bill_to_subscription": true,
+    "edit_ms_observed": 159,
+    "bank_cancelled_count": 1,
+    "script_errors": [],
+    "horizontal_overflow": false
+  },
+  "desktop": {
+    "viewport": [
+      1280,
+      800
+    ],
+    "three_scenes": true,
+    "old_approval_cancelled": true,
+    "scheduled": true,
+    "scam_hold": true,
+    "script_errors": [],
+    "horizontal_overflow": false
+  },
+  "method": "Actual Playwright interaction with live Qwen and synthetic bank; videos recorded by browser, MP4 transcoded only, no result frames fabricated",
+  "blind": false,
+  "real_bank": false,
+  "videos": [
+    "submission/video/xiaoman-bills-to-cancellation.mp4",
+    "submission/video/xiaoman-three-scenes.mp4"
+  ]
+}

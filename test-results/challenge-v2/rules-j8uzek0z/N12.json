@@ -1,0 +1,35 @@
+{
+  "id": "N12",
+  "group": "normal",
+  "goal": "linked_bills_to_protocol_consent",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "bills",
+      "status": "DONE",
+      "task": "51e313fe438649a392d06c70c9c1f291",
+      "planner": "rule_baseline",
+      "model_meta": null
+    },
+    {
+      "kind": "subscriptions",
+      "status": "CONSENT_REQUIRED",
+      "task": "262be15880494f158adf755ae86071c2",
+      "planner": "rule_baseline",
+      "model_meta": null
+    }
+  ],
+  "observed": {
+    "kind": "subscriptions",
+    "status": "CONSENT_REQUIRED",
+    "text": "先确认查询银行代扣，再核对哪些仍然需要。",
+    "draft": null,
+    "analysis": null,
+    "pending_choices": [],
+    "source_task_id": "51e313fe438649a392d06c70c9c1f291"
+  },
+  "operation_count": 0,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 0.05
+}

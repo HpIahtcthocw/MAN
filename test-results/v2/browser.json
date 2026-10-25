@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-10-15T11:40:31.055Z",
+  "library": "Radix Themes 3.3.0 / React 19.2.7",
+  "checks": [
+    "empty workspace",
+    "explicit example only",
+    "cash-flow shortfall arithmetic",
+    "date preview does not save",
+    "Radix drawer and combobox",
+    "bound red confirmation",
+    "demo OTP",
+    "accepted payment timeout",
+    "reload and reconcile original",
+    "one debit",
+    "no duplicate forecast debit",
+    "manual balance separate from bank",
+    "manual expense forecast",
+    "CSV export scoped to manual plan",
+    "mobile no overflow",
+    "tablet no overflow",
+    "subscription query and cancellation",
+    "three working visual variants",
+    "no JS or CSP errors"
+  ],
+  "mobile": {
+    "viewport": 390,
+    "document": 390
+  },
+  "variants": {
+    "blue": "#537d9c",
+    "gray": "#666e6a",
+    "jade": "#488571"
+  },
+  "errors": {
+    "js": [],
+    "csp": []
+  }
+}

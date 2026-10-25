@@ -1,0 +1,16 @@
+{
+  "id": "F02",
+  "group": "fault",
+  "goal": "timeout_before_accept_no_auto_retry",
+  "passed": true,
+  "turns": [],
+  "observed": {
+    "payment_rows": 0,
+    "balance_cents": 975900,
+    "recovered": "CONFIRMED"
+  },
+  "operation_count": 1,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 0.06
+}

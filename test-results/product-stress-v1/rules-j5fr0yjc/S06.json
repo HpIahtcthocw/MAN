@@ -1,0 +1,69 @@
+{
+  "id": "S06",
+  "group": "normal",
+  "goal": "retain_period_food_650",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "bills",
+      "status": "DONE",
+      "task": "3dc6d1f7714445199ce810d8f02a3a8a",
+      "planner": "rule_baseline",
+      "model_meta": null
+    },
+    {
+      "kind": "bills",
+      "status": "DONE",
+      "task": "3dc6d1f7714445199ce810d8f02a3a8a",
+      "planner": "rule_baseline",
+      "model_meta": null
+    }
+  ],
+  "observed": {
+    "kind": "bills",
+    "status": "DONE",
+    "text": "账单范围和金额已按银行流水计算，下面保留原始依据。",
+    "draft": null,
+    "analysis": {
+      "balance_cents": 975900,
+      "reserved_cents": 0,
+      "available_cents": 975900,
+      "filters": {
+        "category": "餐饮",
+        "merchant_contains": null
+      },
+      "coverage": {
+        "first_day": "2026-07-05",
+        "last_day": "2026-09-05",
+        "note": "仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。"
+      },
+      "period": "2026-09-01 至 2026-09-30",
+      "scope": {
+        "start": "2026-09-01",
+        "end": "2026-09-30"
+      },
+      "expense_cents": 65000,
+      "income_cents": 0,
+      "categories": {
+        "餐饮": 65000
+      },
+      "rows": [
+        {
+          "id": "b7c68c12158d41d9a66682133d477942",
+          "owner": "54d80ea527bf4283b82f5b537071723e",
+          "amount": -65000,
+          "merchant": "日常餐饮",
+          "category": "餐饮",
+          "day": "2026-09-05",
+          "source": "food2026-09-05"
+        }
+      ]
+    },
+    "pending_choices": null,
+    "source_task_id": null
+  },
+  "operation_count": 0,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 0.06
+}

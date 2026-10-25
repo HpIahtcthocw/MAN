@@ -1,0 +1,88 @@
+/* Reflow and interaction fixes within the reviewed warm jade design. */
+html{scroll-padding-block:20px 110px}
+.xm-app{width:100%;min-width:0}
+.xm-main,.xm-task,.xm-history,.xm-analysis,.xm-sub-info>div{min-width:0}
+.xm-main{overflow-wrap:anywhere}
+.xm-sidebar{height:100dvh;overflow-y:auto;overscroll-behavior:contain}
+.xm-sidebar nav{margin-top:clamp(24px,8vh,76px)}
+.xm-sidebar nav button,.xm-bottom-nav button{min-height:48px}
+.xm-primary,.xm-secondary,.xm-example,.xm-renewal-prompt{overflow-wrap:anywhere}
+.xm-primary svg,.xm-example>svg,.xm-error>svg,.xm-renewal-prompt>svg{flex-shrink:0}
+.xm-composer textarea{display:block;min-width:0;max-width:100%}
+.xm-composer>div{gap:12px;flex-wrap:wrap}
+.xm-send{min-width:46px;min-height:46px;flex-shrink:0;margin-left:auto}
+.xm-error{align-items:flex-start;min-width:0}
+.xm-error>div{flex:1;min-width:0}
+.xm-error span{display:block;overflow-wrap:anywhere}
+.xm-error>button,.xm-icon-button{min-width:44px;min-height:44px;flex-shrink:0}
+.xm-loading{min-width:0;padding-top:clamp(24px,12vh,100px)}
+.xm-loading p{overflow-wrap:anywhere;font-size:16px}
+.xm-user-message{white-space:pre-wrap}
+.xm-transfer-form>label,.xm-transfer-form .rt-SelectTrigger,.xm-transfer-form .rt-TextFieldRoot{min-width:0;max-width:100%}
+.xm-transfer-form .rt-SelectTrigger>span{overflow:hidden;text-overflow:ellipsis;min-width:0}
+.xm-transfer-form input,.xm-approval input{min-width:0;max-width:100%}
+.xm-subscription fieldset{min-width:0;max-width:100%}
+.xm-subscription fieldset label{white-space:normal;overflow-wrap:anywhere}
+.xm-sub-info h3,.xm-sub-info strong,.xm-operation strong,.xm-category>*{overflow-wrap:anywhere;min-width:0}
+.xm-category{gap:16px}
+.xm-category strong,.xm-ledger-row>strong{flex-shrink:0;font-variant-numeric:tabular-nums}
+.xm-ledger-row>span{min-width:0;overflow-wrap:anywhere}
+.xm-operation>div{min-width:min(180px,100%)}
+.xm-operation .rt-Button{min-height:44px}
+.xm-analysis-total strong{font-size:clamp(28px,7vw,37px);overflow-wrap:anywhere}
+.xm-steps{font-size:14px;color:#596c55}
+.xm-steps summary,.xm-analysis summary,.xm-subscription summary,.xm-demo-code summary{min-height:44px;align-content:center;cursor:pointer;overflow-wrap:anywhere}
+.xm-steps>div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:start}
+.xm-steps>div>span{min-width:0;overflow-wrap:anywhere}
+.xm-steps>div>small{max-width:5em;text-align:right}
+.xm-steps span small{white-space:normal}
+.xm-dialog{
+ min-width:0;max-width:calc(100vw - 32px)!important;
+ max-height:calc(var(--xm-viewport-height,100dvh) - 80px);
+ overflow-y:auto;overscroll-behavior:contain;overflow-wrap:anywhere;
+ scrollbar-gutter:stable;scroll-padding-block:16px;
+}
+.xm-dialog :is(h1,h2,h3,p,dd,blockquote){overflow-wrap:anywhere;min-width:0}
+.xm-dialog .rt-Button{min-height:44px;height:auto;white-space:normal;padding-block:10px}
+.xm-dialog-buttons{flex-wrap:wrap;gap:12px}
+.xm-approval dl>div{min-width:0;align-items:start}
+.xm-approval dt{max-width:48%;white-space:normal}
+.xm-approval dd{min-width:0;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.xm-confirm-check{min-height:44px;cursor:pointer}
+.xm-dialog-copy,.xm-approval>p{color:#53654f}
+.xm-skip{position:fixed;left:16px;top:12px;z-index:1000;padding:12px 18px;background:#fff;color:#20563f;border:2px solid #20563f;border-radius:8px;transform:translateY(-200%)}
+.xm-skip:focus{transform:none}
+@media(max-width:680px){
+ .xm-app{padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+ .xm-main{padding: max(20px,env(safe-area-inset-top,0px)) clamp(16px,5vw,22px) 32px}
+ .xm-bottom-nav{height:calc(76px + env(safe-area-inset-bottom,0px));padding-bottom:env(safe-area-inset-bottom,0px)}
+ .xm-bottom-nav button{min-width:64px}
+ .xm-followup>div>.xm-text-button{max-width:calc(100% - 58px);text-align:left}
+ .xm-cancelled{font-size:12px;max-width:100px}
+ .xm-dialog{max-width:calc(100vw - 24px)!important;max-height:calc(var(--xm-viewport-height,100dvh) - 80px);padding:20px!important}
+ .xm-subscription details,.xm-subscription details p{font-size:13px;color:#596c55}
+ .xm-subscription details small{font-size:12px}
+ .xm-sub-info>div{width:100%}
+ html[data-keyboard-open=true] .xm-bottom-nav{display:none}
+}
+@media(max-width:420px){
+ .xm-dialog-buttons{display:grid;grid-template-columns:minmax(0,1fr)}
+ .xm-dialog-buttons .rt-Button{width:100%;min-width:0}
+ .xm-approval dl>div{gap:10px}
+}
+@media(max-width:380px){
+ .xm-subscription{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}
+ .xm-subscription fieldset{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;width:100%}
+ .xm-subscription fieldset label{padding:8px 4px;font-size:13px;gap:5px}
+ .xm-cancelled{max-width:none;justify-self:start}
+ .xm-shortcuts{gap:8px}
+ .xm-shortcuts small{font-size:12px}
+ .xm-reply h2{font-size:22px}
+}
+@media(max-height:500px){
+ .xm-sidebar{padding-top:20px;padding-bottom:16px}
+ .xm-sidebar nav{margin-top:18px;gap:4px}
+ .xm-sidebar nav button{padding-block:8px}
+ .xm-dialog{max-height:calc(var(--xm-viewport-height,100dvh) - 80px);padding-block:16px!important}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.xm-skip{transition:none}}

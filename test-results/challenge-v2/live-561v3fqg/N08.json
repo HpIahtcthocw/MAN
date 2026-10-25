@@ -1,0 +1,93 @@
+{
+  "id": "N08",
+  "group": "normal",
+  "goal": "cloud_expense_58",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "bills",
+      "status": "DONE",
+      "task": "a423ab77d7d54979b8a4c186f761b822",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 1.656,
+        "prompt_tokens": 965,
+        "completion_tokens": 90,
+        "structured_output_valid": true
+      }
+    }
+  ],
+  "observed": {
+    "kind": "bills",
+    "status": "DONE",
+    "text": "账单范围和金额已按银行流水计算，下面保留原始依据。",
+    "draft": null,
+    "analysis": {
+      "balance_cents": 975900,
+      "reserved_cents": 0,
+      "available_cents": 975900,
+      "filters": {
+        "category": null,
+        "merchant_contains": "云盘",
+        "exclude": []
+      },
+      "coverage": {
+        "first_day": "2026-07-02",
+        "last_day": "2026-10-25",
+        "note": "我只能看到这个银行账户里已有的记录；现金、微信、支付宝里的花销我看不到。"
+      },
+      "period": "2026年09月",
+      "scope": {
+        "start": "2026-09-01",
+        "end": "2026-09-30"
+      },
+      "query": {
+        "scope": {
+          "start": "2026-09-01",
+          "end": "2026-09-30"
+        },
+        "filters": {
+          "category": null,
+          "merchant_contains": "云盘",
+          "exclude": []
+        },
+        "comparison_scopes": []
+      },
+      "expense_cents": 5800,
+      "income_cents": 0,
+      "categories": {
+        "订阅": 5800
+      },
+      "rows": [
+        {
+          "id": "5950b51eb58849b0a65ba475052da7b7",
+          "owner": "a4300a41f5294373bb027ac69e404fcd",
+          "amount": -2900,
+          "merchant": "云盘会员 B",
+          "category": "订阅",
+          "day": "2026-09-05",
+          "source": "cloud-b2026-09-05"
+        },
+        {
+          "id": "d2fe2f1e31d34520b69e84637cea5ab2",
+          "owner": "a4300a41f5294373bb027ac69e404fcd",
+          "amount": -2900,
+          "merchant": "云盘会员 A",
+          "category": "订阅",
+          "day": "2026-09-05",
+          "source": "cloud-a2026-09-05"
+        }
+      ],
+      "anomalies": [],
+      "plain_summary": "钱主要花在：订阅 58元。",
+      "query_verification": "model_host_agreement"
+    },
+    "pending_choices": null,
+    "source_task_id": null
+  },
+  "operation_count": 0,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 1.75
+}

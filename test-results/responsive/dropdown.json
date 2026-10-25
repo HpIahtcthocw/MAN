@@ -1,0 +1,34 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "height": 568,
+      "inside": true,
+      "selected": true,
+      "passed": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "inside": true,
+      "selected": true,
+      "passed": true
+    },
+    {
+      "width": 667,
+      "height": 375,
+      "inside": true,
+      "selected": true,
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "inside": true,
+      "selected": true,
+      "passed": true
+    }
+  ],
+  "total": 4,
+  "passed": 4
+}

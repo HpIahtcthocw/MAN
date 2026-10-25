@@ -1,0 +1,41 @@
+async(page)=>{
+ const c=await page.context().browser().newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});const p=await c.newPage();const base='http://127.0.0.1:8772';const results=[];
+ const check=(name,condition)=>{results.push({name,passed:!!condition});if(!condition)throw Error(name)};
+ let startupFailures=0;
+ await p.route('**/api/state',async route=>{if(!startupFailures++){await route.fulfill({status:502,contentType:'text/html',body:'<h1>Temporary gateway error</h1>'})}else await route.continue()});
+ await p.goto(base);await p.getByRole('button',{name:'重新连接',exact:true}).waitFor();
+ check('startup error offers recovery',await p.getByRole('button',{name:'重新连接',exact:true}).isVisible());
+ await p.unroute('**/api/state');await p.getByRole('button',{name:'重新连接',exact:true}).click();await p.getByLabel('说说你想办的事').waitFor();
+ check('explicit reconnect restores account',await p.getByLabel('说说你想办的事').isVisible());
+ await p.getByRole('button',{name:'演示账户',exact:true}).click();await p.getByRole('dialog').waitFor();let trapped=true;
+ for(let i=0;i<12;i++){await p.keyboard.press('Tab');trapped=trapped&&await p.evaluate(()=>!!document.activeElement.closest('[role=dialog]'))}
+ check('dialog keyboard focus stays inside',trapped);await p.keyboard.press('Escape');await p.getByRole('dialog').waitFor({state:'hidden'});
+ check('Escape closes information dialog',!await p.getByRole('dialog').count());
+ await p.getByRole('button',{name:'办理记录',exact:true}).click();await p.getByRole('heading',{name:'办理记录',exact:true}).waitFor();
+ await p.getByRole('button',{name:'首页',exact:true}).click();await p.getByLabel('说说你想办的事').waitFor();
+ check('home navigation consistently returns home',await p.locator('.xm-home').isVisible());
+ await p.getByLabel('说说你想办的事').fill('给房东转600');await p.getByRole('button',{name:'发送需求',exact:true}).click();await p.getByRole('button',{name:'核对转账详情'}).waitFor();
+ const task=await p.evaluate(async()=>await(await fetch('/api/assistant/tasks/'+sessionStorage.getItem('xiaoman-task'))).json());
+ const csrf=(await(await c.request.post(base+'/api/session')).json()).csrf;
+ await c.request.post(base+'/api/assistant/message',{headers:{'x-csrf-token':csrf},data:{message:'金额改为700',task_id:task.id,revision:task.revision}});
+ await p.getByRole('button',{name:'核对转账详情'}).click();await p.getByRole('alert').waitFor();await p.waitForFunction(()=>document.querySelector('[aria-label="转账金额"]')?.value==='700');
+ check('stale version refreshes to the latest amount',await p.getByLabel('转账金额').inputValue()==='700');
+ check('stale preparation does not open approval',!await p.getByRole('dialog').count());
+ let dispatches=0;
+ await p.route('**/api/operations/*/execute',async route=>{dispatches++;await route.fetch();await route.fulfill({status:502,contentType:'text/html',body:'<h1>Gateway response lost</h1>'})});
+ await p.getByRole('button',{name:'核对转账详情'}).click();await p.getByRole('dialog').waitFor();await p.getByTestId('confirm-operation').click();
+ await p.getByText('已收到这笔转账的完成回执。',{exact:true}).waitFor();
+ check('non-JSON response after actual payment is reconciled by read only',dispatches===1);
+ check('completed transfer no longer has preparation form',!await p.getByRole('button',{name:'核对转账详情'}).count());
+ const state=await p.evaluate(async()=>await(await fetch('/api/state')).json());const rows=state.bills.filter(b=>b.source.startsWith('payment:'));
+ check('one actual debit after lost HTTP response',rows.length===1&&rows[0].amount===-70000);
+ await p.reload();await p.getByText('已收到这笔转账的完成回执。',{exact:true}).waitFor();check('reload never re-dispatches',dispatches===1);
+ await p.getByRole('button',{name:'新办一件事',exact:true}).click();await p.getByLabel('说说你想办的事').fill('给房东转100');await p.getByRole('button',{name:'发送需求',exact:true}).click();await p.getByRole('button',{name:'核对转账详情'}).waitFor();
+ let preparations=0;await p.route('**/api/assistant/tasks/*/transfer',async route=>{preparations++;await route.fetch();await route.fulfill({status:502,contentType:'text/html',body:'<h1>Preparation response lost</h1>'})});
+ await p.getByRole('button',{name:'核对转账详情'}).click();await p.getByRole('button',{name:'继续核对',exact:true}).waitFor();
+ check('lost draft response recovers exactly one prepared operation',preparations===1);
+ check('lost draft response never implies approval',!await p.getByRole('dialog').count());
+ await p.screenshot({path:'E:/gitproject/hackathon/cashflow-guardian/test-results/responsive/recovery-390.png',fullPage:true});
+ const report={results,passed:results.filter(x=>x.passed).length,total:results.length,real_bank:false,environment:'Actual UI and deterministic sandbox; only gateway responses fault-injected, provider effects real within sandbox'};
+ const downloadPromise=p.waitForEvent('download');await p.evaluate(report=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(report,null,2)],{type:'application/json'}));a.download='ui-recovery.json';a.click()},report);await(await downloadPromise).saveAs('E:/gitproject/hackathon/cashflow-guardian/test-results/responsive/recovery.json');await c.close();return report;
+}

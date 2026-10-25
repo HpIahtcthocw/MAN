@@ -1,0 +1,22 @@
+{
+  "live_model_configured": false,
+  "prior_tests": {
+    "tests": "72",
+    "failures": "0",
+    "errors": "0"
+  },
+  "followup": {
+    "new_task": true,
+    "first_kind": "transfer",
+    "followup_kind": "clarify"
+  },
+  "balance_constraint_probe": {
+    "kind": "transfer",
+    "status": "READY",
+    "approval_status": "CONFIRMED",
+    "projected_balance_cents": 275900,
+    "requested_floor_cents": 300000
+  },
+  "real_payments": false,
+  "executed_transfers": 0
+}

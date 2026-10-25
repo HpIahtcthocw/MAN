@@ -1,0 +1,60 @@
+{
+  "id": "N10",
+  "group": "normal",
+  "goal": "revoke_prepared_cancellation",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "subscriptions",
+      "status": "CONSENT_REQUIRED",
+      "task": "e942f483f1a94fa6a7b40670de1cff2d",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 9.235,
+        "prompt_tokens": 1389,
+        "completion_tokens": 276,
+        "structured_output_valid": true
+      }
+    },
+    {
+      "kind": "subscriptions",
+      "status": "REVIEW",
+      "task": "e942f483f1a94fa6a7b40670de1cff2d",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 9.187,
+        "prompt_tokens": 1468,
+        "completion_tokens": 316,
+        "structured_output_valid": true
+      }
+    },
+    {
+      "kind": "subscriptions",
+      "status": "REVIEW",
+      "task": "e942f483f1a94fa6a7b40670de1cff2d",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 9.875,
+        "prompt_tokens": 1486,
+        "completion_tokens": 317,
+        "structured_output_valid": true
+      }
+    }
+  ],
+  "observed": {
+    "kind": "subscriptions",
+    "status": "REVIEW",
+    "text": "已按你这轮的话更新选择，请核对具体协议；没有执行撤销。",
+    "draft": null,
+    "analysis": null,
+    "pending_choices": [],
+    "source_task_id": null
+  },
+  "operation_count": 1,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 28.59
+}

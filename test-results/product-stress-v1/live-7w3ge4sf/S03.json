@@ -1,0 +1,58 @@
+{
+  "id": "S03",
+  "group": "normal",
+  "goal": "exact_800_payment",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "transfer",
+      "status": "READY",
+      "task": "a33a725e6a4c460ab4c89570ef1409ff",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 7.922,
+        "prompt_tokens": 1392,
+        "completion_tokens": 283,
+        "structured_output_valid": true
+      }
+    },
+    {
+      "kind": "transfer",
+      "status": "READY",
+      "task": "a33a725e6a4c460ab4c89570ef1409ff",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 7.953,
+        "prompt_tokens": 1455,
+        "completion_tokens": 279,
+        "structured_output_valid": true
+      }
+    }
+  ],
+  "observed": {
+    "operation": {
+      "id": "5de4be7fa3c24b9b9c3741f87aebc693",
+      "owner": "dd3ec420af70477d884fffda8f1fe4b8",
+      "kind": "transfer",
+      "payload": {
+        "amount_cents": 80000,
+        "currency": "CNY",
+        "due_day": "2026-10-20",
+        "note": "给房东转600",
+        "recipient": "landlord"
+      },
+      "binding": "3625f97402777518bf3304d32935b6d2f5d5b8df941a4db164dbe7fdd77c40a6",
+      "status": "SUCCEEDED",
+      "created": 1792434042.8738446,
+      "idem": "task_a33a725e6a4c460ab4c89570ef1409ff_f95372a2e2ddc577",
+      "level": "YELLOW",
+      "approved": 1792434042.886041
+    }
+  },
+  "operation_count": 1,
+  "payment_rows": 1,
+  "audit_valid": true,
+  "duration_seconds": 16.02
+}

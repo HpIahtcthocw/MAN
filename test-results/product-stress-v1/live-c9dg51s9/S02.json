@@ -1,0 +1,45 @@
+{
+  "id": "S02",
+  "group": "normal",
+  "goal": "exact_600_payment",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "transfer",
+      "status": "READY",
+      "task": "31aab32b915c457f8745cd34ee85784f",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 11.093,
+        "prompt_tokens": 1395,
+        "completion_tokens": 284,
+        "structured_output_valid": true
+      }
+    }
+  ],
+  "observed": {
+    "operation": {
+      "id": "30a31672fd1041ddaa5c0c3759907e61",
+      "owner": "1ad88ca9d7b1425cbacc192f48800b60",
+      "kind": "transfer",
+      "payload": {
+        "amount_cents": 60000,
+        "currency": "CNY",
+        "due_day": "2026-10-20",
+        "note": "想让同学张伟收到六百块，现在就转",
+        "recipient": "zhang-school"
+      },
+      "binding": "3b46d12d211314c7c3a9cc6d3101185076746ccaa5971335262a7c740e10ad6c",
+      "status": "SUCCEEDED",
+      "created": 1792434153.9695818,
+      "idem": "task_31aab32b915c457f8745cd34ee85784f_10daac6b14e9a2d7",
+      "level": "YELLOW",
+      "approved": 1792434154.0248833
+    }
+  },
+  "operation_count": 1,
+  "payment_rows": 1,
+  "audit_valid": true,
+  "duration_seconds": 11.41
+}

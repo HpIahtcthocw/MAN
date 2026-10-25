@@ -1,0 +1,77 @@
+{
+  "id": "R4",
+  "passed": false,
+  "turns": [
+    {
+      "input": "上个月云盘消费一共多少",
+      "planner": "rule_baseline",
+      "status": "DONE",
+      "text": "账单范围和金额已按银行流水计算，下面保留原始依据。",
+      "query_proposal": null,
+      "model_meta": {
+        "structured_output_valid": false,
+        "failure_category": "ValueError"
+      },
+      "draft": null,
+      "analysis": {
+        "balance_cents": 975900,
+        "reserved_cents": 0,
+        "available_cents": 975900,
+        "filters": {
+          "category": null,
+          "merchant_contains": "云盘",
+          "exclude": []
+        },
+        "coverage": {
+          "first_day": "2026-07-05",
+          "last_day": "2026-09-05",
+          "note": "仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。"
+        },
+        "period": "2026年09月",
+        "scope": {
+          "start": "2026-09-01",
+          "end": "2026-09-30"
+        },
+        "query": {
+          "scope": {
+            "start": "2026-09-01",
+            "end": "2026-09-30"
+          },
+          "filters": {
+            "category": null,
+            "merchant_contains": "云盘",
+            "exclude": []
+          },
+          "comparison_scopes": []
+        },
+        "expense_cents": 5800,
+        "income_cents": 0,
+        "categories": {
+          "订阅": 5800
+        },
+        "rows": [
+          {
+            "id": "1ad9eb1092e449dfab9fef827d0af596",
+            "owner": "86c945b3b9e944ca90592d08d1ee5f3f",
+            "amount": -2900,
+            "merchant": "云盘会员 A",
+            "category": "订阅",
+            "day": "2026-09-05",
+            "source": "cloud-a2026-09-05"
+          },
+          {
+            "id": "5ff7aaf8f9b7401b9a264871a797f957",
+            "owner": "86c945b3b9e944ca90592d08d1ee5f3f",
+            "amount": -2900,
+            "merchant": "云盘会员 B",
+            "category": "订阅",
+            "day": "2026-09-05",
+            "source": "cloud-b2026-09-05"
+          }
+        ],
+        "query_verification": "host_only"
+      }
+    }
+  ],
+  "payment_rows": 0
+}

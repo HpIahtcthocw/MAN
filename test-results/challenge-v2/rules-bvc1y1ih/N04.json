@@ -1,0 +1,35 @@
+{
+  "id": "N04",
+  "group": "normal",
+  "goal": "decline_floor_3000",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "transfer",
+      "status": "DECLINED",
+      "task": "f02c2cbce34d4a7dacd5cb0b39cad9e5",
+      "planner": "rule_baseline",
+      "model_meta": null
+    }
+  ],
+  "observed": {
+    "kind": "transfer",
+    "status": "DECLINED",
+    "text": "当前可用余额不足以满足这笔付款及保留条件：预计剩2759.00元，需要保留3000.00元，没有准备付款。",
+    "draft": {
+      "amount": "7000",
+      "minimum_balance": "3000",
+      "recipient": "landlord",
+      "recipient_hint": "landlord",
+      "due_day": "2026-10-20",
+      "reference_last": false
+    },
+    "analysis": null,
+    "pending_choices": null,
+    "source_task_id": null
+  },
+  "operation_count": 0,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 0.06
+}

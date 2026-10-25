@@ -1,0 +1,1610 @@
+{
+  "environment": "Chromium, deterministic isolated bank on 8772",
+  "sizes": [
+    [
+      320,
+      568
+    ],
+    [
+      360,
+      800
+    ],
+    [
+      390,
+      844
+    ],
+    [
+      430,
+      932
+    ],
+    [
+      600,
+      900
+    ],
+    [
+      640,
+      800
+    ],
+    [
+      768,
+      1024
+    ],
+    [
+      820,
+      1180
+    ],
+    [
+      1024,
+      768
+    ],
+    [
+      1280,
+      800
+    ],
+    [
+      1440,
+      900
+    ],
+    [
+      1920,
+      1080
+    ],
+    [
+      667,
+      375
+    ],
+    [
+      844,
+      390
+    ]
+  ],
+  "cases": [
+    {
+      "view": "home",
+      "width": 320,
+      "height": 568,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "info",
+      "width": 320,
+      "height": 568,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "transfer",
+      "width": 320,
+      "height": 568,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "subscriptions",
+      "width": 320,
+      "height": 568,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "bills",
+      "width": 320,
+      "height": 568,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "approval",
+      "width": 320,
+      "height": 568,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "history",
+      "width": 320,
+      "height": 568,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "account",
+      "width": 320,
+      "height": 568,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "risk",
+      "width": 320,
+      "height": 568,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "help",
+      "width": 320,
+      "height": 568,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "long-text",
+      "width": 320,
+      "height": 568,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "home",
+      "width": 360,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "info",
+      "width": 360,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "transfer",
+      "width": 360,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "subscriptions",
+      "width": 360,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "bills",
+      "width": 360,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "approval",
+      "width": 360,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "history",
+      "width": 360,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "account",
+      "width": 360,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "risk",
+      "width": 360,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "help",
+      "width": 360,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "long-text",
+      "width": 360,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "home",
+      "width": 390,
+      "height": 844,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "info",
+      "width": 390,
+      "height": 844,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "transfer",
+      "width": 390,
+      "height": 844,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "subscriptions",
+      "width": 390,
+      "height": 844,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "bills",
+      "width": 390,
+      "height": 844,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "approval",
+      "width": 390,
+      "height": 844,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "history",
+      "width": 390,
+      "height": 844,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "account",
+      "width": 390,
+      "height": 844,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "risk",
+      "width": 390,
+      "height": 844,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "help",
+      "width": 390,
+      "height": 844,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "long-text",
+      "width": 390,
+      "height": 844,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "home",
+      "width": 430,
+      "height": 932,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "info",
+      "width": 430,
+      "height": 932,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "transfer",
+      "width": 430,
+      "height": 932,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "subscriptions",
+      "width": 430,
+      "height": 932,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "bills",
+      "width": 430,
+      "height": 932,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "approval",
+      "width": 430,
+      "height": 932,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "history",
+      "width": 430,
+      "height": 932,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "account",
+      "width": 430,
+      "height": 932,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "risk",
+      "width": 430,
+      "height": 932,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "help",
+      "width": 430,
+      "height": 932,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "long-text",
+      "width": 430,
+      "height": 932,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "home",
+      "width": 600,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "info",
+      "width": 600,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "transfer",
+      "width": 600,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "subscriptions",
+      "width": 600,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "bills",
+      "width": 600,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "approval",
+      "width": 600,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "history",
+      "width": 600,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "account",
+      "width": 600,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "risk",
+      "width": 600,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "help",
+      "width": 600,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "long-text",
+      "width": 600,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "home",
+      "width": 640,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "info",
+      "width": 640,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "transfer",
+      "width": 640,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "subscriptions",
+      "width": 640,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "bills",
+      "width": 640,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "approval",
+      "width": 640,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "history",
+      "width": 640,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "account",
+      "width": 640,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "risk",
+      "width": 640,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "help",
+      "width": 640,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "long-text",
+      "width": 640,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "home",
+      "width": 768,
+      "height": 1024,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "info",
+      "width": 768,
+      "height": 1024,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "transfer",
+      "width": 768,
+      "height": 1024,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "subscriptions",
+      "width": 768,
+      "height": 1024,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "bills",
+      "width": 768,
+      "height": 1024,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "approval",
+      "width": 768,
+      "height": 1024,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "history",
+      "width": 768,
+      "height": 1024,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "account",
+      "width": 768,
+      "height": 1024,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "risk",
+      "width": 768,
+      "height": 1024,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "help",
+      "width": 768,
+      "height": 1024,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "long-text",
+      "width": 768,
+      "height": 1024,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "home",
+      "width": 820,
+      "height": 1180,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "info",
+      "width": 820,
+      "height": 1180,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "transfer",
+      "width": 820,
+      "height": 1180,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "subscriptions",
+      "width": 820,
+      "height": 1180,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "bills",
+      "width": 820,
+      "height": 1180,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "approval",
+      "width": 820,
+      "height": 1180,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "history",
+      "width": 820,
+      "height": 1180,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "account",
+      "width": 820,
+      "height": 1180,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "risk",
+      "width": 820,
+      "height": 1180,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "help",
+      "width": 820,
+      "height": 1180,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "long-text",
+      "width": 820,
+      "height": 1180,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "home",
+      "width": 1024,
+      "height": 768,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "info",
+      "width": 1024,
+      "height": 768,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "transfer",
+      "width": 1024,
+      "height": 768,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "subscriptions",
+      "width": 1024,
+      "height": 768,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "bills",
+      "width": 1024,
+      "height": 768,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "approval",
+      "width": 1024,
+      "height": 768,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "history",
+      "width": 1024,
+      "height": 768,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "account",
+      "width": 1024,
+      "height": 768,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "risk",
+      "width": 1024,
+      "height": 768,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "help",
+      "width": 1024,
+      "height": 768,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "long-text",
+      "width": 1024,
+      "height": 768,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "home",
+      "width": 1280,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "info",
+      "width": 1280,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "transfer",
+      "width": 1280,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "subscriptions",
+      "width": 1280,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "bills",
+      "width": 1280,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "approval",
+      "width": 1280,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "history",
+      "width": 1280,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "account",
+      "width": 1280,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "risk",
+      "width": 1280,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "help",
+      "width": 1280,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "long-text",
+      "width": 1280,
+      "height": 800,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "home",
+      "width": 1440,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "info",
+      "width": 1440,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "transfer",
+      "width": 1440,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "subscriptions",
+      "width": 1440,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "bills",
+      "width": 1440,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "approval",
+      "width": 1440,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "history",
+      "width": 1440,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "account",
+      "width": 1440,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "risk",
+      "width": 1440,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "help",
+      "width": 1440,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "long-text",
+      "width": 1440,
+      "height": 900,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "home",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "info",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "transfer",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "subscriptions",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "bills",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "approval",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "history",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "account",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "risk",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "help",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "long-text",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "home",
+      "width": 667,
+      "height": 375,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "info",
+      "width": 667,
+      "height": 375,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "transfer",
+      "width": 667,
+      "height": 375,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "subscriptions",
+      "width": 667,
+      "height": 375,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "bills",
+      "width": 667,
+      "height": 375,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "approval",
+      "width": 667,
+      "height": 375,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "history",
+      "width": 667,
+      "height": 375,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "account",
+      "width": 667,
+      "height": 375,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "risk",
+      "width": 667,
+      "height": 375,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "help",
+      "width": 667,
+      "height": 375,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "long-text",
+      "width": 667,
+      "height": 375,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "home",
+      "width": 844,
+      "height": 390,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "info",
+      "width": 844,
+      "height": 390,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "transfer",
+      "width": 844,
+      "height": 390,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "subscriptions",
+      "width": 844,
+      "height": 390,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "bills",
+      "width": 844,
+      "height": 390,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "approval",
+      "width": 844,
+      "height": 390,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "history",
+      "width": 844,
+      "height": 390,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "account",
+      "width": 844,
+      "height": 390,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "risk",
+      "width": 844,
+      "height": 390,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "help",
+      "width": 844,
+      "height": 390,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    },
+    {
+      "view": "long-text",
+      "width": 844,
+      "height": 390,
+      "passed": true,
+      "horizontal_overflow": false,
+      "outliers": [],
+      "dialog_inside": true,
+      "dialog_scrollable": true
+    }
+  ],
+  "total": 154,
+  "passed": 154,
+  "page_errors": [],
+  "limits": [
+    "640px reflow also covers the CSS width of a 1280px page at 200% zoom, not an actual browser-toolbar zoom test",
+    "No physical iOS/Android keyboard or assistive-technology certification"
+  ]
+}

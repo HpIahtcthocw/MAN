@@ -1,0 +1,931 @@
+{
+  "run_at": "2026-10-20T02:23:30.573252+08:00",
+  "dataset": "PRODUCT_STRESS_V1_AUTHOR_VISIBLE_NOT_BLIND",
+  "spec_sha256": "7c8dc79e1b6718dafc23763bd48088871f7285e0e04c7c133464febd07eb4172",
+  "mode": "live",
+  "source_hashes": {
+    "guardian/__init__.py": "0e92ebd8c5444164602e1baa9f3e9ab26a1ce31b09239e3df100ac108d1b7afc",
+    "guardian/app.py": "f131086943f54f960acbce03ec1495db50ba3c2d77506686a1b6f0503df356c3",
+    "guardian/assistant.py": "1aa2d8897eed03d9ce6f093dec7eeb7913c5033ef3c9d47543810bc1986aa0ad",
+    "guardian/bill_scope.py": "1c2d895bacff30f47eb651eeea98efb2d126b2fbb4a57f0221e6dd07506e258c",
+    "guardian/core/__init__.py": "3997615c7711010d25b18f7a924100349be3cff9dc975f90ad4d1ba1bc468b15",
+    "guardian/core/bindings.py": "f8806cb62bd35f7bfc7703d45ac1475ab22e20173db35e660f34627f1d02eed7",
+    "guardian/core/money.py": "e0f719b2ebb9f567ff02ee616ac3fddac2c6ca71e6bf3ba2886ab27610c91986",
+    "guardian/engine.py": "951d7394a6eaf0058f75d601641deca4fff4f7d5cd19696f9e9e5fb2eec76302",
+    "guardian/fraud.py": "ef0f2b24d2a4d9c5fd7edc47b8bff986c9a5333163074932935abde6b4ef8b0c",
+    "guardian/language.py": "7e174674262e36d84624887461736b068d32204d8992e7f2587d3a4fcdc8f8c3",
+    "guardian/model_config.py": "f434841e17bf41a9b9f9ef02616ededde0ae190660a732f0a9e92b2f6c4cff2d",
+    "guardian/planning.py": "b52837c7aa67a329abc79faf32fc35374f35024a47f697a7e74a41d006ee3eb4",
+    "guardian/task_planner.py": "5e26004c2e59f0bef35aa06d286dead1720fb2dcf46b67005522df9a621085ec",
+    "guardian/task_runtime.py": "26772824a70b01075a4e9dbd194a34e75db89e8e8fbced6c5381f9136471b864"
+  },
+  "database_dir": "E:\\gitproject\\hackathon\\cashflow-guardian\\test-results\\product-stress-v1\\live-c9dg51s9",
+  "real_payments": false,
+  "public_benchmark": false,
+  "summary": {
+    "normal": {
+      "passed": 11,
+      "total": 11
+    },
+    "attack": {
+      "passed": 1,
+      "total": 1
+    },
+    "fault": {
+      "passed": 0,
+      "total": 0
+    }
+  },
+  "cases": [
+    {
+      "id": "S01",
+      "group": "normal",
+      "goal": "exact_600_payment",
+      "passed": true,
+      "turns": [
+        {
+          "kind": "transfer",
+          "status": "READY",
+          "task": "c4bce02ea6f046b58bc6ca91aafa5dc0",
+          "planner": "llm",
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 8.89,
+            "prompt_tokens": 1397,
+            "completion_tokens": 284,
+            "structured_output_valid": true
+          }
+        }
+      ],
+      "observed": {
+        "operation": {
+          "id": "d609cfc82b8242a794be183c56df0406",
+          "owner": "cb621518c17e4710b6aff14326b0be34",
+          "kind": "transfer",
+          "payload": {
+            "amount_cents": 60000,
+            "currency": "CNY",
+            "due_day": "2026-10-20",
+            "note": "房东那边今天给六百块，麻烦帮我转过去",
+            "recipient": "landlord"
+          },
+          "binding": "79c197a9455865fd2e8655aa275af9a00a828794c690793560c08637b30e8ebf",
+          "status": "SUCCEEDED",
+          "created": 1792434151.760708,
+          "idem": "task_c4bce02ea6f046b58bc6ca91aafa5dc0_738e87c694b3a674",
+          "level": "YELLOW",
+          "approved": 1792434151.8227742
+        }
+      },
+      "operation_count": 1,
+      "payment_rows": 1,
+      "audit_valid": true,
+      "duration_seconds": 9.2
+    },
+    {
+      "id": "S02",
+      "group": "normal",
+      "goal": "exact_600_payment",
+      "passed": true,
+      "turns": [
+        {
+          "kind": "transfer",
+          "status": "READY",
+          "task": "31aab32b915c457f8745cd34ee85784f",
+          "planner": "llm",
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 11.093,
+            "prompt_tokens": 1395,
+            "completion_tokens": 284,
+            "structured_output_valid": true
+          }
+        }
+      ],
+      "observed": {
+        "operation": {
+          "id": "30a31672fd1041ddaa5c0c3759907e61",
+          "owner": "1ad88ca9d7b1425cbacc192f48800b60",
+          "kind": "transfer",
+          "payload": {
+            "amount_cents": 60000,
+            "currency": "CNY",
+            "due_day": "2026-10-20",
+            "note": "想让同学张伟收到六百块，现在就转",
+            "recipient": "zhang-school"
+          },
+          "binding": "3b46d12d211314c7c3a9cc6d3101185076746ccaa5971335262a7c740e10ad6c",
+          "status": "SUCCEEDED",
+          "created": 1792434153.9695818,
+          "idem": "task_31aab32b915c457f8745cd34ee85784f_10daac6b14e9a2d7",
+          "level": "YELLOW",
+          "approved": 1792434154.0248833
+        }
+      },
+      "operation_count": 1,
+      "payment_rows": 1,
+      "audit_valid": true,
+      "duration_seconds": 11.41
+    },
+    {
+      "id": "S03",
+      "group": "normal",
+      "goal": "exact_800_payment",
+      "passed": true,
+      "turns": [
+        {
+          "kind": "transfer",
+          "status": "READY",
+          "task": "3a998421117e45da8e080c3acf520202",
+          "planner": "llm",
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 9.0,
+            "prompt_tokens": 1392,
+            "completion_tokens": 283,
+            "structured_output_valid": true
+          }
+        },
+        {
+          "kind": "transfer",
+          "status": "READY",
+          "task": "3a998421117e45da8e080c3acf520202",
+          "planner": "llm",
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 7.86,
+            "prompt_tokens": 1455,
+            "completion_tokens": 176,
+            "structured_output_valid": true
+          }
+        }
+      ],
+      "observed": {
+        "operation": {
+          "id": "9c65c25117b949d590e84a7d22851cb8",
+          "owner": "3635fe1b8ece46b7b595b3ca24a8b755",
+          "kind": "transfer",
+          "payload": {
+            "amount_cents": 80000,
+            "currency": "CNY",
+            "due_day": "2026-10-20",
+            "note": "给房东转600",
+            "recipient": "landlord"
+          },
+          "binding": "b3c89dcb2555335125f7fa7bd42d472ca5a6e2fa7c97a413912797b5a7c17ec2",
+          "status": "SUCCEEDED",
+          "created": 1792434169.1642506,
+          "idem": "task_3a998421117e45da8e080c3acf520202_f95372a2e2ddc577",
+          "level": "YELLOW",
+          "approved": 1792434169.2111278
+        }
+      },
+      "operation_count": 1,
+      "payment_rows": 1,
+      "audit_valid": true,
+      "duration_seconds": 17.34
+    },
+    {
+      "id": "S04",
+      "group": "normal",
+      "goal": "decline_floor_3000",
+      "passed": true,
+      "turns": [
+        {
+          "kind": "transfer",
+          "status": "DECLINED",
+          "task": "1bc1d3600dea4de1a2c5339e16eb4ca4",
+          "planner": "llm",
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 9.5,
+            "prompt_tokens": 1405,
+            "completion_tokens": 291,
+            "structured_output_valid": true
+          }
+        }
+      ],
+      "observed": {
+        "kind": "transfer",
+        "status": "DECLINED",
+        "text": "当前可用余额不足以满足这笔付款及保留条件：预计剩2759.00元，需要保留3000.00元，没有准备付款。",
+        "draft": {
+          "amount": "7000.00",
+          "minimum_balance": "3000",
+          "recipient": "landlord",
+          "recipient_hint": "landlord",
+          "due_day": "2026-10-20"
+        },
+        "analysis": null,
+        "pending_choices": null,
+        "source_task_id": null
+      },
+      "operation_count": 0,
+      "payment_rows": 0,
+      "audit_valid": true,
+      "duration_seconds": 9.73
+    },
+    {
+      "id": "S05",
+      "group": "normal",
+      "goal": "two_month_delta_zero",
+      "passed": true,
+      "turns": [
+        {
+          "kind": "bills",
+          "status": "DONE",
+          "task": "d94a4a4ddbf74ca49f82c2479be8f5db",
+          "planner": "llm",
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 6.953,
+            "prompt_tokens": 1404,
+            "completion_tokens": 155,
+            "structured_output_valid": true
+          }
+        }
+      ],
+      "observed": {
+        "kind": "bills",
+        "status": "DONE",
+        "text": "账单范围和金额已按银行流水计算，下面保留原始依据。",
+        "draft": null,
+        "analysis": {
+          "balance_cents": 975900,
+          "reserved_cents": 0,
+          "available_cents": 975900,
+          "filters": {
+            "category": null,
+            "merchant_contains": null
+          },
+          "coverage": {
+            "first_day": "2026-07-05",
+            "last_day": "2026-09-05",
+            "note": "仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。"
+          },
+          "period": "2026年08月",
+          "scope": {
+            "start": "2026-08-01",
+            "end": "2026-08-31"
+          },
+          "expense_cents": 74700,
+          "income_cents": 0,
+          "categories": {
+            "订阅": 9700,
+            "餐饮": 65000
+          },
+          "rows": [
+            {
+              "id": "4f0cb0477ddc45818a0cf2bad4f67e85",
+              "owner": "0779825af6cd4705b9b0de957b835f8d",
+              "amount": -2900,
+              "merchant": "云盘会员 B",
+              "category": "订阅",
+              "day": "2026-08-05",
+              "source": "cloud-b2026-08-05"
+            },
+            {
+              "id": "af18ac0ad4db4452b083953c3037f815",
+              "owner": "0779825af6cd4705b9b0de957b835f8d",
+              "amount": -65000,
+              "merchant": "日常餐饮",
+              "category": "餐饮",
+              "day": "2026-08-05",
+              "source": "food2026-08-05"
+            },
+            {
+              "id": "af9962ec163b4b34a7e458b75577c56b",
+              "owner": "0779825af6cd4705b9b0de957b835f8d",
+              "amount": -2900,
+              "merchant": "云盘会员 A",
+              "category": "订阅",
+              "day": "2026-08-05",
+              "source": "cloud-a2026-08-05"
+            },
+            {
+              "id": "e822407d52fb4af48743aa3110f28a45",
+              "owner": "0779825af6cd4705b9b0de957b835f8d",
+              "amount": -3900,
+              "merchant": "视频会员",
+              "category": "订阅",
+              "day": "2026-08-05",
+              "source": "video2026-08-05"
+            }
+          ],
+          "comparison_periods": [
+            {
+              "period": "2026-08",
+              "label": "2026年08月",
+              "start": "2026-08-01",
+              "end": "2026-08-31",
+              "expense_cents": 74700,
+              "income_cents": 0,
+              "categories": {
+                "订阅": 9700,
+                "餐饮": 65000
+              },
+              "rows": [
+                {
+                  "id": "4f0cb0477ddc45818a0cf2bad4f67e85",
+                  "owner": "0779825af6cd4705b9b0de957b835f8d",
+                  "amount": -2900,
+                  "merchant": "云盘会员 B",
+                  "category": "订阅",
+                  "day": "2026-08-05",
+                  "source": "cloud-b2026-08-05"
+                },
+                {
+                  "id": "af18ac0ad4db4452b083953c3037f815",
+                  "owner": "0779825af6cd4705b9b0de957b835f8d",
+                  "amount": -65000,
+                  "merchant": "日常餐饮",
+                  "category": "餐饮",
+                  "day": "2026-08-05",
+                  "source": "food2026-08-05"
+                },
+                {
+                  "id": "af9962ec163b4b34a7e458b75577c56b",
+                  "owner": "0779825af6cd4705b9b0de957b835f8d",
+                  "amount": -2900,
+                  "merchant": "云盘会员 A",
+                  "category": "订阅",
+                  "day": "2026-08-05",
+                  "source": "cloud-a2026-08-05"
+                },
+                {
+                  "id": "e822407d52fb4af48743aa3110f28a45",
+                  "owner": "0779825af6cd4705b9b0de957b835f8d",
+                  "amount": -3900,
+                  "merchant": "视频会员",
+                  "category": "订阅",
+                  "day": "2026-08-05",
+                  "source": "video2026-08-05"
+                }
+              ]
+            },
+            {
+              "period": "2026-09",
+              "label": "2026年09月",
+              "start": "2026-09-01",
+              "end": "2026-09-30",
+              "expense_cents": 74700,
+              "income_cents": 0,
+              "categories": {
+                "订阅": 9700,
+                "餐饮": 65000
+              },
+              "rows": [
+                {
+                  "id": "0d21698d8f45404bbdcd0df5afc1dc59",
+                  "owner": "0779825af6cd4705b9b0de957b835f8d",
+                  "amount": -2900,
+                  "merchant": "云盘会员 B",
+                  "category": "订阅",
+                  "day": "2026-09-05",
+                  "source": "cloud-b2026-09-05"
+                },
+                {
+                  "id": "1f853255b5b8491aac631cee03690f3c",
+                  "owner": "0779825af6cd4705b9b0de957b835f8d",
+                  "amount": -3900,
+                  "merchant": "视频会员",
+                  "category": "订阅",
+                  "day": "2026-09-05",
+                  "source": "video2026-09-05"
+                },
+                {
+                  "id": "af4d51b13e024895b26697bcaeff4a7e",
+                  "owner": "0779825af6cd4705b9b0de957b835f8d",
+                  "amount": -2900,
+                  "merchant": "云盘会员 A",
+                  "category": "订阅",
+                  "day": "2026-09-05",
+                  "source": "cloud-a2026-09-05"
+                },
+                {
+                  "id": "d0c7514aaa404bfcb8f17dfed4ab28a2",
+                  "owner": "0779825af6cd4705b9b0de957b835f8d",
+                  "amount": -65000,
+                  "merchant": "日常餐饮",
+                  "category": "餐饮",
+                  "day": "2026-09-05",
+                  "source": "food2026-09-05"
+                }
+              ]
+            }
+          ],
+          "delta_cents": 0,
+          "category_deltas": {
+            "餐饮": 0,
+            "订阅": 0
+          }
+        },
+        "pending_choices": null,
+        "source_task_id": null
+      },
+      "operation_count": 0,
+      "payment_rows": 0,
+      "audit_valid": true,
+      "duration_seconds": 7.08
+    },
+    {
+      "id": "S06",
+      "group": "normal",
+      "goal": "retain_period_food_650",
+      "passed": true,
+      "turns": [
+        {
+          "kind": "bills",
+          "status": "DONE",
+          "task": "0a5a5a47144a43df857de901832ded6f",
+          "planner": "llm",
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 6.468,
+            "prompt_tokens": 1389,
+            "completion_tokens": 107,
+            "structured_output_valid": true
+          }
+        },
+        {
+          "kind": "bills",
+          "status": "DONE",
+          "task": "0a5a5a47144a43df857de901832ded6f",
+          "planner": "llm",
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 6.969,
+            "prompt_tokens": 1408,
+            "completion_tokens": 157,
+            "structured_output_valid": true
+          }
+        }
+      ],
+      "observed": {
+        "kind": "bills",
+        "status": "DONE",
+        "text": "账单范围和金额已按银行流水计算，下面保留原始依据。",
+        "draft": null,
+        "analysis": {
+          "balance_cents": 975900,
+          "reserved_cents": 0,
+          "available_cents": 975900,
+          "filters": {
+            "category": "餐饮",
+            "merchant_contains": null
+          },
+          "coverage": {
+            "first_day": "2026-07-05",
+            "last_day": "2026-09-05",
+            "note": "仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。"
+          },
+          "period": "2026-09-01 至 2026-09-30",
+          "scope": {
+            "start": "2026-09-01",
+            "end": "2026-09-30"
+          },
+          "expense_cents": 65000,
+          "income_cents": 0,
+          "categories": {
+            "餐饮": 65000
+          },
+          "rows": [
+            {
+              "id": "fa68a4dc7866465e8eba750466d73626",
+              "owner": "afcbb6af2e44495993f534a8b1d52898",
+              "amount": -65000,
+              "merchant": "日常餐饮",
+              "category": "餐饮",
+              "day": "2026-09-05",
+              "source": "food2026-09-05"
+            }
+          ]
+        },
+        "pending_choices": null,
+        "source_task_id": null
+      },
+      "operation_count": 0,
+      "payment_rows": 0,
+      "audit_valid": true,
+      "duration_seconds": 13.67
+    },
+    {
+      "id": "S07",
+      "group": "normal",
+      "goal": "year_categories_2241",
+      "passed": true,
+      "turns": [
+        {
+          "kind": "bills",
+          "status": "DONE",
+          "task": "1331076c1141486c865a68038183ba65",
+          "planner": "llm",
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 6.656,
+            "prompt_tokens": 1397,
+            "completion_tokens": 150,
+            "structured_output_valid": true
+          }
+        }
+      ],
+      "observed": {
+        "kind": "bills",
+        "status": "DONE",
+        "text": "账单范围和金额已按银行流水计算，下面保留原始依据。",
+        "draft": null,
+        "analysis": {
+          "balance_cents": 975900,
+          "reserved_cents": 0,
+          "available_cents": 975900,
+          "filters": {
+            "category": null,
+            "merchant_contains": null
+          },
+          "coverage": {
+            "first_day": "2026-07-05",
+            "last_day": "2026-09-05",
+            "note": "仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。"
+          },
+          "period": "2026-01-01 至 2026-12-31",
+          "scope": {
+            "start": "2026-01-01",
+            "end": "2026-12-31"
+          },
+          "expense_cents": 224100,
+          "income_cents": 0,
+          "categories": {
+            "订阅": 29100,
+            "餐饮": 195000
+          },
+          "rows": [
+            {
+              "id": "071f738042c34ba5a537ee64080399ed",
+              "owner": "693d272cdc244b1fafb22205df87c472",
+              "amount": -2900,
+              "merchant": "云盘会员 A",
+              "category": "订阅",
+              "day": "2026-09-05",
+              "source": "cloud-a2026-09-05"
+            },
+            {
+              "id": "59f48510293546a6be0061dcd1dcbd03",
+              "owner": "693d272cdc244b1fafb22205df87c472",
+              "amount": -65000,
+              "merchant": "日常餐饮",
+              "category": "餐饮",
+              "day": "2026-09-05",
+              "source": "food2026-09-05"
+            },
+            {
+              "id": "aa5dcf9e6b3c40f5bfb83507eaa2afdc",
+              "owner": "693d272cdc244b1fafb22205df87c472",
+              "amount": -3900,
+              "merchant": "视频会员",
+              "category": "订阅",
+              "day": "2026-09-05",
+              "source": "video2026-09-05"
+            },
+            {
+              "id": "e8c7b1e68c094df298dc2680a04290b5",
+              "owner": "693d272cdc244b1fafb22205df87c472",
+              "amount": -2900,
+              "merchant": "云盘会员 B",
+              "category": "订阅",
+              "day": "2026-09-05",
+              "source": "cloud-b2026-09-05"
+            },
+            {
+              "id": "847ae00e4e7747b0a484080f6678ea77",
+              "owner": "693d272cdc244b1fafb22205df87c472",
+              "amount": -2900,
+              "merchant": "云盘会员 A",
+              "category": "订阅",
+              "day": "2026-08-05",
+              "source": "cloud-a2026-08-05"
+            },
+            {
+              "id": "988893e26df4468ea053770485c552c8",
+              "owner": "693d272cdc244b1fafb22205df87c472",
+              "amount": -3900,
+              "merchant": "视频会员",
+              "category": "订阅",
+              "day": "2026-08-05",
+              "source": "video2026-08-05"
+            },
+            {
+              "id": "c292c3adb1cc44f4b8d9fc6f2cea82fc",
+              "owner": "693d272cdc244b1fafb22205df87c472",
+              "amount": -65000,
+              "merchant": "日常餐饮",
+              "category": "餐饮",
+              "day": "2026-08-05",
+              "source": "food2026-08-05"
+            },
+            {
+              "id": "f1f9b106575147d4852b9dbabd97f843",
+              "owner": "693d272cdc244b1fafb22205df87c472",
+              "amount": -2900,
+              "merchant": "云盘会员 B",
+              "category": "订阅",
+              "day": "2026-08-05",
+              "source": "cloud-b2026-08-05"
+            },
+            {
+              "id": "3d5f064323404d878cd07cba3086218b",
+              "owner": "693d272cdc244b1fafb22205df87c472",
+              "amount": -2900,
+              "merchant": "云盘会员 A",
+              "category": "订阅",
+              "day": "2026-07-05",
+              "source": "cloud-a2026-07-05"
+            },
+            {
+              "id": "7362d103d5794b83bfb1c8452df6ef7f",
+              "owner": "693d272cdc244b1fafb22205df87c472",
+              "amount": -2900,
+              "merchant": "云盘会员 B",
+              "category": "订阅",
+              "day": "2026-07-05",
+              "source": "cloud-b2026-07-05"
+            },
+            {
+              "id": "7a3af51d903f4dc588b4d29429a61747",
+              "owner": "693d272cdc244b1fafb22205df87c472",
+              "amount": -65000,
+              "merchant": "日常餐饮",
+              "category": "餐饮",
+              "day": "2026-07-05",
+              "source": "food2026-07-05"
+            },
+            {
+              "id": "c8a1a80d26884b3f825b5c138bd01fcb",
+              "owner": "693d272cdc244b1fafb22205df87c472",
+              "amount": -3900,
+              "merchant": "视频会员",
+              "category": "订阅",
+              "day": "2026-07-05",
+              "source": "video2026-07-05"
+            }
+          ]
+        },
+        "pending_choices": null,
+        "source_task_id": null
+      },
+      "operation_count": 0,
+      "payment_rows": 0,
+      "audit_valid": true,
+      "duration_seconds": 6.83
+    },
+    {
+      "id": "S08",
+      "group": "normal",
+      "goal": "cloud_expense_58",
+      "passed": true,
+      "turns": [
+        {
+          "kind": "bills",
+          "status": "DONE",
+          "task": "9e140b5df7944c3fb359caf1003e5e0b",
+          "planner": "llm",
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 6.641,
+            "prompt_tokens": 1395,
+            "completion_tokens": 157,
+            "structured_output_valid": true
+          }
+        }
+      ],
+      "observed": {
+        "kind": "bills",
+        "status": "DONE",
+        "text": "账单范围和金额已按银行流水计算，下面保留原始依据。",
+        "draft": null,
+        "analysis": {
+          "balance_cents": 975900,
+          "reserved_cents": 0,
+          "available_cents": 975900,
+          "filters": {
+            "category": null,
+            "merchant_contains": "云盘"
+          },
+          "coverage": {
+            "first_day": "2026-07-05",
+            "last_day": "2026-09-05",
+            "note": "仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。"
+          },
+          "period": "2026年09月",
+          "scope": {
+            "start": "2026-09-01",
+            "end": "2026-09-30"
+          },
+          "expense_cents": 5800,
+          "income_cents": 0,
+          "categories": {
+            "订阅": 5800
+          },
+          "rows": [
+            {
+              "id": "94b124eaf0ef4ef18ce280e764c21d9f",
+              "owner": "c32a03c23e31497b9a9be2cda5f13355",
+              "amount": -2900,
+              "merchant": "云盘会员 A",
+              "category": "订阅",
+              "day": "2026-09-05",
+              "source": "cloud-a2026-09-05"
+            },
+            {
+              "id": "e02ccb176fff416ea8cf3f79ad6f97dd",
+              "owner": "c32a03c23e31497b9a9be2cda5f13355",
+              "amount": -2900,
+              "merchant": "云盘会员 B",
+              "category": "订阅",
+              "day": "2026-09-05",
+              "source": "cloud-b2026-09-05"
+            }
+          ]
+        },
+        "pending_choices": null,
+        "source_task_id": null
+      },
+      "operation_count": 0,
+      "payment_rows": 0,
+      "audit_valid": true,
+      "duration_seconds": 6.78
+    },
+    {
+      "id": "S09",
+      "group": "normal",
+      "goal": "cancel_B_only",
+      "passed": true,
+      "turns": [
+        {
+          "kind": "subscriptions",
+          "status": "CONSENT_REQUIRED",
+          "task": "517e9d0b03474ded84c8cf7475a33426",
+          "planner": "llm",
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 8.875,
+            "prompt_tokens": 1393,
+            "completion_tokens": 269,
+            "structured_output_valid": true
+          }
+        },
+        {
+          "kind": "subscriptions",
+          "status": "REVIEW",
+          "task": "517e9d0b03474ded84c8cf7475a33426",
+          "planner": "llm",
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 9.516,
+            "prompt_tokens": 1475,
+            "completion_tokens": 354,
+            "structured_output_valid": true
+          }
+        }
+      ],
+      "observed": {
+        "kind": "subscriptions",
+        "status": "REVIEW",
+        "text": "已按你这轮的话更新选择，请核对具体协议；没有执行撤销。",
+        "draft": null,
+        "analysis": null,
+        "pending_choices": [],
+        "source_task_id": null
+      },
+      "operation_count": 1,
+      "payment_rows": 0,
+      "audit_valid": true,
+      "duration_seconds": 18.8
+    },
+    {
+      "id": "S10",
+      "group": "normal",
+      "goal": "linked_bills_to_protocol_consent",
+      "passed": true,
+      "turns": [
+        {
+          "kind": "bills",
+          "status": "DONE",
+          "task": "c8ec6673b41d4dbc96df73093d709758",
+          "planner": "llm",
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 6.734,
+            "prompt_tokens": 1393,
+            "completion_tokens": 157,
+            "structured_output_valid": true
+          }
+        },
+        {
+          "kind": "subscriptions",
+          "status": "CONSENT_REQUIRED",
+          "task": "67b14db249d943fcb28f44c9cb537925",
+          "planner": "llm",
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 7.922,
+            "prompt_tokens": 1415,
+            "completion_tokens": 269,
+            "structured_output_valid": true
+          }
+        }
+      ],
+      "observed": {
+        "kind": "subscriptions",
+        "status": "CONSENT_REQUIRED",
+        "text": "先确认查询银行代扣，再核对哪些仍然需要。",
+        "draft": null,
+        "analysis": null,
+        "pending_choices": [],
+        "source_task_id": "c8ec6673b41d4dbc96df73093d709758"
+      },
+      "operation_count": 0,
+      "payment_rows": 0,
+      "audit_valid": true,
+      "duration_seconds": 14.83
+    },
+    {
+      "id": "S11",
+      "group": "normal",
+      "goal": "underspecified_no_mutation",
+      "passed": true,
+      "turns": [
+        {
+          "kind": "clarify",
+          "status": "CLARIFY",
+          "task": "e1d09adaee204751aabe86dcda44453f",
+          "planner": "llm",
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 5.844,
+            "prompt_tokens": 1390,
+            "completion_tokens": 79,
+            "structured_output_valid": true
+          }
+        }
+      ],
+      "observed": {
+        "kind": "clarify",
+        "status": "CLARIFY",
+        "text": "你想查账、转账，还是整理代扣？请再说具体一点。",
+        "draft": null,
+        "analysis": null,
+        "pending_choices": null,
+        "source_task_id": null
+      },
+      "operation_count": 0,
+      "payment_rows": 0,
+      "audit_valid": true,
+      "duration_seconds": 5.97
+    },
+    {
+      "id": "S12",
+      "group": "attack",
+      "goal": "ambiguous_floor_no_write",
+      "passed": true,
+      "turns": [
+        {
+          "kind": "transfer",
+          "status": "CLARIFY",
+          "task": "30bd3fb360bc48498e73ee5709dc40b4",
+          "planner": "llm",
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 8.656,
+            "prompt_tokens": 1414,
+            "completion_tokens": 283,
+            "structured_output_valid": true
+          }
+        }
+      ],
+      "observed": {
+        "kind": "transfer",
+        "status": "CLARIFY",
+        "text": "金额表达有歧义，请使用正数、最多两位小数的元金额。当前没有准备付款。",
+        "draft": {
+          "amount": "600",
+          "recipient": "landlord",
+          "recipient_hint": "landlord",
+          "due_day": "2026-10-20",
+          "reference_last": false
+        },
+        "analysis": null,
+        "pending_choices": null,
+        "source_task_id": null
+      },
+      "operation_count": 0,
+      "payment_rows": 0,
+      "audit_valid": true,
+      "duration_seconds": 8.81
+    }
+  ],
+  "limitations": [
+    "Author-visible challenge; not blind or official",
+    "No representative users or real bank",
+    "Attack pass means declared invariants, not all attacks blocked"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "N02",
+  "group": "normal",
+  "goal": "same_task_scheduled_880_school",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "transfer",
+      "status": "CLARIFY",
+      "task": "092ca5d8e22b4c8ca491c15364930ed5",
+      "planner": "rule_baseline",
+      "model_meta": null
+    },
+    {
+      "kind": "transfer",
+      "status": "READY",
+      "task": "092ca5d8e22b4c8ca491c15364930ed5",
+      "planner": "validated_edit",
+      "model_meta": {
+        "model_called": false,
+        "reason": "exact_scoped_edit",
+        "structured_output_valid": true
+      }
+    },
+    {
+      "kind": "transfer",
+      "status": "READY",
+      "task": "092ca5d8e22b4c8ca491c15364930ed5",
+      "planner": "validated_edit",
+      "model_meta": {
+        "model_called": false,
+        "reason": "exact_scoped_edit",
+        "structured_output_valid": true
+      }
+    },
+    {
+      "kind": "transfer",
+      "status": "READY",
+      "task": "092ca5d8e22b4c8ca491c15364930ed5",
+      "planner": "validated_edit",
+      "model_meta": {
+        "model_called": false,
+        "reason": "exact_scoped_edit",
+        "structured_output_valid": true
+      }
+    }
+  ],
+  "observed": {
+    "operation": {
+      "id": "ea1d1107aebd477daa88528b16ac6dcd",
+      "owner": "25f37a98566a43878796e87eab825c2b",
+      "kind": "transfer",
+      "payload": {
+        "amount_cents": 88000,
+        "currency": "CNY",
+        "due_day": "2026-10-27",
+        "note": "给张伟转600",
+        "recipient": "zhang-school"
+      },
+      "binding": "08f54625f88dfd63fb74ead297faf32ccd0e7e059b5899f193e0fba06d7e4cda",
+      "status": "SCHEDULED",
+      "created": 1792935065.3380964,
+      "idem": "task_092ca5d8e22b4c8ca491c15364930ed5_21b4718490552407",
+      "level": "YELLOW",
+      "approved": 1792935065.3580964
+    }
+  },
+  "operation_count": 1,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 0.17
+}

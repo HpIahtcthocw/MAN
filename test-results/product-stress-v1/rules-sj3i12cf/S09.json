@@ -1,0 +1,24 @@
+{
+  "id": "S09",
+  "group": "normal",
+  "goal": "cancel_B_only",
+  "passed": false,
+  "turns": [
+    {
+      "kind": "subscriptions",
+      "status": "CONSENT_REQUIRED",
+      "task": "95dcf7b6ee624005b277e62eaf36cf47",
+      "planner": "rule_baseline",
+      "model_meta": null
+    },
+    {
+      "kind": "subscriptions",
+      "status": "REVIEW",
+      "task": "95dcf7b6ee624005b277e62eaf36cf47",
+      "planner": "rule_baseline",
+      "model_meta": null
+    }
+  ],
+  "error_type": "Denied",
+  "error_code": "APPROVAL"
+}

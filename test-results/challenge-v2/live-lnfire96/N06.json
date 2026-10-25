@@ -1,0 +1,145 @@
+{
+  "id": "N06",
+  "group": "normal",
+  "goal": "clarify_then_90_days",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "bills",
+      "status": "CLARIFY",
+      "task": "8bb40ef8da26487e86d67e4c0f0fc21f",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 7.563,
+        "prompt_tokens": 1391,
+        "completion_tokens": 168,
+        "structured_output_valid": true
+      }
+    },
+    {
+      "kind": "bills",
+      "status": "DONE",
+      "task": "8bb40ef8da26487e86d67e4c0f0fc21f",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 7.859,
+        "prompt_tokens": 1408,
+        "completion_tokens": 157,
+        "structured_output_valid": true
+      }
+    }
+  ],
+  "observed": {
+    "kind": "bills",
+    "status": "DONE",
+    "text": "账单范围和金额已按银行流水计算，下面保留原始依据。",
+    "draft": null,
+    "analysis": {
+      "balance_cents": 975900,
+      "reserved_cents": 0,
+      "available_cents": 975900,
+      "filters": {
+        "category": null,
+        "merchant_contains": null
+      },
+      "coverage": {
+        "first_day": "2026-07-05",
+        "last_day": "2026-09-05",
+        "note": "仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。"
+      },
+      "period": "2026-07-22 至 2026-10-19",
+      "scope": {
+        "start": "2026-07-22",
+        "end": "2026-10-19"
+      },
+      "expense_cents": 149400,
+      "income_cents": 0,
+      "categories": {
+        "订阅": 19400,
+        "餐饮": 130000
+      },
+      "rows": [
+        {
+          "id": "8e141a1c1e134fd384860db2ab6796a1",
+          "owner": "4d64ae3b0d054bafb856cf3aa85c92b2",
+          "amount": -2900,
+          "merchant": "云盘会员 B",
+          "category": "订阅",
+          "day": "2026-09-05",
+          "source": "cloud-b2026-09-05"
+        },
+        {
+          "id": "b0cbbcaf40a240dc8eac9a8fb25ba78a",
+          "owner": "4d64ae3b0d054bafb856cf3aa85c92b2",
+          "amount": -2900,
+          "merchant": "云盘会员 A",
+          "category": "订阅",
+          "day": "2026-09-05",
+          "source": "cloud-a2026-09-05"
+        },
+        {
+          "id": "e9b0ba793df9414696aba5ee0109691e",
+          "owner": "4d64ae3b0d054bafb856cf3aa85c92b2",
+          "amount": -65000,
+          "merchant": "日常餐饮",
+          "category": "餐饮",
+          "day": "2026-09-05",
+          "source": "food2026-09-05"
+        },
+        {
+          "id": "f67c46270edc445996dbec05f8987484",
+          "owner": "4d64ae3b0d054bafb856cf3aa85c92b2",
+          "amount": -3900,
+          "merchant": "视频会员",
+          "category": "订阅",
+          "day": "2026-09-05",
+          "source": "video2026-09-05"
+        },
+        {
+          "id": "29cd79e0c6f44df382dbdd40da6e33de",
+          "owner": "4d64ae3b0d054bafb856cf3aa85c92b2",
+          "amount": -2900,
+          "merchant": "云盘会员 A",
+          "category": "订阅",
+          "day": "2026-08-05",
+          "source": "cloud-a2026-08-05"
+        },
+        {
+          "id": "5527ff2d4b844eaea5a407c046dec1bc",
+          "owner": "4d64ae3b0d054bafb856cf3aa85c92b2",
+          "amount": -2900,
+          "merchant": "云盘会员 B",
+          "category": "订阅",
+          "day": "2026-08-05",
+          "source": "cloud-b2026-08-05"
+        },
+        {
+          "id": "8513cec8b1844c1c879749b8440d3518",
+          "owner": "4d64ae3b0d054bafb856cf3aa85c92b2",
+          "amount": -65000,
+          "merchant": "日常餐饮",
+          "category": "餐饮",
+          "day": "2026-08-05",
+          "source": "food2026-08-05"
+        },
+        {
+          "id": "ae3a02844c8745cd8d5fd8f04f52fa50",
+          "owner": "4d64ae3b0d054bafb856cf3aa85c92b2",
+          "amount": -3900,
+          "merchant": "视频会员",
+          "category": "订阅",
+          "day": "2026-08-05",
+          "source": "video2026-08-05"
+        }
+      ]
+    },
+    "pending_choices": null,
+    "source_task_id": null
+  },
+  "operation_count": 0,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 15.59
+}

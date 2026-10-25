@@ -1,0 +1,47 @@
+{
+  "id": "N12",
+  "group": "normal",
+  "goal": "linked_bills_to_protocol_consent",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "bills",
+      "status": "DONE",
+      "task": "ca5e9093b278440b8b2cb7a7db330709",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 0.953,
+        "prompt_tokens": 963,
+        "completion_tokens": 43,
+        "structured_output_valid": true
+      }
+    },
+    {
+      "kind": "subscriptions",
+      "status": "CONSENT_REQUIRED",
+      "task": "053dc9ccf6b4436fba6e03dead8792d2",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 1.234,
+        "prompt_tokens": 1039,
+        "completion_tokens": 19,
+        "structured_output_valid": true
+      }
+    }
+  ],
+  "observed": {
+    "kind": "subscriptions",
+    "status": "CONSENT_REQUIRED",
+    "text": "先确认查询银行代扣，再核对哪些仍然需要。",
+    "draft": null,
+    "analysis": null,
+    "pending_choices": [],
+    "source_task_id": "ca5e9093b278440b8b2cb7a7db330709"
+  },
+  "operation_count": 0,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 2.28
+}

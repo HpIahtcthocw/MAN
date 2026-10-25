@@ -1,0 +1,38 @@
+{
+  "id": "E03",
+  "group": "normal",
+  "goal": "underspecified_no_mutation",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "transfer",
+      "status": "CLARIFY",
+      "task": "7f065bdad2354b9e80880eec351f4c9f",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 8.25,
+        "prompt_tokens": 1391,
+        "completion_tokens": 276,
+        "structured_output_valid": true
+      }
+    }
+  ],
+  "observed": {
+    "kind": "transfer",
+    "status": "CLARIFY",
+    "text": "你说的是哪一位？请在候选中核对，或者接着告诉我。",
+    "draft": {
+      "due_day": "2026-10-19",
+      "reference_last": true,
+      "subtract_amount": null
+    },
+    "analysis": null,
+    "pending_choices": null,
+    "source_task_id": null
+  },
+  "operation_count": 0,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 8.47
+}

@@ -1,0 +1,188 @@
+{
+  "run_at": "2026-10-20T00:55:26.349855+08:00",
+  "author_visible": true,
+  "blind_cases": 0,
+  "real_bank": false,
+  "approval": "Explicit sandbox harness confirmation, not model or chat approval",
+  "records": [
+    {
+      "mode": "rules_system",
+      "passed": true,
+      "checks": {
+        "old_preparation_cancelled": true,
+        "old_approval_rejected": true,
+        "same_task": true,
+        "correct_recipient": true,
+        "correct_amount": true,
+        "correct_friday": true,
+        "scheduled": true,
+        "no_early_debit": true,
+        "reservation_600": true,
+        "audit_valid": true
+      },
+      "turns": [
+        {
+          "message": "给张伟转600",
+          "task": "26373c4694924d50a303f8121e2c13d3",
+          "status": "CLARIFY",
+          "draft": {
+            "amount": "600",
+            "recipient": null,
+            "recipient_hint": "张伟",
+            "due_day": "2026-10-20",
+            "reference_last": false
+          },
+          "planner": "rule_baseline",
+          "model_meta": null
+        },
+        {
+          "message": "同学那个",
+          "task": "26373c4694924d50a303f8121e2c13d3",
+          "status": "READY",
+          "draft": {
+            "amount": "600",
+            "recipient": "zhang-school",
+            "recipient_hint": "zhang-school",
+            "due_day": "2026-10-20",
+            "reference_last": false
+          },
+          "planner": "validated_edit",
+          "model_meta": {
+            "model_called": false,
+            "reason": "exact_scoped_edit",
+            "structured_output_valid": true
+          }
+        },
+        {
+          "message": "改成周五",
+          "task": "26373c4694924d50a303f8121e2c13d3",
+          "status": "READY",
+          "draft": {
+            "amount": "600",
+            "due_day": "2026-10-23",
+            "recipient": "zhang-school",
+            "recipient_hint": "zhang-school",
+            "reference_last": false
+          },
+          "planner": "validated_edit",
+          "model_meta": {
+            "model_called": false,
+            "reason": "exact_scoped_edit",
+            "structured_output_valid": true
+          }
+        }
+      ],
+      "final": {
+        "id": "d47cb72c6b1944f4bf4fb609f5c81be3",
+        "owner": "ca71118ce9bc487aba36fed4106ebf81",
+        "kind": "transfer",
+        "payload": {
+          "amount_cents": 60000,
+          "currency": "CNY",
+          "due_day": "2026-10-23",
+          "note": "给张伟转600",
+          "recipient": "zhang-school"
+        },
+        "binding": "3bfa27dd4b1c5135d54918d2067ad0e4b2c4ea8950fad6b81989a571a2e91d2a",
+        "status": "SCHEDULED",
+        "created": 1792428915.6887593,
+        "idem": "task_26373c4694924d50a303f8121e2c13d3_ea6341f0a2105b53",
+        "level": "YELLOW",
+        "approved": 1792428915.708276
+      }
+    },
+    {
+      "mode": "live_system",
+      "passed": true,
+      "checks": {
+        "old_preparation_cancelled": true,
+        "old_approval_rejected": true,
+        "same_task": true,
+        "correct_recipient": true,
+        "correct_amount": true,
+        "correct_friday": true,
+        "scheduled": true,
+        "no_early_debit": true,
+        "reservation_600": true,
+        "audit_valid": true
+      },
+      "turns": [
+        {
+          "message": "给张伟转600",
+          "task": "27e242de8d104b02acd3ee83c63b1a85",
+          "status": "CLARIFY",
+          "draft": {
+            "amount": "600",
+            "recipient": null,
+            "recipient_hint": "张伟",
+            "due_day": "2026-10-20",
+            "reference_last": false
+          },
+          "planner": "llm",
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 10.438,
+            "prompt_tokens": 1392,
+            "completion_tokens": 283,
+            "structured_output_valid": true
+          }
+        },
+        {
+          "message": "同学那个",
+          "task": "27e242de8d104b02acd3ee83c63b1a85",
+          "status": "READY",
+          "draft": {
+            "amount": "600",
+            "recipient": "zhang-school",
+            "recipient_hint": "zhang-school",
+            "due_day": "2026-10-20",
+            "reference_last": false
+          },
+          "planner": "validated_edit",
+          "model_meta": {
+            "model_called": false,
+            "reason": "exact_scoped_edit",
+            "structured_output_valid": true
+          }
+        },
+        {
+          "message": "改成周五",
+          "task": "27e242de8d104b02acd3ee83c63b1a85",
+          "status": "READY",
+          "draft": {
+            "amount": "600",
+            "due_day": "2026-10-23",
+            "recipient": "zhang-school",
+            "recipient_hint": "zhang-school",
+            "reference_last": false
+          },
+          "planner": "validated_edit",
+          "model_meta": {
+            "model_called": false,
+            "reason": "exact_scoped_edit",
+            "structured_output_valid": true
+          }
+        }
+      ],
+      "final": {
+        "id": "f49cd50dc923415fb1c867f02888b3f9",
+        "owner": "e36e1524b5174a4bae005ba42dda3d66",
+        "kind": "transfer",
+        "payload": {
+          "amount_cents": 60000,
+          "currency": "CNY",
+          "due_day": "2026-10-23",
+          "note": "给张伟转600",
+          "recipient": "zhang-school"
+        },
+        "binding": "33e6836ddf80cc52bf6269dae13878b21233d688a2e6772077fe11c3b3aa23a7",
+        "status": "SCHEDULED",
+        "created": 1792428926.3228064,
+        "idem": "task_27e242de8d104b02acd3ee83c63b1a85_ea6341f0a2105b53",
+        "level": "YELLOW",
+        "approved": 1792428926.3428416
+      }
+    }
+  ],
+  "database_dir": "E:\\gitproject\\hackathon\\cashflow-guardian\\test-results\\priority-milestone\\run-8er5oy6h"
+}

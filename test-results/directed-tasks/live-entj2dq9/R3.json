@@ -1,0 +1,21 @@
+{
+  "id": "R3",
+  "passed": true,
+  "turns": [
+    {
+      "input": "9月外卖花了多少",
+      "planner": "llm",
+      "status": "CLARIFY",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 9.781,
+        "prompt_tokens": 1949,
+        "completion_tokens": 289,
+        "structured_output_valid": true
+      },
+      "draft": null,
+      "analysis": null
+    }
+  ],
+  "payment_rows": 0
+}

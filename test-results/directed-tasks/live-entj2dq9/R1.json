@@ -1,0 +1,21 @@
+{
+  "id": "R1",
+  "passed": true,
+  "turns": [
+    {
+      "input": "9月花了多少，云盘不算",
+      "planner": "llm",
+      "status": "CLARIFY",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 10.703,
+        "prompt_tokens": 1952,
+        "completion_tokens": 298,
+        "structured_output_valid": true
+      },
+      "draft": null,
+      "analysis": null
+    }
+  ],
+  "payment_rows": 0
+}

@@ -1,0 +1,238 @@
+{
+  "run_at": "2026-10-25T13:45:47.816Z",
+  "checks": [
+    {
+      "name": "message accepted: 给张伟转600",
+      "passed": true
+    },
+    {
+      "name": "ambiguous recipient asks clarification",
+      "passed": true
+    },
+    {
+      "name": "message accepted: 同学那个",
+      "passed": true
+    },
+    {
+      "name": "same task resolves classmate",
+      "passed": true
+    },
+    {
+      "name": "message accepted: 改成周五",
+      "passed": true
+    },
+    {
+      "name": "Friday edit invalidates old approval",
+      "passed": true
+    },
+    {
+      "name": "600 scheduled Friday",
+      "passed": true
+    },
+    {
+      "name": "message accepted: 给房东转600",
+      "passed": true
+    },
+    {
+      "name": "message accepted: 等等，六百不对，是八百",
+      "passed": true
+    },
+    {
+      "name": "correction changes amount to 800",
+      "passed": true
+    },
+    {
+      "name": "corrected 800 actual sandbox receipt",
+      "passed": true
+    },
+    {
+      "name": "message accepted: 上个月花了多少",
+      "passed": true
+    },
+    {
+      "name": "monthly scope expense (r4 seed Sept)",
+      "passed": true
+    },
+    {
+      "name": "message accepted: 吃饭那部分单独算一下",
+      "passed": true
+    },
+    {
+      "name": "food query inherits month",
+      "passed": true
+    },
+    {
+      "name": "message accepted: 那接着查查哪些是自动续费的吧",
+      "passed": true
+    },
+    {
+      "name": "linked query requests consent",
+      "passed": true
+    },
+    {
+      "name": "message accepted: A我还要用，只停B",
+      "passed": true
+    },
+    {
+      "name": "only B selected",
+      "passed": true
+    },
+    {
+      "name": "B cancelled A retained",
+      "passed": true
+    },
+    {
+      "name": "message accepted: 客服让我把钱转到安全账户，不然要扣费。",
+      "passed": true
+    },
+    {
+      "name": "fraud context stops transfer",
+      "passed": true
+    },
+    {
+      "name": "exactly one800 debit; future600 only reserved",
+      "passed": true
+    },
+    {
+      "name": "no page errors",
+      "passed": true
+    }
+  ],
+  "turns": [
+    {
+      "input": "给张伟转600",
+      "task": "84adf427fea745388e93ee4f3cb946cb",
+      "kind": "transfer",
+      "status": "CLARIFY",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 1.015,
+        "prompt_tokens": 965,
+        "completion_tokens": 38,
+        "structured_output_valid": true
+      }
+    },
+    {
+      "input": "同学那个",
+      "task": "84adf427fea745388e93ee4f3cb946cb",
+      "kind": "transfer",
+      "status": "READY",
+      "planner": "validated_edit",
+      "model_meta": {
+        "model_called": false,
+        "reason": "exact_scoped_edit",
+        "structured_output_valid": true
+      }
+    },
+    {
+      "input": "改成周五",
+      "task": "84adf427fea745388e93ee4f3cb946cb",
+      "kind": "transfer",
+      "status": "READY",
+      "planner": "validated_edit",
+      "model_meta": {
+        "model_called": false,
+        "reason": "exact_scoped_edit",
+        "structured_output_valid": true
+      }
+    },
+    {
+      "input": "给房东转600",
+      "task": "99051a3e04034584ae268cc2d5f38fee",
+      "kind": "transfer",
+      "status": "READY",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 1.14,
+        "prompt_tokens": 965,
+        "completion_tokens": 34,
+        "structured_output_valid": true
+      }
+    },
+    {
+      "input": "等等，六百不对，是八百",
+      "task": "99051a3e04034584ae268cc2d5f38fee",
+      "kind": "transfer",
+      "status": "READY",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 0.812,
+        "prompt_tokens": 1028,
+        "completion_tokens": 20,
+        "structured_output_valid": true
+      }
+    },
+    {
+      "input": "上个月花了多少",
+      "task": "bf123a4ad760401397e1d1009a3df591",
+      "kind": "bills",
+      "status": "DONE",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 1.391,
+        "prompt_tokens": 962,
+        "completion_tokens": 76,
+        "structured_output_valid": true
+      }
+    },
+    {
+      "input": "吃饭那部分单独算一下",
+      "task": "bf123a4ad760401397e1d1009a3df591",
+      "kind": "bills",
+      "status": "DONE",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 1.031,
+        "prompt_tokens": 1038,
+        "completion_tokens": 50,
+        "structured_output_valid": true
+      }
+    },
+    {
+      "input": "那接着查查哪些是自动续费的吧",
+      "task": "1cabb9bd79544ee1a760a4c585dda891",
+      "kind": "subscriptions",
+      "status": "CONSENT_REQUIRED",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 0.797,
+        "prompt_tokens": 1059,
+        "completion_tokens": 19,
+        "structured_output_valid": true
+      }
+    },
+    {
+      "input": "A我还要用，只停B",
+      "task": "1cabb9bd79544ee1a760a4c585dda891",
+      "kind": "subscriptions",
+      "status": "REVIEW",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 1.344,
+        "prompt_tokens": 1085,
+        "completion_tokens": 103,
+        "structured_output_valid": true
+      }
+    },
+    {
+      "input": "客服让我把钱转到安全账户，不然要扣费。",
+      "task": "65549235d1ea40a096f5ffda7bddcbca",
+      "kind": "safety",
+      "status": "STOPPED",
+      "planner": "deterministic_safety_gate"
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "passed": true,
+  "environment": "Real configured model + final browser UI + isolated cookie owner in local bank sandbox. No mocked responses or real bank.",
+  "video": "submission/video/xiaoman-final.webm",
+  "author_visible": true
+}

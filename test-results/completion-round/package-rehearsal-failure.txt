@@ -1,0 +1,96 @@
+........................................................................ [ 32%]
+........................................................................ [ 64%]
+........................................................................ [ 96%]
+.......                                                                  [100%]
+223 passed in 14.99s
+
+Traceback (most recent call last):
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\responses.py", line 349, in __call__
+    stat_result = await anyio.to_thread.run_sync(os.stat, self.path)
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\anyio\to_thread.py", line 63, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\anyio\_backends\_asyncio.py", line 2502, in run_sync_in_worker_thread
+    return await future
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\anyio\_backends\_asyncio.py", line 986, in run
+    result = context.run(func, *args)
+FileNotFoundError: [WinError 3] ϵͳ�Ҳ���ָ����·����: 'E:\\gitproject\\hackathon\\cashflow-guardian\\submission\\build\\rehearsal-fdyfsbeg\\web\\index.html'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\testclient.py", line 479, in get
+    return super().get(
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\httpx\_client.py", line 1053, in get
+    return self.request(
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\testclient.py", line 451, in request
+    return super().request(
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\httpx\_client.py", line 825, in request
+    return self.send(request, auth=auth, follow_redirects=follow_redirects)
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\httpx\_client.py", line 914, in send
+    response = self._send_handling_auth(
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\httpx\_client.py", line 942, in _send_handling_auth
+    response = self._send_handling_redirects(
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\httpx\_client.py", line 979, in _send_handling_redirects
+    response = self._send_single_request(request)
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\httpx\_client.py", line 1014, in _send_single_request
+    response = transport.handle_request(request)
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\testclient.py", line 354, in handle_request
+    raise exc
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\testclient.py", line 351, in handle_request
+    portal.call(self.app, scope, receive, send)
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\anyio\from_thread.py", line 334, in call
+    return cast(T_Retval, self.start_task_soon(func, *args).result())
+  File "D:\Anaconda\lib\concurrent\futures\_base.py", line 446, in result
+    return self.__get_result()
+  File "D:\Anaconda\lib\concurrent\futures\_base.py", line 391, in __get_result
+    raise self._exception
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\anyio\from_thread.py", line 259, in _call_func
+    retval = await retval_or_awaitable
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\fastapi\applications.py", line 1138, in __call__
+    await super().__call__(scope, receive, send)
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\applications.py", line 113, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\middleware\errors.py", line 186, in __call__
+    raise exc
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\middleware\base.py", line 196, in __call__
+    recv_stream.close()
+  File "D:\Anaconda\lib\contextlib.py", line 137, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+  File "E:\gitproject\hackathon\cashflow-guardian\submission\build\rehearsal-fdyfsbeg\guardian\app.py", line 132, in boundary
+    response=await call_next(request)
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\fastapi\routing.py", line 121, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\fastapi\routing.py", line 108, in app
+    await response(scope, receive, send)
+  File "E:\gitproject\hackathon\agent-hack\personal-investment-os\.venv\lib\site-packages\starlette\responses.py", line 352, in __call__
+    raise RuntimeError(f"File at path {self.path} does not exist.")
+RuntimeError: File at path E:\gitproject\hackathon\cashflow-guardian\submission\build\rehearsal-fdyfsbeg\web\index.html does not exist.

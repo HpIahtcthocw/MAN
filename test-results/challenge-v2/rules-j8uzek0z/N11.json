@@ -1,0 +1,28 @@
+{
+  "id": "N11",
+  "group": "normal",
+  "goal": "explain_no_hold",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "safety_info",
+      "status": "DONE",
+      "task": "a557617e6a4842459bc889cd35c529f4",
+      "planner": "deterministic_context_gate",
+      "model_meta": null
+    }
+  ],
+  "observed": {
+    "kind": "safety_info",
+    "status": "DONE",
+    "text": "这段宣传是在提醒：不要按陌生人的要求把钱转到所谓“安全账户”。这是解释性查询，没有发起转账，也不会解除已有安全暂停。",
+    "draft": null,
+    "analysis": null,
+    "pending_choices": null,
+    "source_task_id": null
+  },
+  "operation_count": 0,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 0.05
+}

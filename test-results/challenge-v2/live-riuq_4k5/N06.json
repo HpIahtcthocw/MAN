@@ -1,0 +1,145 @@
+{
+  "id": "N06",
+  "group": "normal",
+  "goal": "clarify_then_90_days",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "bills",
+      "status": "CLARIFY",
+      "task": "7597365546a841939ea54b64b95c066c",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 7.969,
+        "prompt_tokens": 1391,
+        "completion_tokens": 150,
+        "structured_output_valid": true
+      }
+    },
+    {
+      "kind": "bills",
+      "status": "DONE",
+      "task": "7597365546a841939ea54b64b95c066c",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 7.89,
+        "prompt_tokens": 1408,
+        "completion_tokens": 168,
+        "structured_output_valid": true
+      }
+    }
+  ],
+  "observed": {
+    "kind": "bills",
+    "status": "DONE",
+    "text": "账单范围和金额已按银行流水计算，下面保留原始依据。",
+    "draft": null,
+    "analysis": {
+      "balance_cents": 975900,
+      "reserved_cents": 0,
+      "available_cents": 975900,
+      "filters": {
+        "category": null,
+        "merchant_contains": null
+      },
+      "coverage": {
+        "first_day": "2026-07-05",
+        "last_day": "2026-09-05",
+        "note": "仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。"
+      },
+      "period": "2026-07-22 至 2026-10-19",
+      "scope": {
+        "start": "2026-07-22",
+        "end": "2026-10-19"
+      },
+      "expense_cents": 149400,
+      "income_cents": 0,
+      "categories": {
+        "订阅": 19400,
+        "餐饮": 130000
+      },
+      "rows": [
+        {
+          "id": "0b54a525b8944b419884fe9089df6df9",
+          "owner": "2a5053c6bd6f4ae9a411266b1e783c27",
+          "amount": -2900,
+          "merchant": "云盘会员 A",
+          "category": "订阅",
+          "day": "2026-09-05",
+          "source": "cloud-a2026-09-05"
+        },
+        {
+          "id": "2625d3b3b5cf42bcaf5f4ad0bb63ff62",
+          "owner": "2a5053c6bd6f4ae9a411266b1e783c27",
+          "amount": -2900,
+          "merchant": "云盘会员 B",
+          "category": "订阅",
+          "day": "2026-09-05",
+          "source": "cloud-b2026-09-05"
+        },
+        {
+          "id": "7bee5ea51c334a2b97adad4ef6ec6076",
+          "owner": "2a5053c6bd6f4ae9a411266b1e783c27",
+          "amount": -65000,
+          "merchant": "日常餐饮",
+          "category": "餐饮",
+          "day": "2026-09-05",
+          "source": "food2026-09-05"
+        },
+        {
+          "id": "b2e505d4f3fe44e69bae03d80a037684",
+          "owner": "2a5053c6bd6f4ae9a411266b1e783c27",
+          "amount": -3900,
+          "merchant": "视频会员",
+          "category": "订阅",
+          "day": "2026-09-05",
+          "source": "video2026-09-05"
+        },
+        {
+          "id": "603d499c166f4f38aad519f2e5801c67",
+          "owner": "2a5053c6bd6f4ae9a411266b1e783c27",
+          "amount": -2900,
+          "merchant": "云盘会员 A",
+          "category": "订阅",
+          "day": "2026-08-05",
+          "source": "cloud-a2026-08-05"
+        },
+        {
+          "id": "8e5a22c86e9d4d92834b28b61b33988f",
+          "owner": "2a5053c6bd6f4ae9a411266b1e783c27",
+          "amount": -65000,
+          "merchant": "日常餐饮",
+          "category": "餐饮",
+          "day": "2026-08-05",
+          "source": "food2026-08-05"
+        },
+        {
+          "id": "a0682173cf1247c08aa046ce1b6742d5",
+          "owner": "2a5053c6bd6f4ae9a411266b1e783c27",
+          "amount": -2900,
+          "merchant": "云盘会员 B",
+          "category": "订阅",
+          "day": "2026-08-05",
+          "source": "cloud-b2026-08-05"
+        },
+        {
+          "id": "d16ab1f77d0243bf98e7f93fc3a90ecf",
+          "owner": "2a5053c6bd6f4ae9a411266b1e783c27",
+          "amount": -3900,
+          "merchant": "视频会员",
+          "category": "订阅",
+          "day": "2026-08-05",
+          "source": "video2026-08-05"
+        }
+      ]
+    },
+    "pending_choices": null,
+    "source_task_id": null
+  },
+  "operation_count": 0,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 16.11
+}

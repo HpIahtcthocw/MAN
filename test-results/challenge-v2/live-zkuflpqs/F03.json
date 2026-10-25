@@ -1,0 +1,12 @@
+{
+  "id": "F03",
+  "group": "fault",
+  "goal": "concurrent_execute_one_debit",
+  "passed": true,
+  "turns": [],
+  "observed": {},
+  "operation_count": 1,
+  "payment_rows": 1,
+  "audit_valid": true,
+  "duration_seconds": 0.17
+}

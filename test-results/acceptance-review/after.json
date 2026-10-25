@@ -1,0 +1,141 @@
+{
+  "label": "after",
+  "author_visible": true,
+  "blind": false,
+  "real_bank": false,
+  "model_calls": 0,
+  "source_hashes": {
+    "guardian/__init__.py": "0e92ebd8c5444164602e1baa9f3e9ab26a1ce31b09239e3df100ac108d1b7afc",
+    "guardian/app.py": "f131086943f54f960acbce03ec1495db50ba3c2d77506686a1b6f0503df356c3",
+    "guardian/assistant.py": "a0134c94793264468faccbf2747b119b17c1c7f3629efc4eb7efa95d563f6e90",
+    "guardian/bill_scope.py": "dcc2c33b987e0ce6a5049bda83b5109d17a4ac86e38193a9eac7b9bfeb4f144e",
+    "guardian/core/__init__.py": "3997615c7711010d25b18f7a924100349be3cff9dc975f90ad4d1ba1bc468b15",
+    "guardian/core/bindings.py": "f8806cb62bd35f7bfc7703d45ac1475ab22e20173db35e660f34627f1d02eed7",
+    "guardian/core/money.py": "e0f719b2ebb9f567ff02ee616ac3fddac2c6ca71e6bf3ba2886ab27610c91986",
+    "guardian/engine.py": "951d7394a6eaf0058f75d601641deca4fff4f7d5cd19696f9e9e5fb2eec76302",
+    "guardian/fraud.py": "ef0f2b24d2a4d9c5fd7edc47b8bff986c9a5333163074932935abde6b4ef8b0c",
+    "guardian/language.py": "7e174674262e36d84624887461736b068d32204d8992e7f2587d3a4fcdc8f8c3",
+    "guardian/model_config.py": "f434841e17bf41a9b9f9ef02616ededde0ae190660a732f0a9e92b2f6c4cff2d",
+    "guardian/planning.py": "b52837c7aa67a329abc79faf32fc35374f35024a47f697a7e74a41d006ee3eb4",
+    "guardian/task_planner.py": "5e26004c2e59f0bef35aa06d286dead1720fb2dcf46b67005522df9a621085ec",
+    "guardian/task_runtime.py": "9835a4c97414804dccceaee86b02aa63b07dae6f120acd6e392f635b88dfc8d0"
+  },
+  "records": [
+    {
+      "id": "A01",
+      "input": "2025年9月1日到9月15日花了多少",
+      "expected": "End date inherits explicitly stated 2025, not today.year",
+      "passed": true,
+      "observed": {
+        "scope": {
+          "start": "2025-09-01",
+          "end": "2025-09-15"
+        },
+        "filters": {
+          "category": null,
+          "merchant_contains": null
+        },
+        "expense_cents": 10000,
+        "needs_clarification": null,
+        "delta_cents": null
+      }
+    },
+    {
+      "id": "A02",
+      "input": "9月只看云盘 → 全部类别",
+      "expected": "Reset category only; merchant filter remains cloud",
+      "passed": true,
+      "observed": {
+        "scope": {
+          "start": "2026-09-01",
+          "end": "2026-09-30"
+        },
+        "filters": {
+          "category": null,
+          "merchant_contains": "云盘"
+        },
+        "expense_cents": 2900,
+        "needs_clarification": null,
+        "delta_cents": null
+      }
+    },
+    {
+      "id": "A03",
+      "input": "9月只看餐饮 → 只看医疗",
+      "expected": "Clarify unknown category or return explicit medical zero; never old food",
+      "passed": true,
+      "observed": {
+        "scope": null,
+        "filters": {
+          "category": "餐饮",
+          "merchant_contains": null
+        },
+        "expense_cents": null,
+        "needs_clarification": true,
+        "delta_cents": null
+      }
+    },
+    {
+      "id": "A04",
+      "input": "9月1日至3日花了多少",
+      "expected": "Exact days; no fifth-day cloud charge",
+      "passed": true,
+      "observed": {
+        "scope": {
+          "start": "2026-09-01",
+          "end": "2026-09-03"
+        },
+        "filters": {
+          "category": null,
+          "merchant_contains": null
+        },
+        "expense_cents": 30000,
+        "needs_clarification": null,
+        "delta_cents": null
+      }
+    },
+    {
+      "id": "A05",
+      "input": "9月只看餐饮 → 和八月比呢",
+      "expected": "Food remains selected; September minus August =220CNY",
+      "passed": true,
+      "observed": {
+        "scope": {
+          "start": "2026-09-01",
+          "end": "2026-09-30"
+        },
+        "filters": {
+          "category": "餐饮",
+          "merchant_contains": null
+        },
+        "expense_cents": 30000,
+        "needs_clarification": null,
+        "delta_cents": 22000
+      }
+    },
+    {
+      "id": "A06",
+      "input": "Food bills → related subscription query",
+      "expected": "No candidate, no expansion and no financial operation",
+      "passed": true,
+      "observed": {
+        "protocol_count": 0,
+        "link_status": "NO_MATCH",
+        "operation_count": 0
+      }
+    },
+    {
+      "id": "A07",
+      "input": "Corrupted provenance references another owner bank rows",
+      "expected": "Owner filter rejects foreign evidence even with internal metadata corruption",
+      "passed": true,
+      "observed": {
+        "protocol_count": 0,
+        "operation_count": 0
+      }
+    }
+  ],
+  "passed": 7,
+  "total": 7,
+  "database_dir": "E:\\gitproject\\hackathon\\cashflow-guardian\\test-results\\acceptance-review\\after-ejxgp3p3"
+}

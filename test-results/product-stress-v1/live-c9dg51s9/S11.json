@@ -1,0 +1,34 @@
+{
+  "id": "S11",
+  "group": "normal",
+  "goal": "underspecified_no_mutation",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "clarify",
+      "status": "CLARIFY",
+      "task": "e1d09adaee204751aabe86dcda44453f",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 5.844,
+        "prompt_tokens": 1390,
+        "completion_tokens": 79,
+        "structured_output_valid": true
+      }
+    }
+  ],
+  "observed": {
+    "kind": "clarify",
+    "status": "CLARIFY",
+    "text": "你想查账、转账，还是整理代扣？请再说具体一点。",
+    "draft": null,
+    "analysis": null,
+    "pending_choices": null,
+    "source_task_id": null
+  },
+  "operation_count": 0,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 5.97
+}

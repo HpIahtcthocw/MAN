@@ -1,0 +1,9 @@
+{
+  "storage_blocked_app_usable": true,
+  "history_restore_without_storage": true,
+  "double_click_request_count": 1,
+  "optimistic_selection_visible": true,
+  "failed_selection_rolled_back": true,
+  "page_errors": [],
+  "passed": true
+}

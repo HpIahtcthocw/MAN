@@ -1,0 +1,11 @@
+{
+  "run_at": "2026-10-20T19:37:12.662553+08:00",
+  "author_visible": true,
+  "blind": false,
+  "shadow_only": true,
+  "configured": false,
+  "records": [],
+  "metric_note": "Intent-only correctness, not banking task completion. Confidence is not measured Chinese accuracy.",
+  "status": "NOT_RUN_MISSING_CREDENTIAL",
+  "requests": 0
+}

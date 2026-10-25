@@ -1,0 +1,70 @@
+{
+  "run_at": "2026-10-20T03:48:24.871Z",
+  "checks": [
+    {
+      "name": "accepted 查余额",
+      "passed": true
+    },
+    {
+      "name": "balance bypasses model",
+      "passed": true
+    },
+    {
+      "name": "accepted 9月1日到9月3日花了多少",
+      "passed": true
+    },
+    {
+      "name": "day range has no fifth-day rows",
+      "passed": true
+    },
+    {
+      "name": "accepted 上个月只看餐饮",
+      "passed": true
+    },
+    {
+      "name": "food selected",
+      "passed": true
+    },
+    {
+      "name": "accepted 和八月比呢",
+      "passed": true
+    },
+    {
+      "name": "comparison retains food and both months",
+      "passed": true
+    },
+    {
+      "name": "accepted 全部类别，只看云盘",
+      "passed": true
+    },
+    {
+      "name": "explicit reset switches to cloud",
+      "passed": true
+    },
+    {
+      "name": "accepted 接着整理这些代扣",
+      "passed": true
+    },
+    {
+      "name": "linked query requires consent",
+      "passed": true
+    },
+    {
+      "name": "only two cloud protocols exposed",
+      "passed": true
+    },
+    {
+      "name": "candidates have source evidence and no auto-selection",
+      "passed": true
+    },
+    {
+      "name": "matching explanation visible",
+      "passed": false
+    }
+  ],
+  "errors": [],
+  "failure": "matching explanation visible",
+  "passed": false,
+  "real_bank": false,
+  "environment": "Final UI and configured model; balance deterministic; new isolated cookie account; no response mocking"
+}

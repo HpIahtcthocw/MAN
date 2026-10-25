@@ -1,0 +1,136 @@
+{
+  "run_at": "2026-10-20T13:54:05.445171+08:00",
+  "passed": true,
+  "checks": [
+    {
+      "name": "API accepts 2025年9月1日到9月15日花了多少",
+      "passed": true
+    },
+    {
+      "name": "explicit end-year inherited",
+      "passed": true
+    },
+    {
+      "name": "API accepts 上个月云盘消费一共多少",
+      "passed": true
+    },
+    {
+      "name": "cloud total58",
+      "passed": true
+    },
+    {
+      "name": "API accepts 全部类别",
+      "passed": true
+    },
+    {
+      "name": "merchant survives category reset",
+      "passed": true
+    },
+    {
+      "name": "API accepts 只看医疗",
+      "passed": true
+    },
+    {
+      "name": "unknown filter clarifies without stale total",
+      "passed": true
+    },
+    {
+      "name": "financial operations remain zero",
+      "passed": true
+    },
+    {
+      "name": "state does not bypass protocol consent",
+      "passed": true
+    },
+    {
+      "name": "mutation without csrf rejected",
+      "passed": true
+    }
+  ],
+  "turns": [
+    {
+      "input": "2025年9月1日到9月15日花了多少",
+      "status": "DONE",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 6.891,
+        "prompt_tokens": 1402,
+        "completion_tokens": 80,
+        "structured_output_valid": true
+      },
+      "query": {
+        "scope": {
+          "start": "2025-09-01",
+          "end": "2025-09-15"
+        },
+        "filters": {
+          "category": null,
+          "merchant_contains": null
+        },
+        "comparison_scopes": []
+      }
+    },
+    {
+      "input": "上个月云盘消费一共多少",
+      "status": "DONE",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 6.687,
+        "prompt_tokens": 1392,
+        "completion_tokens": 157,
+        "structured_output_valid": true
+      },
+      "query": {
+        "scope": {
+          "start": "2026-09-01",
+          "end": "2026-09-30"
+        },
+        "filters": {
+          "category": null,
+          "merchant_contains": "云盘"
+        },
+        "comparison_scopes": []
+      }
+    },
+    {
+      "input": "全部类别",
+      "status": "DONE",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 7.578,
+        "prompt_tokens": 1407,
+        "completion_tokens": 168,
+        "structured_output_valid": true
+      },
+      "query": {
+        "scope": {
+          "start": "2026-09-01",
+          "end": "2026-09-30"
+        },
+        "filters": {
+          "category": null,
+          "merchant_contains": "云盘"
+        },
+        "comparison_scopes": []
+      }
+    },
+    {
+      "input": "只看医疗",
+      "status": "CLARIFY",
+      "planner": "validated_edit",
+      "model_meta": {
+        "model_called": false,
+        "reason": "exact_scoped_edit",
+        "structured_output_valid": true
+      },
+      "query": null
+    }
+  ],
+  "failure": null,
+  "real_bank": false,
+  "blind": false,
+  "environment": "FastAPI TestClient + real configured model + isolated synthetic bank; not a browser or user trial"
+}

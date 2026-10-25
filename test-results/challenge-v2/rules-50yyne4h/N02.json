@@ -1,0 +1,60 @@
+{
+  "id": "N02",
+  "group": "normal",
+  "goal": "same_task_scheduled_880_school",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "transfer",
+      "status": "CLARIFY",
+      "task": "9981f5574a2145a6a88dbcd63366fc5e",
+      "planner": "rule_baseline",
+      "model_meta": null
+    },
+    {
+      "kind": "transfer",
+      "status": "READY",
+      "task": "9981f5574a2145a6a88dbcd63366fc5e",
+      "planner": "rule_baseline",
+      "model_meta": null
+    },
+    {
+      "kind": "transfer",
+      "status": "READY",
+      "task": "9981f5574a2145a6a88dbcd63366fc5e",
+      "planner": "rule_baseline",
+      "model_meta": null
+    },
+    {
+      "kind": "transfer",
+      "status": "READY",
+      "task": "9981f5574a2145a6a88dbcd63366fc5e",
+      "planner": "rule_baseline",
+      "model_meta": null
+    }
+  ],
+  "observed": {
+    "operation": {
+      "id": "ad03fb0cdc984dd1831e0652222f0007",
+      "owner": "37a6166ceb6641fba0adaaef197143cb",
+      "kind": "transfer",
+      "payload": {
+        "amount_cents": 88000,
+        "currency": "CNY",
+        "due_day": "2026-10-27",
+        "note": "给张伟转600",
+        "recipient": "zhang-school"
+      },
+      "binding": "64db96d76663615887f0202008d628c8848bd29a4d288e9f92e91803ac7fdb69",
+      "status": "SCHEDULED",
+      "created": 1792422666.2696424,
+      "idem": "task_9981f5574a2145a6a88dbcd63366fc5e_7d69f3e1b71ed86e",
+      "level": "YELLOW",
+      "approved": 1792422666.2952852
+    }
+  },
+  "operation_count": 1,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 0.22
+}

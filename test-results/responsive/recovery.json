@@ -1,0 +1,60 @@
+{
+  "results": [
+    {
+      "name": "startup error offers recovery",
+      "passed": true
+    },
+    {
+      "name": "explicit reconnect restores account",
+      "passed": true
+    },
+    {
+      "name": "dialog keyboard focus stays inside",
+      "passed": true
+    },
+    {
+      "name": "Escape closes information dialog",
+      "passed": true
+    },
+    {
+      "name": "home navigation consistently returns home",
+      "passed": true
+    },
+    {
+      "name": "stale version refreshes to the latest amount",
+      "passed": true
+    },
+    {
+      "name": "stale preparation does not open approval",
+      "passed": true
+    },
+    {
+      "name": "non-JSON response after actual payment is reconciled by read only",
+      "passed": true
+    },
+    {
+      "name": "completed transfer no longer has preparation form",
+      "passed": true
+    },
+    {
+      "name": "one actual debit after lost HTTP response",
+      "passed": true
+    },
+    {
+      "name": "reload never re-dispatches",
+      "passed": true
+    },
+    {
+      "name": "lost draft response recovers exactly one prepared operation",
+      "passed": true
+    },
+    {
+      "name": "lost draft response never implies approval",
+      "passed": true
+    }
+  ],
+  "passed": 13,
+  "total": 13,
+  "real_bank": false,
+  "environment": "Actual UI and deterministic sandbox; only gateway responses fault-injected, provider effects real within sandbox"
+}

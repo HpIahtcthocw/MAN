@@ -1,0 +1,56 @@
+{
+  "run_at": "2026-10-25T06:16:21.542Z",
+  "author_visible": true,
+  "blind": false,
+  "real_bank": false,
+  "checks": [
+    {
+      "name": "transfer asks for ambiguous recipient",
+      "passed": true
+    },
+    {
+      "name": "transfer follow-up retains task and resolves recipient",
+      "passed": true
+    },
+    {
+      "name": "transfer form rendered",
+      "passed": true
+    },
+    {
+      "name": "bill exclusion completes from bank rows",
+      "passed": true
+    },
+    {
+      "name": "bill exclusion is visible in rendered UI",
+      "passed": true
+    },
+    {
+      "name": "subscriptions require fresh consent",
+      "passed": true
+    },
+    {
+      "name": "subscription evidence rows shown",
+      "passed": true
+    },
+    {
+      "name": "subscription UI labels show individual decision",
+      "passed": true
+    },
+    {
+      "name": "fraud is stopped before any transfer",
+      "passed": true
+    },
+    {
+      "name": "fraud official-channel action rendered",
+      "passed": true
+    },
+    {
+      "name": "no browser errors",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "failure": null,
+  "passed": true,
+  "environment": "Isolated Chromium profile against current React UI and configured model; local synthetic bank, no mocked model responses."
+}

@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-15T09:34:28.360Z",
+  "checks": [
+    "browser session",
+    "rule plan draft",
+    "red confirmation",
+    "sandbox OTP",
+    "timeout after bank accept",
+    "reload persists state",
+    "original payment reconciliation",
+    "one debit only",
+    "subscription query confirmation",
+    "subscription cancellation",
+    "imported XSS remains text",
+    "mobile no overflow",
+    "audit chain",
+    "no JS or CSP errors"
+  ],
+  "initial_balance_cents": 975900,
+  "final_balance_cents": 625900,
+  "mobile": {
+    "viewport": 390,
+    "document": 390
+  },
+  "errors": {
+    "js": [],
+    "csp": []
+  }
+}

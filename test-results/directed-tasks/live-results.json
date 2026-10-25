@@ -1,0 +1,422 @@
+{
+  "run_at": "2026-10-20T15:04:11.888588+08:00",
+  "author_visible": true,
+  "blind": false,
+  "real_bank": false,
+  "records": [
+    {
+      "id": "R1",
+      "passed": true,
+      "turns": [
+        {
+          "input": "9月花了多少，云盘不算",
+          "planner": "llm",
+          "status": "CLARIFY",
+          "text": "请明确起止日期或要比较的期间；当前不会把日期范围扩大成整月。",
+          "query_proposal": {
+            "period_start": "2026-09-01",
+            "period_end": "2026-09-30",
+            "period_evidence": "9月花了多少",
+            "category": null,
+            "category_evidence": null,
+            "merchant": null,
+            "merchant_evidence": null,
+            "exclude": [
+              "云盘"
+            ],
+            "compare_start": null,
+            "compare_end": null,
+            "compare_evidence": null
+          },
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 9.969,
+            "prompt_tokens": 1992,
+            "completion_tokens": 252,
+            "structured_output_valid": true
+          },
+          "draft": null,
+          "analysis": null
+        }
+      ],
+      "payment_rows": 0
+    },
+    {
+      "id": "R2",
+      "passed": true,
+      "turns": [
+        {
+          "input": "去年9月花了多少",
+          "planner": "llm",
+          "status": "DONE",
+          "text": "账单范围和金额已按银行流水计算，下面保留原始依据。",
+          "query_proposal": {
+            "period_start": "2025-09-01",
+            "period_end": "2025-09-30",
+            "period_evidence": "去年9月花了多少",
+            "category": null,
+            "category_evidence": null,
+            "merchant": null,
+            "merchant_evidence": null,
+            "exclude": [],
+            "compare_start": null,
+            "compare_end": null,
+            "compare_evidence": null
+          },
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 9.578,
+            "prompt_tokens": 1989,
+            "completion_tokens": 279,
+            "structured_output_valid": true
+          },
+          "draft": null,
+          "analysis": {
+            "balance_cents": 975900,
+            "reserved_cents": 0,
+            "available_cents": 975900,
+            "filters": {
+              "category": null,
+              "merchant_contains": null
+            },
+            "coverage": {
+              "first_day": "2026-07-05",
+              "last_day": "2026-09-05",
+              "note": "仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。"
+            },
+            "period": "2025年09月",
+            "scope": {
+              "start": "2025-09-01",
+              "end": "2025-09-30"
+            },
+            "query": {
+              "scope": {
+                "start": "2025-09-01",
+                "end": "2025-09-30"
+              },
+              "filters": {
+                "category": null,
+                "merchant_contains": null
+              },
+              "comparison_scopes": []
+            },
+            "expense_cents": 0,
+            "income_cents": 0,
+            "categories": {},
+            "rows": [],
+            "query_verification": "model_host_agreement"
+          }
+        }
+      ],
+      "payment_rows": 0
+    },
+    {
+      "id": "R3",
+      "passed": true,
+      "turns": [
+        {
+          "input": "9月外卖花了多少",
+          "planner": "llm",
+          "status": "CLARIFY",
+          "text": "这次提到的分类或商户尚未匹配，请核对具体名称；当前不会返回整个期间的金额。",
+          "query_proposal": {
+            "period_start": "2026-09-01",
+            "period_end": "2026-09-30",
+            "period_evidence": "9月",
+            "category": "外卖",
+            "category_evidence": "外卖",
+            "merchant": null,
+            "merchant_evidence": null,
+            "exclude": [],
+            "compare_start": null,
+            "compare_end": null,
+            "compare_evidence": null
+          },
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 9.704,
+            "prompt_tokens": 1989,
+            "completion_tokens": 283,
+            "structured_output_valid": true
+          },
+          "draft": null,
+          "analysis": null
+        }
+      ],
+      "payment_rows": 0
+    },
+    {
+      "id": "R4",
+      "passed": true,
+      "turns": [
+        {
+          "input": "上个月云盘消费一共多少",
+          "planner": "llm",
+          "status": "DONE",
+          "text": "账单范围和金额已按银行流水计算，下面保留原始依据。",
+          "query_proposal": {
+            "period_start": "2026-09-01",
+            "period_end": "2026-09-30",
+            "period_evidence": "上个月",
+            "category": null,
+            "category_evidence": null,
+            "merchant": "云盘",
+            "merchant_evidence": "云盘消费",
+            "exclude": [],
+            "compare_start": null,
+            "compare_end": null,
+            "compare_evidence": null
+          },
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 9.641,
+            "prompt_tokens": 1990,
+            "completion_tokens": 280,
+            "structured_output_valid": true
+          },
+          "draft": null,
+          "analysis": {
+            "balance_cents": 975900,
+            "reserved_cents": 0,
+            "available_cents": 975900,
+            "filters": {
+              "category": null,
+              "merchant_contains": "云盘"
+            },
+            "coverage": {
+              "first_day": "2026-07-05",
+              "last_day": "2026-09-05",
+              "note": "仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。"
+            },
+            "period": "2026年09月",
+            "scope": {
+              "start": "2026-09-01",
+              "end": "2026-09-30"
+            },
+            "query": {
+              "scope": {
+                "start": "2026-09-01",
+                "end": "2026-09-30"
+              },
+              "filters": {
+                "category": null,
+                "merchant_contains": "云盘"
+              },
+              "comparison_scopes": []
+            },
+            "expense_cents": 5800,
+            "income_cents": 0,
+            "categories": {
+              "订阅": 5800
+            },
+            "rows": [
+              {
+                "id": "c0a050bdc9c448f880af002887d526af",
+                "owner": "dc74223641d24bbf81dcb412e4a90186",
+                "amount": -2900,
+                "merchant": "云盘会员 A",
+                "category": "订阅",
+                "day": "2026-09-05",
+                "source": "cloud-a2026-09-05"
+              },
+              {
+                "id": "ccc511d6ba77422688e0e237cab143eb",
+                "owner": "dc74223641d24bbf81dcb412e4a90186",
+                "amount": -2900,
+                "merchant": "云盘会员 B",
+                "category": "订阅",
+                "day": "2026-09-05",
+                "source": "cloud-b2026-09-05"
+              }
+            ],
+            "query_verification": "model_host_agreement"
+          }
+        }
+      ],
+      "payment_rows": 0
+    },
+    {
+      "id": "R5",
+      "passed": true,
+      "turns": [
+        {
+          "input": "给房东转600",
+          "planner": "llm",
+          "status": "READY",
+          "text": "对象、金额、日期和余额条件已核对；下一步仍由你批准。",
+          "query_proposal": null,
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 9.344,
+            "prompt_tokens": 1990,
+            "completion_tokens": 276,
+            "structured_output_valid": true
+          },
+          "draft": {
+            "amount": "600",
+            "recipient": "landlord",
+            "recipient_hint": "landlord",
+            "due_day": "2026-10-20",
+            "reference_last": false
+          },
+          "analysis": null
+        },
+        {
+          "input": "不转600了，转500，周五",
+          "planner": "llm",
+          "status": "READY",
+          "text": "对象、金额、日期和余额条件已核对；下一步仍由你批准。",
+          "query_proposal": null,
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 9.219,
+            "prompt_tokens": 2059,
+            "completion_tokens": 297,
+            "structured_output_valid": true
+          },
+          "draft": {
+            "amount": "500",
+            "due_day": "2026-10-23",
+            "recipient": "landlord",
+            "recipient_hint": "landlord",
+            "reference_last": false
+          },
+          "analysis": null
+        },
+        {
+          "input": "先别转了",
+          "planner": "llm",
+          "status": "PAUSED",
+          "text": "已暂停这项任务。未执行的草稿会失效，已付款不会被撤回。",
+          "query_proposal": null,
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 9.062,
+            "prompt_tokens": 2074,
+            "completion_tokens": 284,
+            "structured_output_valid": true
+          },
+          "draft": {
+            "amount": "500",
+            "due_day": "2026-10-23",
+            "recipient": "landlord",
+            "recipient_hint": "landlord",
+            "reference_last": false
+          },
+          "analysis": null
+        },
+        {
+          "input": "改成周五",
+          "planner": "validated_edit",
+          "status": "PAUSED",
+          "text": "补充已保留，这项任务仍然暂停；只有明确说“继续办理”后才会重新核对。",
+          "query_proposal": null,
+          "model_meta": {
+            "model_called": false,
+            "reason": "exact_scoped_edit",
+            "structured_output_valid": true
+          },
+          "draft": {
+            "amount": "500",
+            "due_day": "2026-10-23",
+            "recipient": "landlord",
+            "recipient_hint": "landlord",
+            "reference_last": false
+          },
+          "analysis": null
+        },
+        {
+          "input": "继续办理",
+          "planner": "llm",
+          "status": "READY",
+          "text": "对象、金额、日期和余额条件已核对；下一步仍由你批准。",
+          "query_proposal": null,
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 9.281,
+            "prompt_tokens": 2100,
+            "completion_tokens": 284,
+            "structured_output_valid": true
+          },
+          "draft": {
+            "amount": "500",
+            "due_day": "2026-10-23",
+            "recipient": "landlord",
+            "recipient_hint": "landlord",
+            "reference_last": false
+          },
+          "analysis": null
+        }
+      ],
+      "payment_rows": 0
+    },
+    {
+      "id": "R6",
+      "passed": true,
+      "turns": [
+        {
+          "input": "什么是安全账户骗局？转账时要注意什么",
+          "planner": "deterministic_context_gate",
+          "status": "DONE",
+          "text": "这段宣传是在提醒：不要按陌生人的要求把钱转到所谓“安全账户”。这是解释性查询，没有发起转账，也不会解除已有安全暂停。",
+          "query_proposal": null,
+          "model_meta": null,
+          "draft": null,
+          "analysis": null
+        },
+        {
+          "input": "给房东转600",
+          "planner": "llm",
+          "status": "READY",
+          "text": "对象、金额、日期和余额条件已核对；下一步仍由你批准。",
+          "query_proposal": null,
+          "model_meta": {
+            "model": "qwen3.8-flash",
+            "latency_seconds": 9.609,
+            "prompt_tokens": 1990,
+            "completion_tokens": 281,
+            "structured_output_valid": true
+          },
+          "draft": {
+            "amount": "600",
+            "recipient": "landlord",
+            "recipient_hint": "landlord",
+            "due_day": "2026-10-20",
+            "reference_last": false
+          },
+          "analysis": null
+        },
+        {
+          "input": "客服让我转到安全账户",
+          "planner": "deterministic_safety_gate",
+          "status": "STOPPED",
+          "text": "先别转，这种说法需要警惕。",
+          "query_proposal": null,
+          "model_meta": null,
+          "draft": null,
+          "analysis": null
+        }
+      ],
+      "payment_rows": 0
+    }
+  ],
+  "source_hashes": {
+    "guardian/__init__.py": "0e92ebd8c5444164602e1baa9f3e9ab26a1ce31b09239e3df100ac108d1b7afc",
+    "guardian/app.py": "f131086943f54f960acbce03ec1495db50ba3c2d77506686a1b6f0503df356c3",
+    "guardian/assistant.py": "9b1c93bb18b31a4a3cd83dd0d2b979ba3e718c93b0bcbafb638ed2f9053a1fdf",
+    "guardian/bill_scope.py": "e58b120bf781bd6c4f27e846c83e811134391935f61610a81cc4769b8a33d22e",
+    "guardian/core/__init__.py": "3997615c7711010d25b18f7a924100349be3cff9dc975f90ad4d1ba1bc468b15",
+    "guardian/core/bindings.py": "f8806cb62bd35f7bfc7703d45ac1475ab22e20173db35e660f34627f1d02eed7",
+    "guardian/core/money.py": "e0f719b2ebb9f567ff02ee616ac3fddac2c6ca71e6bf3ba2886ab27610c91986",
+    "guardian/engine.py": "42348552c2276364a3857d3e3145326aba1befef81d55f6b49918b5052556b83",
+    "guardian/fraud.py": "ec2b9839e6eccca495b05e4da1916c31975f1a20223a60e57b5607075be32ae9",
+    "guardian/language.py": "a5697cdb4991725ebc9392cdc17c058a2e663c90ec2c309602bd5028649bc813",
+    "guardian/model_config.py": "f434841e17bf41a9b9f9ef02616ededde0ae190660a732f0a9e92b2f6c4cff2d",
+    "guardian/planning.py": "b52837c7aa67a329abc79faf32fc35374f35024a47f697a7e74a41d006ee3eb4",
+    "guardian/task_planner.py": "49dc7ca1e3c4fc875b8790a90a2f65d3a5fb54f8e489bbe4ad22a33ada41f767",
+    "guardian/task_runtime.py": "73e9f84adccac3280d29fa167d51e1e19ad01e0dbf2b14c139b909c268c2e701"
+  },
+  "passed": 6,
+  "total": 6,
+  "database_dir": "E:\\gitproject\\hackathon\\cashflow-guardian\\test-results\\claude-tasks\\live-aa9v33lv"
+}

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="10" skipped="0" tests="10" time="1.109" timestamp="2026-10-20T14:43:37.678935+08:00" hostname="LAPTOP-PQ2J8U4J"><testcase classname="tests.test_claude_acceptance" name="test_T1_exclusion_never_becomes_inclusion" time="0.010"><failure message="AssertionError: assert (None or 2900 == 30000)&#10; +  where None = &lt;built-in method get of dict object at 0x000002033F045540&gt;('needs_clarification')&#10; +    where &lt;built-in method get of dict object at 0x000002033F045540&gt; = {'available_cents': 900000, 'balance_cents': 900000, 'categories': {'订阅': 2900}, 'coverage': {'first_day': '2026-08-05', 'last_day': '2026-09-20', 'note': '仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。'}, ...}.get&#10; +  and   2900 = &lt;built-in method get of dict object at 0x000002033F045540&gt;('expense_cents')&#10; +    where &lt;built-in method get of dict object at 0x000002033F045540&gt; = {'available_cents': 900000, 'balance_cents': 900000, 'categories': {'订阅': 2900}, 'coverage': {'first_day': '2026-08-05', 'last_day': '2026-09-20', 'note': '仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。'}, ...}.get">def test_T1_exclusion_never_becomes_inclusion():
+        r=analyze(ledger(),'9月花了多少，云盘不算',date(2026,10,20))
+&gt;       assert r.get('needs_clarification') or r.get('expense_cents')==30000
+E       AssertionError: assert (None or 2900 == 30000)
+E        +  where None = &lt;built-in method get of dict object at 0x000002033F045540&gt;('needs_clarification')
+E        +    where &lt;built-in method get of dict object at 0x000002033F045540&gt; = {'available_cents': 900000, 'balance_cents': 900000, 'categories': {'订阅': 2900}, 'coverage': {'first_day': '2026-08-05', 'last_day': '2026-09-20', 'note': '仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。'}, ...}.get
+E        +  and   2900 = &lt;built-in method get of dict object at 0x000002033F045540&gt;('expense_cents')
+E        +    where &lt;built-in method get of dict object at 0x000002033F045540&gt; = {'available_cents': 900000, 'balance_cents': 900000, 'categories': {'订阅': 2900}, 'coverage': {'first_day': '2026-08-05', 'last_day': '2026-09-20', 'note': '仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。'}, ...}.get
+
+tests\test_claude_acceptance.py:25: AssertionError</failure></testcase><testcase classname="tests.test_claude_acceptance" name="test_T2_last_year_month_does_not_mean_this_year" time="0.003"><failure message="AssertionError: assert (None or '2026-09-01' == '2025-09-01'&#10; +  where None = &lt;built-in method get of dict object at 0x000002033F0250C0&gt;('needs_clarification')&#10; +    where &lt;built-in method get of dict object at 0x000002033F0250C0&gt; = {'available_cents': 900000, 'balance_cents': 900000, 'categories': {'订阅': 2900, '餐饮': 30000}, 'coverage': {'first_day': '2026-08-05', 'last_day': '2026-09-20', 'note': '仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。'}, ...}.get&#10;  &#10;  - 2025-09-01&#10;  ?    ^&#10;  + 2026-09-01&#10;  ?    ^)">def test_T2_last_year_month_does_not_mean_this_year():
+        r=analyze(ledger(),'去年9月花了多少',date(2026,10,20))
+&gt;       assert r.get('needs_clarification') or r.get('scope',{}).get('start')=='2025-09-01'
+E       AssertionError: assert (None or '2026-09-01' == '2025-09-01'
+E        +  where None = &lt;built-in method get of dict object at 0x000002033F0250C0&gt;('needs_clarification')
+E        +    where &lt;built-in method get of dict object at 0x000002033F0250C0&gt; = {'available_cents': 900000, 'balance_cents': 900000, 'categories': {'订阅': 2900, '餐饮': 30000}, 'coverage': {'first_day': '2026-08-05', 'last_day': '2026-09-20', 'note': '仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。'}, ...}.get
+E         
+E         - 2025-09-01
+E         ?    ^
+E         + 2026-09-01
+E         ?    ^)
+
+tests\test_claude_acceptance.py:30: AssertionError</failure></testcase><testcase classname="tests.test_claude_acceptance" name="test_T3_unknown_merchant_never_becomes_all_expenses" time="0.003"><failure message="AssertionError: assert (None or (32900 == 0))&#10; +  where None = &lt;built-in method get of dict object at 0x000002033F8E9380&gt;('needs_clarification')&#10; +    where &lt;built-in method get of dict object at 0x000002033F8E9380&gt; = {'available_cents': 900000, 'balance_cents': 900000, 'categories': {'订阅': 2900, '餐饮': 30000}, 'coverage': {'first_day': '2026-08-05', 'last_day': '2026-09-20', 'note': '仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。'}, ...}.get&#10; +  and   32900 = &lt;built-in method get of dict object at 0x000002033F8E9380&gt;('expense_cents')&#10; +    where &lt;built-in method get of dict object at 0x000002033F8E9380&gt; = {'available_cents': 900000, 'balance_cents': 900000, 'categories': {'订阅': 2900, '餐饮': 30000}, 'coverage': {'first_day': '2026-08-05', 'last_day': '2026-09-20', 'note': '仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。'}, ...}.get">def test_T3_unknown_merchant_never_becomes_all_expenses():
+        r=analyze(ledger(),'9月外卖花了多少',date(2026,10,20))
+&gt;       assert r.get('needs_clarification') or (r.get('expense_cents')==0 and r.get('filters',{}).get('merchant_contains')=='外卖')
+E       AssertionError: assert (None or (32900 == 0))
+E        +  where None = &lt;built-in method get of dict object at 0x000002033F8E9380&gt;('needs_clarification')
+E        +    where &lt;built-in method get of dict object at 0x000002033F8E9380&gt; = {'available_cents': 900000, 'balance_cents': 900000, 'categories': {'订阅': 2900, '餐饮': 30000}, 'coverage': {'first_day': '2026-08-05', 'last_day': '2026-09-20', 'note': '仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。'}, ...}.get
+E        +  and   32900 = &lt;built-in method get of dict object at 0x000002033F8E9380&gt;('expense_cents')
+E        +    where &lt;built-in method get of dict object at 0x000002033F8E9380&gt; = {'available_cents': 900000, 'balance_cents': 900000, 'categories': {'订阅': 2900, '餐饮': 30000}, 'coverage': {'first_day': '2026-08-05', 'last_day': '2026-09-20', 'note': '仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。'}, ...}.get
+
+tests\test_claude_acceptance.py:35: AssertionError</failure></testcase><testcase classname="tests.test_claude_acceptance" name="test_T4_business_trip_is_not_a_comparison" time="0.003"><failure message="AssertionError: assert 'comparison_periods' not in {'available_cents': 900000, 'balance_cents': 900000, 'categories': {'订阅': 2900, '餐饮': 8000}, 'category_deltas': {'订阅': 0, '餐饮': -22000}, ...}">def test_T4_business_trip_is_not_a_comparison():
+        first=analyze(ledger(),'8月花了多少',date(2026,10,20))
+        r=analyze(ledger(),'9月出差花了多少',date(2026,10,20),first)
+&gt;       assert 'comparison_periods' not in r
+E       AssertionError: assert 'comparison_periods' not in {'available_cents': 900000, 'balance_cents': 900000, 'categories': {'订阅': 2900, '餐饮': 8000}, 'category_deltas': {'订阅': 0, '餐饮': -22000}, ...}
+
+tests\test_claude_acceptance.py:41: AssertionError</failure></testcase><testcase classname="tests.test_claude_acceptance" name="test_T5_negated_amount_correction_revokes_old_draft" time="0.123"><failure message="AssertionError: assert '600' == '500'&#10;  &#10;  - 500&#10;  + 600">bank = (&lt;guardian.engine.Engine object at 0x000002033F916BE0&gt;, &lt;guardian.assistant.Assistant object at 0x000002033F916A30&gt;, 'f872f837e5c1472d811fca60936ed570')
+
+    def test_T5_negated_amount_correction_revokes_old_draft(bank):
+        e,a,o=bank;t=a.message(o,'给房东转600');old=prepare(a,o,t)
+        t=follow(a,o,old['task'],'不转600了，转500，周五')
+&gt;       assert t['draft']['amount']=='500'
+E       AssertionError: assert '600' == '500'
+E         
+E         - 500
+E         + 600
+
+tests\test_claude_acceptance.py:47: AssertionError</failure></testcase><testcase classname="tests.test_claude_acceptance" name="test_T6_paused_task_cannot_resume_from_date_edit" time="0.133"><failure message="AssertionError: assert 'READY' == 'PAUSED'&#10;  &#10;  - PAUSED&#10;  + READY">bank = (&lt;guardian.engine.Engine object at 0x000002033F9199D0&gt;, &lt;guardian.assistant.Assistant object at 0x000002033F9198B0&gt;, '597e1a48edef408780e2a5cac291849c')
+
+    def test_T6_paused_task_cannot_resume_from_date_edit(bank):
+        e,a,o=bank;t=a.message(o,'给房东转600');old=prepare(a,o,t)
+        t=follow(a,o,old['task'],'先别转了');assert t['status']=='PAUSED'
+&gt;       t=follow(a,o,t,'改成周五');assert t['status']=='PAUSED'
+E       AssertionError: assert 'READY' == 'PAUSED'
+E         
+E         - PAUSED
+E         + READY
+
+tests\test_claude_acceptance.py:57: AssertionError</failure></testcase><testcase classname="tests.test_claude_acceptance" name="test_T7_range_provenance_not_called_row_selection" time="0.083"><failure message="AssertionError: assert (None == 'query_scope')&#10; +  where None = &lt;built-in method get of dict object at 0x000002033F92D100&gt;('source_selection')&#10; +    where &lt;built-in method get of dict object at 0x000002033F92D100&gt; = {'bill_evidence_ids': ['4ad65ad3f5cc4e768778b196d5f64240', 'b4aff4577a9644dba8eba840dca0f3db', 'bfa289fa9cc94eaba1a74e...67022576b1184e5', ...], 'consent_at': 1792478618.4220028, 'consent_expired': False, 'created': 1792478618.4120018, ...}.get">bank = (&lt;guardian.engine.Engine object at 0x000002033F0B79A0&gt;, &lt;guardian.assistant.Assistant object at 0x000002033F0B7940&gt;, '762177a4f44f4464ab0b563a9050c421')
+
+    def test_T7_range_provenance_not_called_row_selection(bank):
+        e,a,o=bank;t=a.message(o,'上个月花了多少');t=follow(a,o,t,'接着整理这些代扣');t=a.reveal(o,t['id'],True)
+&gt;       assert t.get('source_selection')=='query_scope' and '选中' not in t['text']
+E       AssertionError: assert (None == 'query_scope')
+E        +  where None = &lt;built-in method get of dict object at 0x000002033F92D100&gt;('source_selection')
+E        +    where &lt;built-in method get of dict object at 0x000002033F92D100&gt; = {'bill_evidence_ids': ['4ad65ad3f5cc4e768778b196d5f64240', 'b4aff4577a9644dba8eba840dca0f3db', 'bfa289fa9cc94eaba1a74e...67022576b1184e5', ...], 'consent_at': 1792478618.4220028, 'consent_expired': False, 'created': 1792478618.4120018, ...}.get
+
+tests\test_claude_acceptance.py:66: AssertionError</failure></testcase><testcase classname="tests.test_claude_acceptance" name="test_T8_duplicate_name_needs_specific_protocol_choice" time="0.091"><failure message="AssertionError: assert None&#10; +  where None = &lt;built-in method get of dict object at 0x000002033F0DD140&gt;('ambiguous_name')&#10; +    where &lt;built-in method get of dict object at 0x000002033F0DD140&gt; = {'amount': 4900, 'id': '5c9cfbfeaf7b4ca5b8ecea7941f5a6c1:other-a', 'name': '云盘会员 A', 'observations': [{'amount': -2900... {'amount': -2900, 'day': '2026-07-05', 'id': '56999acba6124dff96232cf4f2926966', 'source': 'cloud-a2026-07-05'}], ...}.get&#10; +      where {'amount': 4900, 'id': '5c9cfbfeaf7b4ca5b8ecea7941f5a6c1:other-a', 'name': '云盘会员 A', 'observations': [{'amount': -2900... {'amount': -2900, 'day': '2026-07-05', 'id': '56999acba6124dff96232cf4f2926966', 'source': 'cloud-a2026-07-05'}], ...} = next(&lt;generator object test_T8_duplicate_name_needs_specific_protocol_choice.&lt;locals&gt;.&lt;genexpr&gt; at 0x000002033F044900&gt;)">bank = (&lt;guardian.engine.Engine object at 0x000002033EFFCC40&gt;, &lt;guardian.assistant.Assistant object at 0x000002033EFFCDC0&gt;, '5c9cfbfeaf7b4ca5b8ecea7941f5a6c1')
+
+    def test_T8_duplicate_name_needs_specific_protocol_choice(bank):
+        e,a,o=bank
+        with e.tx() as c:c.execute('INSERT INTO subscriptions VALUES(?,?,?,?,?)',(o+':other-a',o,'云盘会员 A',4900,'ACTIVE'))
+        t=a.reveal(o,a.message(o,'查询代扣')['id'],True)
+        t=follow(a,o,t,'云盘会员A我不用了')
+        assert not e.snapshot(o)['operations']
+&gt;       assert next(s for s in t['subscriptions'] if s['id']==o+':other-a').get('ambiguous_name')
+E       AssertionError: assert None
+E        +  where None = &lt;built-in method get of dict object at 0x000002033F0DD140&gt;('ambiguous_name')
+E        +    where &lt;built-in method get of dict object at 0x000002033F0DD140&gt; = {'amount': 4900, 'id': '5c9cfbfeaf7b4ca5b8ecea7941f5a6c1:other-a', 'name': '云盘会员 A', 'observations': [{'amount': -2900... {'amount': -2900, 'day': '2026-07-05', 'id': '56999acba6124dff96232cf4f2926966', 'source': 'cloud-a2026-07-05'}], ...}.get
+E        +      where {'amount': 4900, 'id': '5c9cfbfeaf7b4ca5b8ecea7941f5a6c1:other-a', 'name': '云盘会员 A', 'observations': [{'amount': -2900... {'amount': -2900, 'day': '2026-07-05', 'id': '56999acba6124dff96232cf4f2926966', 'source': 'cloud-a2026-07-05'}], ...} = next(&lt;generator object test_T8_duplicate_name_needs_specific_protocol_choice.&lt;locals&gt;.&lt;genexpr&gt; at 0x000002033F044900&gt;)
+
+tests\test_claude_acceptance.py:78: AssertionError</failure></testcase><testcase classname="tests.test_claude_acceptance" name="test_T9_old_preference_not_fresh_intent" time="0.144"><failure message="AssertionError: assert 'unneeded' == 'unknown'&#10;  &#10;  - unknown&#10;  + unneeded">bank = (&lt;guardian.engine.Engine object at 0x000002033F06F6A0&gt;, &lt;guardian.assistant.Assistant object at 0x000002033F06F910&gt;, '7b8f8a6fa3ca4c29a250307716a5c1fd')
+
+    def test_T9_old_preference_not_fresh_intent(bank):
+        e,a,o=bank;t=a.reveal(o,a.message(o,'查询代扣')['id'],True)
+        b=next(s for s in t['subscriptions'] if s['name']=='云盘会员 B')
+        a.preference(o,t['id'],b['id'],'unneeded')
+        second=a.reveal(o,a.message(o,'查询代扣')['id'],True)
+        b=next(s for s in second['subscriptions'] if s['name']=='云盘会员 B')
+&gt;       assert b['preference']=='unknown'
+E       AssertionError: assert 'unneeded' == 'unknown'
+E         
+E         - unknown
+E         + unneeded
+
+tests\test_claude_acceptance.py:95: AssertionError</failure></testcase><testcase classname="tests.test_claude_acceptance" name="test_T10_education_does_not_hold_but_actual_inducement_does" time="0.098"><failure message="AssertionError: assert 'safety' == 'safety_info'&#10;  &#10;  - safety_info&#10;  + safety">bank = (&lt;guardian.engine.Engine object at 0x000002033F0BCCD0&gt;, &lt;guardian.assistant.Assistant object at 0x000002033F0BCA00&gt;, '368e5226801b43fc8c87af9ec75947f8')
+
+    def test_T10_education_does_not_hold_but_actual_inducement_does(bank):
+        e,a,o=bank;t=a.message(o,'什么是安全账户骗局？转账时要注意什么')
+&gt;       assert t['kind']=='safety_info'
+E       AssertionError: assert 'safety' == 'safety_info'
+E         
+E         - safety_info
+E         + safety
+
+tests\test_claude_acceptance.py:101: AssertionError</failure></testcase></testsuite></testsuites>

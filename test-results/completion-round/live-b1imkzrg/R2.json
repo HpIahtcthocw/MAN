@@ -1,0 +1,71 @@
+{
+  "id": "R2",
+  "passed": true,
+  "turns": [
+    {
+      "input": "去年9月花了多少",
+      "planner": "llm",
+      "status": "DONE",
+      "text": "账单范围和金额已按银行流水计算，下面保留原始依据。",
+      "query_proposal": {
+        "period_start": "2025-09-01",
+        "period_end": "2025-09-30",
+        "period_evidence": "去年9月",
+        "category": null,
+        "category_evidence": null,
+        "merchant": null,
+        "merchant_evidence": null,
+        "exclude": [],
+        "compare_start": null,
+        "compare_end": null,
+        "compare_evidence": null
+      },
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 7.625,
+        "prompt_tokens": 1411,
+        "completion_tokens": 70,
+        "structured_output_valid": true
+      },
+      "draft": null,
+      "analysis": {
+        "balance_cents": 975900,
+        "reserved_cents": 0,
+        "available_cents": 975900,
+        "filters": {
+          "category": null,
+          "merchant_contains": null,
+          "exclude": []
+        },
+        "coverage": {
+          "first_day": "2026-07-05",
+          "last_day": "2026-09-05",
+          "note": "仅统计本账户当前已有银行流水；未出现记录不代表期间完整或其他账户无消费。"
+        },
+        "period": "2025年09月",
+        "scope": {
+          "start": "2025-09-01",
+          "end": "2025-09-30"
+        },
+        "query": {
+          "scope": {
+            "start": "2025-09-01",
+            "end": "2025-09-30"
+          },
+          "filters": {
+            "category": null,
+            "merchant_contains": null,
+            "exclude": []
+          },
+          "comparison_scopes": []
+        },
+        "expense_cents": 0,
+        "income_cents": 0,
+        "categories": {},
+        "rows": [],
+        "query_verification": "model_host_agreement"
+      }
+    }
+  ],
+  "payment_rows": 0
+}
