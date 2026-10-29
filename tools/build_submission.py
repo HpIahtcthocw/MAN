@@ -242,7 +242,7 @@ qa='''# 现场追问与证据入口
 **源代码可复现吗？**
 包里有启动说明、依赖、测试、冻结题、runner和结果JSON。真实推理需自行配置HTTPS兼容服务密钥；离线测试不需要密钥。包不含本机data和API密钥，未代用户发布GitHub。
 '''
-(OUT/'现场问答.md').write_text(qa,encoding='utf-8')
+(OUT/'现场问答.md').write_text((ROOT/'submission/现场问答.md').read_text(encoding='utf-8'),encoding='utf-8')
 check='''# 提交检查与剩余外部条件
 
 ## 已形成的本地交付
