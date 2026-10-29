@@ -1,5 +1,5 @@
 """今日叮咛 speaks first from ledger facts: anomaly, upcoming charges, income, watch hits."""
-from datetime import timedelta
+from datetime import date, timedelta
 
 from guardian.briefing import build
 from guardian.engine import Engine, now
@@ -18,7 +18,23 @@ def test_first_open_briefing_has_anomaly_upcoming_and_income(tmp_path):
     anomaly = next(i for i in briefing['items'] if i['kind'] == 'anomaly')
     assert anomaly['merchant'] == '迅捷数码专营店' and '599' in anomaly['text']
     upcoming = next(i for i in briefing['items'] if i['kind'] == 'upcoming')
-    assert '3笔' in upcoming['text'] and '97' in upcoming['text']
+    # 叮咛窗口是“今天起 14 天内”，窗口滑过订阅扣费日时条数会变；
+    # 期望值按 briefing 的同一规则（estimate_next_charge + 14 天窗）现算。
+    from guardian.bill_scope import estimate_next_charge
+    today = now().date()
+    with e.tx() as c:
+        expected = []
+        for name, amount in c.execute(
+                "SELECT name,amount FROM subscriptions WHERE owner=? AND status='ACTIVE'", (o,)):
+            obs = [dict(b) for b in c.execute(
+                "SELECT day,amount FROM ledger WHERE owner=? AND merchant=? AND source NOT LIKE 'csv:%' ORDER BY day DESC",
+                (o, name))]
+            est = estimate_next_charge(obs, today)
+            if est and 0 <= (est['date'] and (date.fromisoformat(est['date']) - today).days) <= 14:
+                expected.append((name, amount))
+    assert f"{len(expected)}笔" in upcoming['text']
+    from guardian.briefing import _yuan
+    assert _yuan(sum(a for _, a in expected)) in upcoming['text']
     assert briefing['spoken'].startswith(briefing['items'][0]['text'][:6])
 
 
