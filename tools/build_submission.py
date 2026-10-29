@@ -310,6 +310,10 @@ for name in ('README.md','SECURITY.md','run.py','requirements.txt','requirements
     pth=ROOT/name
     if pth.is_file(): files.append(pth)
 files.extend([ROOT/'frontend/index.html'])
+for name in ('evaluation/blind-li-2026-10-29.txt','evaluation/blind-li-2026-10-29.sha256','tools/run_blind_li.py'):
+    pth=ROOT/name
+    if pth.is_file(): files.append(pth)
+for p in (ROOT/'test-results/blind-li-2026-10-29').glob('*.json'): files.append(p)
 for name in ('evaluate_task_baseline.py','evaluate_paraphrases.py','run_challenge.py','review_handoff.py','build_submission.py','preflight_submission.py','serve_ui_test.py','verify-responsive.playwright.js','verify-ui-recovery.playwright.js','verify_priority_milestone.py','record-final-demo.playwright.js','verify-query-context.playwright.js','run_acceptance_review.py','verify_acceptance_api.py','verify-acceptance-review.playwright.js','run_directed_live.py'):
     p=ROOT/'tools'/name
     if p.is_file(): files.append(p)

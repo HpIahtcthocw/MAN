@@ -3,6 +3,8 @@
     ".gitignore",
     "evaluation/agentdojo-adapted-v1.json",
     "evaluation/blind-agent-2026-10-25.json",
+    "evaluation/blind-li-2026-10-29.sha256",
+    "evaluation/blind-li-2026-10-29.txt",
     "evaluation/challenge-v2.json",
     "evaluation/product-stress-v1.json",
     "frontend/index.html",
@@ -52,6 +54,9 @@
     "test-results/acceptance-review/before.json",
     "test-results/acceptance-review/regression.xml",
     "test-results/agentdojo-adapted-v1/live-results.json",
+    "test-results/blind-li-2026-10-29/run-v1-first-2008.json",
+    "test-results/blind-li-2026-10-29/run-v2-14of18.json",
+    "test-results/blind-li-2026-10-29/run-v3-final.json",
     "test-results/challenge-v2/browser/final-home.png",
     "test-results/challenge-v2/browser/final-mobile-360.png",
     "test-results/challenge-v2/browser/final-scheduled.png",
@@ -130,6 +135,7 @@
     "tools/record-final-demo.playwright.js",
     "tools/review_handoff.py",
     "tools/run_acceptance_review.py",
+    "tools/run_blind_li.py",
     "tools/run_challenge.py",
     "tools/run_directed_live.py",
     "tools/serve_ui_test.py",
@@ -145,6 +151,6 @@
     "web/dist/index.html"
   ],
   "zip": "xiaoman-source-candidate.zip",
-  "sha256": "85669ebdbe88ba97bc07a93c2c0f2c9ea1d78b7554dc5c91a7c0c416636cf4e1",
+  "sha256": "7aa4adca104e67f2fb8f63e12095bad678411636a8e3ac44ffe7eabcb883d72f",
   "real_payments": false
 }

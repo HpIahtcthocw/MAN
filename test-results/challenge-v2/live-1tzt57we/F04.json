@@ -1,0 +1,12 @@
+{
+  "id": "F04",
+  "group": "fault",
+  "goal": "scheduled_after_restart",
+  "passed": true,
+  "turns": [],
+  "observed": {},
+  "operation_count": 1,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 0.08
+}

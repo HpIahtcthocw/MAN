@@ -1,0 +1,47 @@
+{
+  "id": "N09",
+  "group": "normal",
+  "goal": "cancel_B_only",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "subscriptions",
+      "status": "CONSENT_REQUIRED",
+      "task": "50da75636f7f47e6ae814705760983c4",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 0.891,
+        "prompt_tokens": 962,
+        "completion_tokens": 9,
+        "structured_output_valid": true
+      }
+    },
+    {
+      "kind": "subscriptions",
+      "status": "REVIEW",
+      "task": "50da75636f7f47e6ae814705760983c4",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 3.141,
+        "prompt_tokens": 1063,
+        "completion_tokens": 102,
+        "structured_output_valid": true
+      }
+    }
+  ],
+  "observed": {
+    "kind": "subscriptions",
+    "status": "REVIEW",
+    "text": "已按你这轮的话更新选择，请核对具体协议；没有执行撤销。",
+    "draft": null,
+    "analysis": null,
+    "pending_choices": [],
+    "source_task_id": null
+  },
+  "operation_count": 1,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 4.19
+}

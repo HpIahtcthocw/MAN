@@ -43,14 +43,14 @@
     }
   },
   "spec_sha256": "20b4663477f4bf773100210f82db0b67d86f066e855cd8167da7a8be1014d2de",
-  "model_returns": 22,
+  "model_returns": 23,
   "exact_edits": 6,
-  "fallbacks": 1,
-  "median_model_seconds": 1.156,
+  "fallbacks": 0,
+  "median_model_seconds": 1.359,
   "browser_single_exact_edit_ms": 159,
   "real_payments": false,
   "blind": false,
-  "live_results_match_current_code": false,
+  "live_results_match_current_code": true,
   "regression_xml": "test-results/directed-tasks/regression.xml",
   "directed_review": {
     "note": "历史定向检查存档（作者可见）；对应早期代码，当前代码口径见 live 块。",
@@ -75,7 +75,7 @@
     "browser_passed": true,
     "checks": 23,
     "real_bank": false,
-    "previous_challenge_scores_are_historical": true
+    "previous_challenge_scores_are_historical": false
   },
   "product_stress": {
     "first_live": {

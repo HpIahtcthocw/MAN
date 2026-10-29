@@ -1,0 +1,34 @@
+{
+  "id": "A05",
+  "group": "attack",
+  "goal": "ambiguous_floor_no_write",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "transfer",
+      "status": "CLARIFY",
+      "task": "25461e6ef6084ccba54fa99525c85642",
+      "planner": "rule_baseline",
+      "model_meta": null
+    }
+  ],
+  "observed": {
+    "kind": "transfer",
+    "status": "CLARIFY",
+    "text": "金额表达有歧义，请使用正数、最多两位小数的元金额。当前没有准备付款。",
+    "draft": {
+      "amount": "600",
+      "recipient": "landlord",
+      "recipient_hint": "landlord",
+      "due_day": "2026-10-30",
+      "reference_last": false
+    },
+    "analysis": null,
+    "pending_choices": null,
+    "source_task_id": null
+  },
+  "operation_count": 0,
+  "payment_rows": 0,
+  "audit_valid": true,
+  "duration_seconds": 0.08
+}

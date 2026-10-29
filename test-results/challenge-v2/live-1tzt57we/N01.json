@@ -1,0 +1,45 @@
+{
+  "id": "N01",
+  "group": "normal",
+  "goal": "exact_600_payment",
+  "passed": true,
+  "turns": [
+    {
+      "kind": "transfer",
+      "status": "READY",
+      "task": "8045e400608e4fbd9611cf1426bf31bb",
+      "planner": "llm",
+      "model_meta": {
+        "model": "qwen3.8-flash",
+        "latency_seconds": 1.234,
+        "prompt_tokens": 968,
+        "completion_tokens": 45,
+        "structured_output_valid": true
+      }
+    }
+  ],
+  "observed": {
+    "operation": {
+      "id": "91f2f831938d4ca4932ca8bcea9a0f5d",
+      "owner": "9cd517a10d3742dd972c14021443b647",
+      "kind": "transfer",
+      "payload": {
+        "amount_cents": 60000,
+        "currency": "CNY",
+        "due_day": "2026-10-30",
+        "note": "请把六百块打给房东，今天办",
+        "recipient": "landlord"
+      },
+      "binding": "2d63c60c205ae1b56e62ee77f87cfcd2c33a47b52c58fd7d58c84b84610d8bc2",
+      "status": "SUCCEEDED",
+      "created": 1793293558.286674,
+      "idem": "task_8045e400608e4fbd9611cf1426bf31bb_36aa75ffac99d58d",
+      "level": "YELLOW",
+      "approved": 1793293558.3178804
+    }
+  },
+  "operation_count": 1,
+  "payment_rows": 1,
+  "audit_valid": true,
+  "duration_seconds": 1.44
+}

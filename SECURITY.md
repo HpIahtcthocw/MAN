@@ -30,7 +30,7 @@
 
 ## 证据
 
-109项离线回归：`test-results/agent-completion/offline.xml`。模型开发任务12/12（13次结构合法返回）、额外口语/攻击10/10，仅为作者可见小样本；同一规则对照分别12/12和8/10。四条浏览器纵向路径见 `test-results/xiaoman-browser/agent-completion.json`。无第三方审计、官方成绩、银发用户研究或生产安全认证。
+工程回归264项（tests/，XML随包）；冻结挑战与队友盲写集成绩见 submission/EVIDENCE.json（含口径与首轮失败保留说明）。无第三方审计、官方成绩、银发用户研究或生产安全认证。
 
 ## 13. 主动能力与跟进（2026-10-25 增补）
 
