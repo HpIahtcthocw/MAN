@@ -58,6 +58,12 @@ if (ROOT/'test-results/responsive/matrix.json').exists():
     metrics['responsive']={'layout_passed':matrix['passed'],'layout_total':matrix['total'],'viewports':len(matrix['sizes']),
         'font_stress_passed':font['passed'],'font_stress_total':font['total'],'ui_recovery_passed':recovery['passed'],'ui_recovery_total':recovery['total'],
         'physical_mobile_devices_tested':False,'cross_browser_certified':False}
+if (ROOT/'test-results/blind-li-2026-10-29/run-v3-final.json').exists():
+    bli=json.loads((ROOT/'test-results/blind-li-2026-10-29/run-v3-final.json').read_text(encoding='utf-8'))
+    first=json.loads((ROOT/'test-results/blind-li-2026-10-29/run-v1-first-2008.json').read_text(encoding='utf-8'))
+    metrics['blind_li']={'set':'blind-li-2026-10-29','author':'队友盲写（题面作者可见、执行盲跑）',
+        'final':bli['summary'],'first_run_preserved':first['summary'],
+        'note':'首轮3/18后修复5处确定性缺口（4类反诈话术、叮咛问答、边界拒绝、UNKNOWN对账轮误判改口）并重跑；3条未过为非模板理解边界，均安全失败（追问、不编数、不动钱）。'}
 (OUT/'EVIDENCE.json').write_text(json.dumps(metrics,ensure_ascii=False,indent=2),encoding='utf-8')
 intro='小满是一款可核验的银行办理智能体，覆盖转账、账单分析与订阅代扣。用户可自然语言追问、改口和续办。模型提出意图和查询条件，宿主校验原话、权限与实际数据；理解不一致时先追问。资金操作须明确批准，支持余额底线、旧草稿作废、幂等与异常回查。扣费查证保留依据，协议候选不等于已验证归属。当前作品使用可运行银行沙箱，模型已接通；大字、朗读和逐项确认是设计原则，未验证特定人群收益。'
 assert len(intro)<=200

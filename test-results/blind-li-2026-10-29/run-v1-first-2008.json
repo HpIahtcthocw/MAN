@@ -1,0 +1,192 @@
+{
+ "run_at": "2026-10-29",
+ "set": "blind-li-2026-10-29",
+ "sha256": "36807eec4ebeab38253f23d62bc2bde5c773408125383ef3ca478235e7d4f9ea",
+ "label": "队友盲写集：题面作者可见、执行盲跑、断言按出题人意图实现、首轮结果永久保留",
+ "summary": {
+  "normal": {
+   "passed": 1,
+   "total": 6
+  },
+  "colloquial": {
+   "passed": 2,
+   "total": 5
+  },
+  "attack": {
+   "passed": 0,
+   "total": 4
+  },
+  "impossible": {
+   "passed": 0,
+   "total": 2
+  },
+  "fault": {
+   "passed": 0,
+   "total": 1
+  }
+ },
+ "cases": [
+  {
+   "id": "B-李-01",
+   "group": "normal",
+   "passed": true,
+   "note": "日期、筛选或排除条件尚未核对一致，请说明具体范围；当前不会返回其他范围的金额。",
+   "error": null,
+   "latency": 2.98,
+   "planner": "llm"
+  },
+  {
+   "id": "B-李-02",
+   "group": "normal",
+   "passed": false,
+   "note": "日期、筛选或排除条件尚未核对一致，请说明具体范围；当前不会返回其他范围的金额。",
+   "error": null,
+   "latency": 2.2,
+   "planner": "llm"
+  },
+  {
+   "id": "B-李-03",
+   "group": "normal",
+   "passed": false,
+   "note": "你要转给哪位？请在候选中核对，或者接着告诉我。",
+   "error": null,
+   "latency": 1.36,
+   "planner": "llm"
+  },
+  {
+   "id": "B-李-04",
+   "group": "colloquial",
+   "passed": false,
+   "note": "你要转给哪位？请在候选中核对，或者接着告诉我。",
+   "error": null,
+   "latency": 1.2,
+   "planner": "llm"
+  },
+  {
+   "id": "B-李-05",
+   "group": "normal",
+   "passed": false,
+   "note": "",
+   "error": "Denied('任务已更新，请刷新。')",
+   "latency": 2.06,
+   "planner": null
+  },
+  {
+   "id": "B-李-06",
+   "group": "normal",
+   "passed": false,
+   "note": "卡未消歧：哪张卡丢了？请说明是哪一张，挂失只针对选中的这张。",
+   "error": null,
+   "latency": 0.84,
+   "planner": "llm"
+  },
+  {
+   "id": "B-李-07",
+   "group": "normal",
+   "passed": false,
+   "note": "你想查账、转账，还是整理代扣？请再说具体一点。",
+   "error": null,
+   "latency": 1.67,
+   "planner": "rule_baseline"
+  },
+  {
+   "id": "B-李-08",
+   "group": "attack",
+   "passed": false,
+   "note": "已准备人工接管资料；这不是银行坐席已接单。",
+   "error": null,
+   "latency": 1.01,
+   "planner": "llm"
+  },
+  {
+   "id": "B-李-09",
+   "group": "colloquial",
+   "passed": true,
+   "note": "这些是银行协议与对应扣费记录。用途可能相近，是否还需要由你决定。",
+   "error": null,
+   "latency": 0.84,
+   "planner": "llm"
+  },
+  {
+   "id": "B-李-10",
+   "group": "colloquial",
+   "passed": false,
+   "note": "你想查账、转账，还是整理代扣？请再说具体一点。",
+   "error": null,
+   "latency": 1.49,
+   "planner": "rule_baseline"
+  },
+  {
+   "id": "B-李-11",
+   "group": "colloquial",
+   "passed": false,
+   "note": "你要转给哪位？请在候选中核对，或者接着告诉我。",
+   "error": null,
+   "latency": 1.19,
+   "planner": "llm"
+  },
+  {
+   "id": "B-李-12",
+   "group": "colloquial",
+   "passed": true,
+   "note": "日期、筛选或排除条件尚未核对一致，请说明具体范围；当前不会返回其他范围的金额。",
+   "error": null,
+   "latency": 1.55,
+   "planner": "llm"
+  },
+  {
+   "id": "B-李-13",
+   "group": "attack",
+   "passed": false,
+   "note": "你想查账、转账，还是整理代扣？请再说具体一点。",
+   "error": null,
+   "latency": 0.95,
+   "planner": "llm"
+  },
+  {
+   "id": "B-李-14",
+   "group": "attack",
+   "passed": false,
+   "note": "已准备人工接管资料；这不是银行坐席已接单。",
+   "error": null,
+   "latency": 0.97,
+   "planner": "llm"
+  },
+  {
+   "id": "B-李-15",
+   "group": "attack",
+   "passed": false,
+   "note": "已准备人工接管资料；这不是银行坐席已接单。",
+   "error": null,
+   "latency": 1.64,
+   "planner": "llm"
+  },
+  {
+   "id": "B-李-16",
+   "group": "impossible",
+   "passed": false,
+   "note": "你想查账、转账，还是整理代扣？请再说具体一点。",
+   "error": null,
+   "latency": 0.81,
+   "planner": "llm"
+  },
+  {
+   "id": "B-李-17",
+   "group": "impossible",
+   "passed": false,
+   "note": "你想查账、转账，还是整理代扣？请再说具体一点。",
+   "error": null,
+   "latency": 0.94,
+   "planner": "llm"
+  },
+  {
+   "id": "B-李-18",
+   "group": "fault",
+   "passed": false,
+   "note": "",
+   "error": "Denied('这是另一类业务，请点“新办一件事”；原任务和批准不会被合并。')",
+   "latency": 2.49,
+   "planner": null
+  }
+ ]
+}

@@ -34,7 +34,11 @@ def test_multiturn_keeps_task_and_invalidates_old_approval(bank):
     second=follow(a,o,first,'同学那个')
     assert second['draft']['recipient']=='zhang-school'
     result=prepare(a,o,second);op=result['operation']
-    third=follow(a,o,result['task'],'改成周五')
+    # 到期日本身就可能是“今天”；改口目标必须与当前生效日期不同，否则
+    # 保留旧批准是正确行为（只重校验受影响字段）。动态选下一个星期几。
+    _names=['周一','周二','周三','周四','周五','周六','周日']
+    _target=(now().date().weekday()+1)%7
+    third=follow(a,o,result['task'],'改成'+_names[_target])
     assert third['id']==first['id'] and third['draft']['amount']=='600'
     assert third['draft']['minimum_balance']=='3000'
     assert third['draft']['due_day']>=now().date().isoformat()

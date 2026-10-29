@@ -117,6 +117,26 @@ class TaskRuntimeMixin:
                 # already sets the action and keeps every draft field unchanged.
                 plan=self.rule_plan(message,context);mode='deterministic_session_control'
                 meta={'model_called':False,'reason':'pure_pause_or_resume','structured_output_valid':True}
+            elif not old and re.search(r'养老金|叮咛|快到期|这两天要交',message):
+                from guardian.briefing import build as _briefing
+                _b=_briefing(self.engine,owner)
+                _text=_b.get('spoken') or '；'.join(i['text'] for i in _b['items'])
+                return self.save(owner,'bills',dict(message=message,initial_message=message,revision=1,
+                    turns=[{'role':'user','text':message}],status='DONE',planner='deterministic_briefing',
+                    text=_text,operation_ids=[],plan=[n.model_dump() for n in template('bills')],
+                    steps=[{'label':'汇总账户当前事实','status':'DONE'}]))
+            elif not old and re.search(r'买.{0,8}(?:理财|基金|股票)|利息高.{0,8}(?:来点|买|理)',message):
+                return self.save(owner,'clarify',dict(message=message,initial_message=message,revision=1,
+                    turns=[{'role':'user','text':message}],status='DONE',planner='deterministic_boundary',
+                    text='买理财这类投资它办不了，也不会替你估收益。请到银行柜台或银行官方App咨询，别信“利息高”的来路不明推荐。',
+                    operation_ids=[],plan=[n.model_dump() for n in template('safety_info')],
+                    steps=[{'label':'说明能力边界','status':'DONE'}]))
+            elif not old and re.search(r'退.{0,12}(?:回来|回|款)',message) and re.search(r'别的银行|其他银行|他行|连.{0,6}卡',message):
+                return self.save(owner,'clarify',dict(message=message,initial_message=message,revision=1,
+                    turns=[{'role':'user','text':message}],status='DONE',planner='deterministic_boundary',
+                    text='已经扣掉的钱它退不了：撤销银行代扣不等于退款，退款要找商户或官方客服。别的银行的卡也连不上，它只办理本行授权的账户。本账户的自动扣费可以帮你逐项整理。',
+                    operation_ids=[],plan=[n.model_dump() for n in template('safety_info')],
+                    steps=[{'label':'说明能力边界','status':'DONE'}]))
             elif configured():
                 plan,meta=model_plan(message,context);mode='llm'
             else: plan=self.rule_plan(message,context)
@@ -124,7 +144,7 @@ class TaskRuntimeMixin:
             plan=self.rule_plan(message,context);unavailable=True
             meta={'structured_output_valid':False,'failure_category':type(error).__name__}
         validate_nodes(plan)
-        if old and kind=='transfer' and re.search(r'转了|转出去|到账|结果|成功|扣了',message):
+        if old and kind=='transfer' and re.search(r'转了|转出去|到账|结果|成功|扣了|出去没有|再转|没动静|失败了',message):
             unknown_ids=[op_id for op_id in old.get('operation_ids',[])
                          if self.engine.get_operation(owner,op_id)['status']=='UNKNOWN']
             if unknown_ids:
@@ -312,7 +332,7 @@ class TaskRuntimeMixin:
         if plan.action=='handoff': data.update(status='HANDOFF',text='已准备人工接管资料；这不是银行坐席已接单。')
         if was_paused and not explicit_resume and plan.action!='handoff':
             data.update(status='PAUSED',text='补充已保留，这项任务仍然暂停；只有明确说“继续办理”后才会重新核对。')
-        material=task_kind=='transfer' and ((old or {}).get('draft',{})!=data.get('draft',{}) or
+        material=task_kind=='transfer' and mode!='deterministic_reconcile_inquiry' and ((old or {}).get('draft',{})!=data.get('draft',{}) or
             any(data.get(flag) for flag in ('unresolved_constraint','unresolved_amount','unsupported_currency','unresolved_schedule')))
         if task_id:
             with self.engine.tx() as c:

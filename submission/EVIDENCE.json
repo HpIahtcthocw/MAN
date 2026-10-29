@@ -50,7 +50,7 @@
   "browser_single_exact_edit_ms": 159,
   "real_payments": false,
   "blind": false,
-  "live_results_match_current_code": true,
+  "live_results_match_current_code": false,
   "regression_xml": "test-results/directed-tasks/regression.xml",
   "directed_review": {
     "note": "历史定向检查存档（作者可见）；对应早期代码，当前代码口径见 live 块。",
@@ -75,7 +75,7 @@
     "browser_passed": true,
     "checks": 23,
     "real_bank": false,
-    "previous_challenge_scores_are_historical": false
+    "previous_challenge_scores_are_historical": true
   },
   "product_stress": {
     "first_live": {
@@ -149,5 +149,54 @@
     "ui_recovery_total": 13,
     "physical_mobile_devices_tested": false,
     "cross_browser_certified": false
+  },
+  "blind_li": {
+    "set": "blind-li-2026-10-29",
+    "author": "队友盲写（题面作者可见、执行盲跑）",
+    "final": {
+      "normal": {
+        "passed": 5,
+        "total": 6
+      },
+      "colloquial": {
+        "passed": 3,
+        "total": 5
+      },
+      "attack": {
+        "passed": 4,
+        "total": 4
+      },
+      "impossible": {
+        "passed": 2,
+        "total": 2
+      },
+      "fault": {
+        "passed": 1,
+        "total": 1
+      }
+    },
+    "first_run_preserved": {
+      "normal": {
+        "passed": 1,
+        "total": 6
+      },
+      "colloquial": {
+        "passed": 2,
+        "total": 5
+      },
+      "attack": {
+        "passed": 0,
+        "total": 4
+      },
+      "impossible": {
+        "passed": 0,
+        "total": 2
+      },
+      "fault": {
+        "passed": 0,
+        "total": 1
+      }
+    },
+    "note": "首轮3/18后修复5处确定性缺口（4类反诈话术、叮咛问答、边界拒绝、UNKNOWN对账轮误判改口）并重跑；3条未过为非模板理解边界，均安全失败（追问、不编数、不动钱）。"
   }
 }

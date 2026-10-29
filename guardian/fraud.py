@@ -38,7 +38,7 @@ def assess(text):
         signals.append('要求把资金转入所谓“安全账户”')
     if '屏幕共享' in text and re.search(r'转账|操作|验证码|银行卡', text):
         signals.append('对方要求屏幕共享并操作账户')
-    if re.search(r'验证码|银行卡密码|支付密码|查询密码|取款密码', text) and re.search(r'告诉|发给|提供给|给客服|交给|发给我|发给他|发给她', text):
+    if re.search(r'验证码|银行卡密码|支付密码|查询密码|取款密码|六位数字|六位数', text) and re.search(r'告诉|发给|提供给|给客服|交给|发给我|发给他|发给她|念给|读给|报给|念一下|读一下', text):
         signals.append('对方索取验证码或账户密码')
     if re.search(r'退款|退费|贷款|解冻', text) and re.search(r'先转|先交|先付|保证金|解冻金', text):
         signals.append('以退款、贷款或解冻为由要求先付钱')
@@ -52,6 +52,12 @@ def assess(text):
         signals.append('以“老师带单”“稳赚不赔”等话术诱导转账投资')
     if re.search(r'公检法|公安|检察院|法院|警官|民警|冻结账户', text) and re.search(r'涉案|洗钱|通缉|清查|资金审查|配合调查.{0,10}(?:转|汇|付)', text):
         signals.append('冒充公检法要求配合清查资金或转账自证')
+    if re.search(r'验一验|验资|资金验证|安全验证', text) and re.search(r'新户头|新账户|转到|转入|另一张卡', text):
+        signals.append('冒充客服要求“验资”把钱转到所谓新账户')
+    if re.search(r'出事|车祸|住院|急救|急用|急需', text) and re.search(r'别告诉|不要告诉|保密|别声张|先别声张', text) and re.search(r'转|汇|打', text):
+        signals.append('冒充熟人急事借钱并要求保密，请当面或回拨常用号码核实')
+    if re.search(r'医保|社保|补贴|补助|养老金发放', text) and re.search(r'停|冻结|失效|作废|过期', text) and re.search(r'转|打|汇', text) and re.search(r'今天|下午|小时|马上|立即|赶紧|之前|以前', text):
+        signals.append('冒充机构称待遇即将停用，限时催转到指定账户')
     if re.search(r'快递|包裹|电商|商家', text) and re.search(r'丢失|损毁|烧毁|下架|质量问题', text) and re.search(r'理赔|赔偿|退款', text) and re.search(r'垫付|手续费|保证金|先.{0,3}(?:交|付|转)|银行卡|验证码', text):
         signals.append('冒充快递或商家理赔，要求垫付费用或提供银行卡信息')
     return dict(blocked=bool(signals), signals=signals,
