@@ -36,3 +36,4 @@ tools/build_followup.py
 tools/claude_review_request.md
 tools/run_blind_set.py
 tools/capture_deck_shots.cjs
+submission/盲写出题规则.md
