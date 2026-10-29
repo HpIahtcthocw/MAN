@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Live-model checks after Claude review; author-visible, no real bank."""
+"""Directed live-model checks after expert review; author-visible, no real bank."""
 import argparse,hashlib,json,sys,tempfile
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path

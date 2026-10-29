@@ -5,7 +5,7 @@ const path=require('node:path');
 const {openBrowser}=require('E:/gitproject/farmer-film-titles/node_modules/@remotion/renderer');
 const root=path.resolve(__dirname,'..');
 const out=path.join(root,'test-results','completion-round');
-const chrome='C:/Users/ASUS/AppData/Local/ms-playwright/chromium_headless_shell-1243/chrome-headless-shell-win64/chrome-headless-shell.exe';
+const chrome='C:/Users/ASUS/AppData/Local/ms-playwright/chromium_headless_shell-1148/chrome-win/headless_shell.exe';
 fs.mkdirSync(out,{recursive:true});
 const sleep=(ms)=>new Promise(resolve=>setTimeout(resolve,ms));
 
