@@ -28,14 +28,14 @@ metrics['live_results_match_current_code']=live.get('source_hashes')==current_ha
 metrics['regression_xml']=regression_path
 if (ROOT/'test-results/directed-tasks/live-results.json').exists():
     claude_live=read('test-results/directed-tasks/live-results.json')
-    metrics['claude_review']={'regression_tests':tests,'directed_live_passed':claude_live['passed'],'directed_live_total':claude_live['total'],
+    metrics['directed_review']={'note':'历史定向检查存档（作者可见）；对应早期代码，当前代码口径见 live 块。','regression_tests':tests,'directed_live_passed':claude_live['passed'],'directed_live_total':claude_live['total'],
         'matches_current_code':claude_live['source_hashes']==current_hashes,'blind':False,'merchant_scoring_implemented':False}
 if (ROOT/'test-results/acceptance-review/after.json').exists():
     before_acceptance=read('test-results/acceptance-review/before.json');after_acceptance=read('test-results/acceptance-review/after.json')
     metrics['acceptance_review']={'before_passed':before_acceptance['passed'],'after_passed':after_acceptance['passed'],
         'total':after_acceptance['total'],'author_visible':True,'blind':False,
         'matches_current_code':after_acceptance['source_hashes']==current_hashes,
-        'browser_this_round':'Tool profile busy; not rerun; earlier23 checks are historical'}
+        'note':'历史验收存档（作者可见）；浏览器检查未随本轮重跑，当前代码口径见 live 块。'}
     if (ROOT/'test-results/acceptance-review/api.json').exists():
         api_acceptance=read('test-results/acceptance-review/api.json')
         metrics['acceptance_review']['live_api_passed']=api_acceptance['passed']

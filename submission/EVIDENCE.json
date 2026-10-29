@@ -52,7 +52,8 @@
   "blind": false,
   "live_results_match_current_code": true,
   "regression_xml": "test-results/directed-tasks/regression.xml",
-  "claude_review": {
+  "directed_review": {
+    "note": "历史定向检查存档（作者可见）；对应早期代码，当前代码口径见 live 块。",
     "regression_tests": 264,
     "directed_live_passed": 6,
     "directed_live_total": 6,
@@ -67,7 +68,7 @@
     "author_visible": true,
     "blind": false,
     "matches_current_code": false,
-    "browser_this_round": "Tool profile busy; not rerun; earlier23 checks are historical",
+    "note": "历史验收存档（作者可见）；浏览器检查未随本轮重跑，当前代码口径见 live 块。",
     "live_api_passed": true
   },
   "query_context": {
